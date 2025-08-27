@@ -27,8 +27,8 @@ const ForWhomSection = () => {
               w-64 h-64
               sm:w-80 sm:h-80
               md:w-[24rem] md:h-[24rem]
-              lg:w-[34rem] lg:h-[34rem]
-              xl:w-[40rem] xl:h-[40rem]
+              lg:w-[28rem] lg:h-[28rem]
+              xl:w-[35rem] xl:h-[35rem]
             "
           ></div>
 
