@@ -18,19 +18,6 @@ const ForWhomSection = () => {
       {/* Left Side (Image + Circle) */}
       <div className="relative w-full lg:w-1/2 flex justify-center lg:ml-40 sm:ml-0">
         <div className="relative flex items-center justify-center">
-          {/* Background Circle */}
-          <div
-            className="
-              absolute
-              rounded-full
-              bg-purple-100
-              w-64 h-64
-              sm:w-80 sm:h-80
-              md:w-[24rem] md:h-[24rem]
-              lg:w-[28rem] lg:h-[28rem]
-              xl:w-[35rem] xl:h-[35rem]
-            "
-          ></div>
 
           {/* Main Image */}
           <div className="relative z-10 flex items-center justify-center">
@@ -52,7 +39,7 @@ const ForWhomSection = () => {
       </div>
 
       {/* Right Side (Text Content for Desktop only) */}
-      <div className="w-full lg:w-2/3 lg:ml-20 lg:mr-10 text-center lg:text-left">
+      <div className="w-full lg:w-2/3 lg:ml-10 lg:mr-10 text-center lg:text-left">
         {/* Headings for desktop only */}
         <p className="uppercase tracking-wide text-purple-500 font-medium hidden lg:block">
           For Whom
