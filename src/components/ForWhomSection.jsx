@@ -49,7 +49,7 @@ const ForWhomSection = () => {
         </h2>
 
         <p className="text-gray-600 mt-4">
-          VMax is designed to support health and wellness professionals who want
+          <span className="font-bold text-purple-900 ">COACH360</span> is designed to support health and wellness professionals who want
           to streamline their practice, engage clients more effectively, and
           grow their business with ease.
         </p>

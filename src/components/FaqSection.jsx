@@ -4,14 +4,14 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const faqs = [
   {
-    question: "What is VMax CRM used for?",
+    question: "What is COACH360 CRM used for?",
     answer:
-      "VMax CRM helps wellness professionals organize client information, track progress, and manage their daily operations more efficiently.",
+      "COACH360 CRM helps wellness professionals organize client information, track progress, and manage their daily operations more efficiently.",
   },
   {
     question: "Do I need technical skills to use it?",
     answer:
-      "No, VMax CRM is built to be simple and user-friendly, so you can focus on your work without worrying about technical setup.",
+      "No, COACH360 CRM is built to be simple and user-friendly, so you can focus on your work without worrying about technical setup.",
   },
   {
     question: "Can I manage multiple clients at the same time?",
@@ -33,7 +33,7 @@ export default function FAQSection() {
   };
 
   return (
-    <section id="faq" className="max-w-6xl mx-auto px-6 py-16">
+    <section id="faq" className="max-w-6xl mx-auto px-6 py-16 bg-white">
       {/* Grid layout: 1 column on mobile, 2 columns on lg+ */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
         {/* Left side (Title + Subtitle, vertically centered on desktop) */}
@@ -42,7 +42,7 @@ export default function FAQSection() {
             Frequently Asked Questions
           </h2>
           <p className="text-gray-600 text-lg">
-            Find answers to the most common questions about VMax CRM.  
+            Find answers to the most common questions about <span className="font-bold text-purple-900 ">COACH360</span> CRM.  
             If you still need help, our support team is always here.
           </p>
         </div>
@@ -75,19 +75,22 @@ export default function FAQSection() {
 
                 {/* Animate Answer */}
                 <AnimatePresence initial={false}>
-                  {isOpen && (
-                    <motion.div
-                      key="content"
-                      initial={{ height: 0, opacity: 0 }}
-                      animate={{ height: "auto", opacity: 1 }}
-                      exit={{ height: 0, opacity: 0 }}
-                      transition={{ duration: 0.4 }}
-                      className="px-4 text-gray-700"
-                    >
-                      <p className="pb-4">{faq.answer}</p>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
+  {isOpen && (
+    <motion.div
+      key="content"
+      initial={{ height: 0, opacity: 0 }}
+      animate={{ height: "auto", opacity: 1 }}
+      exit={{ height: 0, opacity: 0 }}
+      transition={{ duration: 0.4 }}
+      className="overflow-hidden"
+    >
+      <div className="px-4 pb-4 text-gray-700">
+        {faq.answer}
+      </div>
+    </motion.div>
+  )}
+</AnimatePresence>
+
               </div>
             );
           })}

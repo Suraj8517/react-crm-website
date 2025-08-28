@@ -52,13 +52,13 @@ const OurCombinedFeature = () => {
         {/* Left text */}
         <div className="lg:w-1/3 text-left z-20">
           <h4 className="text-[#6E0ACE] rounded font-semibold uppercase tracking-wide">
-            Why VMax
+            Why COACH360
           </h4>
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mt-2 mb-4 leading-tight">
             Everything you need to run people operations
           </h2>
           <p className="text-gray-600 text-lg mb-6">
-            From client management to payments — VMax streamlines your fitness & wellness business in one place.
+            From client management to payments — <span className="font-bold text-purple-900 ">COACH360</span> streamlines your fitness & wellness business in one place.
           </p>
           <button className="bg-[#6E0ACE] text-white font-semibold px-6 py-3 rounded-full shadow-md hover:bg-[#5e0ace] transition">
             Request demo →
@@ -112,7 +112,7 @@ const OurCombinedFeature = () => {
   {/* Text full width */}
   <div className="text-center mb-6">
      <h4 className="text-[#6E0ACE] rounded font-semibold uppercase tracking-wide">
-            Why VMax
+            Why COACH360
           </h4>
     <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mt-2 mb-4 leading-tight">
       Everything you need to run people operations
