@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { ChevronDown } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const faqs = [
   {
@@ -57,20 +58,36 @@ export default function FAQSection() {
               >
                 <button
                   onClick={() => toggleFAQ(index)}
-                  className={`w-full flex justify-between items-center p-4 text-left font-medium hover:bg-purple-50 transition ${
-                    isOpen ? "text-purple-700" : "text-gray-800"
-                  }`}
+                  className={`w-full flex justify-between items-center p-4 text-left font-medium transition 
+                    ${
+                      isOpen
+                        ? "bg-purple-700 text-white"
+                        : "bg-white text-gray-800 hover:bg-purple-50"
+                    }`}
                 >
                   {faq.question}
                   <ChevronDown
                     className={`w-5 h-5 transition-transform duration-300 ${
-                      isOpen ? "text-purple-800 rotate-180" : "text-gray-500"
+                      isOpen ? "rotate-180 text-white" : "text-gray-500"
                     }`}
                   />
                 </button>
-                {isOpen && (
-                  <div className="px-4 pb-4 text-gray-700">{faq.answer}</div>
-                )}
+
+                {/* Animate Answer */}
+                <AnimatePresence initial={false}>
+                  {isOpen && (
+                    <motion.div
+                      key="content"
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: "auto", opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.4 }}
+                      className="px-4 text-gray-700"
+                    >
+                      <p className="pb-4">{faq.answer}</p>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
               </div>
             );
           })}
