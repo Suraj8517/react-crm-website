@@ -11,7 +11,7 @@ export default function Navbar() {
         <nav className="hidden md:flex gap-6 text-sm text-gray-600">
           <a href="#features" className="hover:text-gray-900 transition">Features</a>
           <a href="#for-whom" className="hover:text-gray-900 transition">For Whom</a>
-          <a href="#resources" className="hover:text-gray-900 transition">FAQ's</a>
+          <a href="#faq" className="hover:text-gray-900 transition">FAQ's</a>
         </nav>
         <div className="flex items-center gap-3">
           <button className="hidden md:inline-flex items-center gap-2 bg-purple-600 text-white text-sm px-4 py-2 rounded-xl shadow-md hover:brightness-105 transition">Get started</button>
