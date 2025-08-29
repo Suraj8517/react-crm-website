@@ -42,7 +42,7 @@ const ForWhomSection = () => {
       <div className="w-full lg:w-2/3 lg:ml-10 lg:mr-10 text-center lg:text-left">
         {/* Headings for desktop only */}
         <p className="uppercase tracking-wide text-purple-500 font-medium hidden lg:block">
-          For Whom
+          Who Is Coach360 For?
         </p>
         <h2 className="hidden lg:block text-3xl sm:text-4xl font-bold text-gray-900 mt-2">
           Designed for Wellness Professionals Like You
