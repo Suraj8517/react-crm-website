@@ -56,16 +56,16 @@ const ForWhomSection = () => {
 
         <ul className="mt-6 space-y-3 text-gray-700 inline-block text-left">
           <li className="flex items-start gap-3 font-bold">
-            <span className="text-purple-500 font-bold">✓</span> Nutritionists & Dietitians
+            <span className="w-5 h-5 flex items-center justify-center bg-purple-100 text-purple-600 rounded-full text-xs font-bold">✓</span> Nutritionists & Dietitians
           </li>
           <li className="flex items-start gap-3 font-bold">
-            <span className="text-purple-500 font-bold">✓</span> Fitness Coaches & Personal Trainers
+            <span className="w-5 h-5 flex items-center justify-center bg-purple-100 text-purple-600 rounded-full text-xs font-bold">✓</span> Fitness Coaches & Personal Trainers
           </li>
           <li className="flex items-start gap-3 font-bold">
-            <span className="text-purple-500 font-bold">✓</span> Wellness Consultants
+            <span className="w-5 h-5 flex items-center justify-center bg-purple-100 text-purple-600 rounded-full text-xs font-bold">✓</span> Wellness Consultants
           </li>
           <li className="flex items-start gap-3 font-bold">
-            <span className="text-purple-500 font-bold">✓</span> Wellness Centers
+            <span className="w-5 h-5 flex items-center justify-center bg-purple-100 text-purple-600 rounded-full text-xs font-bold">✓</span> Wellness Centers
           </li>
         </ul>
       </div>

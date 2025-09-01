@@ -9,6 +9,8 @@ import TestimonialSection from "./components/TestimonialSection";
 import Footer from "./components/Footer";
 import FAQSection from "./components/FaqSection";
 import SwipeFeaturesSection from "./components/SwipeFeatureSection";
+import IconBoxCarousel from "./components/IconBox";
+import SupportSection from "./components/SupportSection";
 
 export default function Landingpages() {
   return (
@@ -16,13 +18,16 @@ export default function Landingpages() {
       <Navbar />
       <HeroSection />
       <DesktopFeature />
+        <IconBoxCarousel/>
       <FeaturesSection />
       <SwipeFeaturesSection />
       <ForWhomSection />
+      <SupportSection/>
       <CallToActionSection />
       <TestimonialSection />
       <FAQSection />
       <Footer />
+      
     </div>
   );
 }

@@ -17,18 +17,17 @@ const SwipeFeaturesSection = () => {
 
   return (
     <div className="w-full max-w-7xl mx-auto py-15">
-      <Swiper
-        modules={[Pagination]}
-        pagination={{ clickable: true, el: ".custom-pagination" }}
-        spaceBetween={20}
-        slidesPerView={1}
-        slidesOffsetBefore={300}
-        breakpoints={{
-          1024: { slidesPerView: 3, slidesOffsetBefore: 300,slidesOffsetAfter: 50 }, // desktop
-          768: { slidesPerView: 2, slidesOffsetBefore: 100,slidesOffsetAfter: 50 }, // tablet
-          0: { slidesPerView: 1, slidesOffsetBefore: 5 }, // mobile
-        }}
-      >
+     <Swiper
+  modules={[Pagination]}
+  pagination={{ clickable: true, el: ".custom-pagination" }}
+  spaceBetween={20}
+  grabCursor={true}
+  breakpoints={{
+    1024: { slidesPerView: 3, slidesOffsetBefore: 100, slidesOffsetAfter: 100 },
+    768: { slidesPerView: 2, slidesOffsetBefore: 50, slidesOffsetAfter: 50 },
+    0: { slidesPerView: 1, slidesOffsetBefore: 5 },
+  }}
+>
         {features.map((item, i) => (
           <SwiperSlide key={i} className="flex justify-center">
             <div
@@ -53,7 +52,7 @@ const SwipeFeaturesSection = () => {
       </Swiper>
 
       {/* Pagination Dots */}
-      <div className="custom-pagination flex justify-center mt-8"></div>
+      <div className="custom-pagination flex justify-center mt-4"></div>
     </div>
   );
 };
