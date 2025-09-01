@@ -3,5 +3,30 @@ html {
   scroll-behavior: smooth;
 }
 .clip-slant {
-    clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
-  }
+  clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.swiper {
+  background-color: transparent;
+}
+.swiper-wrapper {
+  padding-bottom: 20px;
+}
+/* Swiper pagination dots */
+/* Inactive dots */
+.swiper-pagination-bullet {
+  background: #bd85f2 !important;
+  opacity: 1 !important;
+  width: 10px !important;
+  height: 10px !important;
+  margin: 0 6px !important;
+  border-radius: 50% !important;
+  transition: all 0.3s ease !important;
+}
+
+/* Active dot */
+.swiper-pagination-bullet-active {
+  background: #6e0ace !important;
+  width: 12px !important;
+  height: 12px !important;
+}

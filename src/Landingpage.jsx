@@ -7,7 +7,8 @@ import ForWhomSection from "./components/ForWhomSection";
 import CallToActionSection from "./components/CallToActionSection";
 import TestimonialSection from "./components/TestimonialSection";
 import Footer from "./components/Footer";
-import FAQSection from "./components/FaqSection"
+import FAQSection from "./components/FaqSection";
+import SwipeFeaturesSection from "./components/SwipeFeatureSection";
 
 export default function Landingpages() {
   return (
@@ -16,10 +17,11 @@ export default function Landingpages() {
       <HeroSection />
       <DesktopFeature />
       <FeaturesSection />
+      <SwipeFeaturesSection />
       <ForWhomSection />
       <CallToActionSection />
       <TestimonialSection />
-      <FAQSection/>
+      <FAQSection />
       <Footer />
     </div>
   );
