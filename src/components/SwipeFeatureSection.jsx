@@ -25,7 +25,7 @@ const SwipeFeaturesSection = () => {
   breakpoints={{
     1024: { slidesPerView: 3, slidesOffsetBefore: 100, slidesOffsetAfter: 100 },
     768: { slidesPerView: 2, slidesOffsetBefore: 50, slidesOffsetAfter: 50 },
-    0: { slidesPerView: 1, slidesOffsetBefore: 5 ,, slidesOffsetAfter: 5},
+    0: { slidesPerView: 1, slidesOffsetBefore: 5 ,slidesOffsetAfter: 5},
   }}
 >
         {features.map((item, i) => (
