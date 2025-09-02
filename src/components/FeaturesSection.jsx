@@ -4,7 +4,7 @@ import features from "../data/features";
 
 export default function FeaturesSection() {
   return (
-    <section id="features" className="py-10 bg-gray-50">
+    <section id="features" className="py-10 bg-white">
       <div className="max-w-7xl mx-auto px-6">
         {/* Section Heading */}
         <div className="text-center mb-16">

@@ -21,9 +21,9 @@ export default function Navbar() {
 
       {menuOpen && (
         <div className="md:hidden bg-white border-t border-gray-200 px-4 py-3 flex flex-col gap-3">
-          <a href="#product" className="hover:text-gray-900">Features</a>
-          <a href="#pricing" className="hover:text-gray-900">For Whom</a>
-          <a href="#resources" className="hover:text-gray-900">Resources</a>
+          <a href="#features" className="hover:text-gray-900 transition">Features</a>
+          <a href="#for-whom" className="hover:text-gray-900 transition">For Whom</a>
+          <a href="#faq" className="hover:text-gray-900 transition">FAQ's</a>
           <button className="bg-purple-600 text-white px-4 py-2 rounded-xl shadow-md">Get started</button>
         </div>
       )}

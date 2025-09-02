@@ -12,6 +12,9 @@ html {
 .swiper-wrapper {
   padding-bottom: 20px;
 }
+.my-swiper .swiper-slide {
+  width: 200px !important; 
+}
 /* Swiper pagination dots */
 /* Inactive dots */
 .swiper-pagination-bullet {

@@ -13,7 +13,8 @@ import client_progress from '../assets/Clients -_ Progress -_ Progress Images.jp
 import workflow from '../assets/Workflow.jpg';
 import engage from '../assets/interactions.png';
 import logo from '../assets/Vmax Logo 2.png';
-import finance from '../assets/finance.png';const features = [
+import finance from '../assets/finance.png';
+const features = [
   { title: 'Lead Management', shortTitle: 'Leads', desc: 'Capture inquiries from trial signups, social media, or referrals, and convert them into paying members with organized tracking.', img: leads, icon: <MdManageAccounts /> },
   { title: 'Client Management', shortTitle: 'Clients', desc: 'Keep member profiles updated with workout plans, diet schedules, and progress records all in one place.', img: client, icon: <FaUsers /> },
   { title: 'Appointment Scheduling', shortTitle: 'Schedule', desc: 'Allow clients to easily book diet consultations, training sessions, or fitness classes with automated reminders.', img: leads, icon: <AiFillSchedule /> },

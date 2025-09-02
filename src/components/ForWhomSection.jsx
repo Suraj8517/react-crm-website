@@ -8,7 +8,7 @@ const ForWhomSection = () => {
       {/* Headings for mobile/tablet only */}
       <div className="text-center mb-6 lg:hidden">
         <p className="uppercase tracking-wide text-purple-500 text-xl">
-          For Whom
+          Who Is Coach360 For?
         </p>
         <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mt-2">
           Designed for Wellness Professionals Like You
