@@ -11,15 +11,18 @@ import FAQSection from "./components/FaqSection";
 import SwipeFeaturesSection from "./components/SwipeFeatureSection";
 import IconBoxCarousel from "./components/IconBox";
 import SupportSection from "./components/SupportSection";
+import LogoSwipper from "./components/LogoSwipper";
+import MobileAppSection from "./components/MobileAppFeatureSection";
+
 
 export default function Landingpages() {
   return (
-    <div className="min-h-screen bg-gray-50 text-gray-900 antialiased">
+    <div className="min-h-screen bg-white-50 text-gray-900 antialiased">
       <Navbar />
       <HeroSection />
+      <LogoSwipper/>
       <DesktopFeature />
-        <IconBoxCarousel/>
-      <FeaturesSection />
+      <MobileAppSection/>
       <SwipeFeaturesSection />
       <ForWhomSection />
       <SupportSection/>

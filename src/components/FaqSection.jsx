@@ -73,7 +73,7 @@ export default function FAQSection() {
                   />
                 </button>
 
-                {/* Animate Answer */}
+
                 <AnimatePresence initial={false}>
   {isOpen && (
     <motion.div

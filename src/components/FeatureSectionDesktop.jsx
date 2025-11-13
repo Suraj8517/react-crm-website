@@ -44,7 +44,7 @@ const OurCombinedFeature = () => {
   const [activeMobile, setActiveMobile] = useState(null);
 
   return (
-    <section className="relative py-16 px-4 lg:px-20 bg-white lg:mt-80 md:mt-60 mt-20">
+    <section className="relative pt-6 pb-24 px-4 lg:px-20 bg-white ">
       
       {/* Desktop layout */}
       <div className="hidden lg:flex max-w-6xl mx-auto flex-row items-start gap-10 mt-30">
@@ -52,15 +52,15 @@ const OurCombinedFeature = () => {
         {/* Left text */}
         <div className="lg:w-1/3 text-left z-20">
           <h4 className="text-[#6E0ACE] rounded font-semibold uppercase tracking-wide">
-            Why COACH360
+            Why COACH CLUB
           </h4>
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mt-2 mb-4 leading-tight">
             Everything you need to run people operations
           </h2>
           <p className="text-gray-600 text-lg mb-6">
-            From client management to payments — <span className="font-bold text-purple-900 ">COACH360</span> streamlines your fitness & wellness business in one place.
+            From client management to payments — <span className="font-bold text-purple-900 ">COACH CLUB</span> streamlines your fitness & wellness business in one place.
           </p>
-          <button className="bg-[#6E0ACE] text-white font-semibold px-6 py-3 rounded-full shadow-md hover:bg-[#5e0ace] transition">
+          <button className="bg-gradient-to-b from-[#4B0082] to-[#2E005C] text-white font-semibold px-6 py-3 rounded-full shadow-md hover:bg-[#5e0ace] transition">
             Request demo →
           </button>
         </div>
@@ -149,66 +149,80 @@ const OurCombinedFeature = () => {
 </div>
 
       
+
 {/* Mobile layout */}
-<div className="md:hidden mt-10 space-y-6 max-w-6xl mx-auto">
+<div className="md:hidden mt-10 space-y-8 max-w-6xl mx-auto">
   {/* Intro text for mobile */}
   <div className="text-center px-4">
-    <h4 className="text-[#6E0ACE] rounded font-semibold uppercase tracking-wide">
-      Why VMax
+    <h4 className="text-[#6E0ACE] text-sm font-semibold uppercase tracking-wider mb-3">
+      Why COACH CLUB
     </h4>
-    <h2 className="text-2xl font-bold text-gray-900 mt-2 mb-3 leading-snug">
+    <h2 className="text-2xl font-bold text-gray-900 mb-4 leading-tight">
       Everything you need to run people operations
     </h2>
-    <p className="text-gray-600 text-base mb-4">
-      From client management to payments — VMax streamlines your fitness & wellness business in one place.
+    <p className="text-gray-600 text-base mb-6 leading-relaxed">
+      From client management to payments — <span className="font-bold text-purple-900">COACH CLUB</span> streamlines your fitness & wellness business in one place.
     </p>
-    <button className="bg-[#6E0ACE] text-white font-semibold px-6 py-3 rounded-full shadow-md hover:bg-[#5e0ace] transition">
+    <button className="bg-gradient-to-b from-[#4B0082] to-[#2E005C] text-white font-semibold px-8 py-3.5 rounded-full shadow-lg hover:bg-[#5e0ace] transition-all hover:shadow-xl active:scale-95">
       Request demo →
     </button>
   </div>
 
-  {/* Features accordion */}
- <div className="space-y-4">
-  {features.map((feature, idx) => (
-    <div
-      key={idx}
-      className={`rounded-xl shadow-md overflow-hidden transition-all duration-500 relative ${
-        activeMobile === idx ? "bg-purple-50" : "bg-white"
-      }`}
-    >
-      <button
-        className="w-full flex flex-col items-center p-6 text-center transition-all duration-500 relative z-10"
-        onClick={() =>
-          setActiveMobile(activeMobile === idx ? null : idx)
-        }
+  {/* Features cards */}
+  <div className="space-y-4 px-4">
+    {features.map((feature, idx) => (
+      <div
+        key={idx}
+        className={`rounded-2xl shadow-lg overflow-hidden transition-all duration-300 relative ${
+          activeMobile === idx ? "bg-gradient-to-br from-purple-50 to-purple-100" : "bg-white"
+        }`}
+        onClick={() => setActiveMobile(activeMobile === idx ? null : idx)}
       >
-        <div className="w-16 h-16 flex items-center justify-center bg-purple-200 rounded-full">
-          <span className="text-4xl text-purple-600">{feature.icon}</span>
+        <div className="p-6 relative z-10">
+          <div className="flex items-start gap-4">
+            <div className={`w-14 h-14 flex items-center justify-center rounded-2xl transition-all duration-300 flex-shrink-0 ${
+              activeMobile === idx ? "bg-[#6E0ACE]" : "bg-purple-200"
+            }`}>
+              <span className={`text-2xl transition-colors duration-300 ${
+                activeMobile === idx ? "text-white" : "text-purple-600"
+              }`}>{feature.icon}</span>
+            </div>
+            <div className="flex-1 text-left">
+              <h3 className="text-lg font-bold text-gray-900 mb-1">
+                {feature.title}
+              </h3>
+              {activeMobile === idx && (
+                <p className="text-gray-700 text-sm mt-2 leading-relaxed animate-fadeIn">
+                  {feature.desc}
+                </p>
+              )}
+            </div>
+          </div>
         </div>
-        <h3 className="text-lg font-bold text-gray-900 mt-2">
-          {feature.title}
-        </h3>
-      </button>
 
-      {/* Show description + background image */}
-      {activeMobile === idx && (
-        <div className="px-6 pb-6 text-center transition-all duration-500 relative z-10">
-          <p className="text-gray-700 text-base mt-2">{feature.desc}</p>
+        {/* Background image with gradient overlay */}
+        {activeMobile === idx && feature.img && (
+          <div className="absolute inset-0 z-0 overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-t from-purple-50/90 to-transparent z-10"></div>
+            <img
+              src={feature.img}
+              alt={feature.title}
+              className="w-full h-full object-cover opacity-10"
+            />
+          </div>
+        )}
+
+        {/* Expand indicator */}
+        <div className={`absolute bottom-3 right-3 w-6 h-6 flex items-center justify-center rounded-full bg-purple-200 transition-transform duration-300 ${
+          activeMobile === idx ? "rotate-180" : ""
+        }`}>
+          <svg className="w-3 h-3 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+          </svg>
         </div>
-      )}
-
-      {/* Background image with low opacity */}
-      {activeMobile === idx && feature.img && (
-        <img
-          src={feature.img}
-          alt={feature.title}
-          className="absolute inset-0 w-full h-full object-cover opacity-5 z-0"
-        />
-      )}
-    </div>
-  ))}
-</div>
-
+      </div>
+    ))}
+  </div>
 </div>
 
 

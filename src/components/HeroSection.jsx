@@ -20,19 +20,34 @@ export default function HeroSection() {
   return (
     <main className="relative w-full h-[70vh] sm:h-[80vh] md:h-[60vh] lg:h-screen">
       <img src={herobg} alt="hero background" className="w-full h-full object-cover" />
-      <div className="absolute inset-0 bg-purple-600/80"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-[#7025a5] to-[#2E005C]"></div>
 
       {/* Hero Content */}
       <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-4 md:px-6">
+        <div
+  className="border border-amber-50 rounded-3xl py-1 px-4 
+             flex items-center justify-center 
+             animate-fadeInUp 
+             transition-all duration-500 
+             hover:scale-105 hover:shadow-lg hover:shadow-purple-500/30"
+>
+  <h5 className="text-sm font-medium text-white animate-pulse">
+    <span className="bg-purple-700 p-0.5 rounded-sm font-bold text-sm">#1</span> Software for Coaches 🏋🏻
+  </h5>
+</div>
+
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold drop-shadow-lg">
           Train Smarter. Manage Better.<br/> Grow Faster.
         </h1>
-        <p className="mt-4 text-base sm:text-lg md:text-xl lg:text-2xl max-w-lg sm:max-w-xl md:max-w-2xl">
+        <p className="mt-4 text-base sm:text-lg md:text-xl lg:text-xl max-w-lg sm:max-w-xl md:max-w-2xl">
           An all-in-one CRM for personal trainers, coaches, and fitness studios.
         </p>
-        <div className="sm:flex mt-6 gap-4">
-          <button className="bg-white px-3 py-2 rounded-full font-semibold text-purple-600 hover:bg-purple-600 hover:text-white border border-white transition">
-            Get Started
+        <div className="sm:flex mt-6 gap-4 mb-6">
+          <button className="px-4 py-1 rounded-full font-semibold bg-gradient-to-b from-[#7025a5] to-[#49157d] text-white transition-all duration-300 hover:from-[#9b2aec] hover:to-[#52059f]">
+ Get Started
+</button>
+          <button className="bg-purple-900 px-3 py-2 rounded-full font-semibold text-white hover:bg-purple-800 hover:text-white border border-white transition">
+            Book A Demo
           </button>
         </div>
       </div>

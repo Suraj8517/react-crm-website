@@ -1,11 +1,24 @@
 import React from "react";
 import forwhom from "../assets/forwhom1.jpg";
+import bg_circle from "../assets/background-circle.svg";
 
 const ForWhomSection = () => {
   return (
-    <section id="for-whom"className="max-w-7xl mx-auto px-6 lg:px-12 py-10 flex flex-col lg:flex-row items-center gap-10 my-25">
-      
-      {/* Headings for mobile/tablet only */}
+    <section
+      id="for-whom"
+      className="relative max-w-7xl mx-auto px-6 lg:px-12 py-10 flex flex-col lg:flex-row items-center gap-10 my-25"
+    >
+      {/* Top-right decorative circle */}
+      <img
+        src={bg_circle}
+        alt="Decorative Circle"
+        className="absolute top-0 right-0 w-40 lg:w-60 opacity-30 pointer-events-none"
+      />
+
+      {/* Purple background overlay */}
+      <div className="absolute inset-0 bg-purple-100 opacity-20 -z-10 rounded-2xl"></div>
+
+      {/* Headings for mobile/tablet */}
       <div className="text-center mb-6 lg:hidden">
         <p className="uppercase tracking-wide text-purple-500 text-xl">
           Who Is Coach360 For?
@@ -15,32 +28,28 @@ const ForWhomSection = () => {
         </h2>
       </div>
 
-      {/* Left Side (Image + Circle) */}
+      {/* Left Side */}
       <div className="relative w-full lg:w-1/2 flex justify-center lg:ml-40 sm:ml-0">
         <div className="relative flex items-center justify-center">
+          {/* Decorative circle behind main image */}
+          <img
+            src={bg_circle}
+            alt="Decorative Circle"
+            className="absolute -bottom-32 -left-24 w-32 lg:w-88 opacity-30 pointer-events-none z-0"
+          />
 
           {/* Main Image */}
-          <div className="relative z-10 flex items-center justify-center">
-            <img
-              src={forwhom}
-              alt="Online Appointment"
-              className="
-                rounded-2xl shadow-lg object-cover
-                w-full max-w-xs
-                sm:max-w-sm
-                md:max-w-md
-                lg:max-w-xl
-                xl:max-w-2xl
-                h-auto
-              "
-            />
-          </div>
+          <img
+            src={forwhom}
+            alt="Online Appointment"
+            className="relative z-10 rounded-2xl shadow-lg object-cover
+                       w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-xl xl:max-w-2xl h-auto"
+          />
         </div>
       </div>
 
-      {/* Right Side (Text Content for Desktop only) */}
-      <div className="w-full lg:w-2/3 lg:ml-10 lg:mr-10 text-center lg:text-left">
-        {/* Headings for desktop only */}
+      {/* Right Side */}
+      <div className="w-full lg:w-2/3 lg:ml-10 lg:mr-10 text-center lg:text-left relative z-10">
         <p className="uppercase tracking-wide text-purple-500 font-medium hidden lg:block">
           Who Is Coach360 For?
         </p>
@@ -49,7 +58,7 @@ const ForWhomSection = () => {
         </h2>
 
         <p className="text-gray-600 mt-4">
-          <span className="font-bold text-purple-900 ">COACH360</span> is designed to support health and wellness professionals who want
+          <span className="font-bold text-purple-900">COACH360</span> is designed to support health and wellness professionals who want
           to streamline their practice, engage clients more effectively, and
           grow their business with ease.
         </p>

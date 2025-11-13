@@ -28,7 +28,7 @@ const IconBoxCarousel = () => {
           <SwiperSlide key={index} className="!w-[192px]">
             <div className="bg-white rounded-2xl shadow-md p-6 text-center flex flex-col items-center h-48">
               <div className="w-20 h-20 flex items-center justify-center rounded-full bg-purple-100 mb-4">
-                <div className="text-5xl text-purple-600">{item.icon}</div>
+                <div className="text-5xl text-purple-700">{item.icon}</div>
               </div>
               <h3 className="text-gray-700 font-normal">{item.title}</h3>
             </div>
