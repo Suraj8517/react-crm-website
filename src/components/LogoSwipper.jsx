@@ -17,7 +17,7 @@ export default function ClientLogoSection() {
       <div className="relative w-full flex justify-center overflow-visible">
         
         {/* Capsule container */}
-        <div className="relative bg-white border-2 border-gradient-to-b from-[#7025a5] to-[#2E005C] rounded-full shadow-sm px-4 sm:px-6 md:px-10 overflow-hidden 
+        <div className="relative bg-white border-2 border-purple-200 rounded-full shadow-sm px-4 sm:px-6 md:px-10 overflow-hidden 
           w-[85%] sm:w-[80%] md:max-w-4xl lg:max-w-5xl h-16 sm:h-20 md:h-24 flex items-center">
           
           {/* Scrolling logos */}
@@ -58,7 +58,7 @@ export default function ClientLogoSection() {
 
         {/* Floating title (overlapping top border) */}
         <div className="absolute -top-3 sm:-top-4 bg-white px-4 sm:px-6 md:px-8 z-40">
-          <h2 className="text-sm sm:text-base md:text-xl font-semibold text-gray-800">
+          <h2 className="text-sm sm:text-base md:text-xl font-semibold text-purple-900">
             Trusted by the best
           </h2>
         </div>

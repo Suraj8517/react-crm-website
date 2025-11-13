@@ -3,8 +3,8 @@ import {CreditCard,
   MessageSquare,
   Video,
   BookOpen,
-  Bell,
-  ShoppingBag,
+  Apple,
+  Network,
   ThumbsUp,
   Smartphone,
 } from "lucide-react";
@@ -15,12 +15,12 @@ export default function MobileAppSection() {
     { icon: MessageSquare, title: "Easy Customer Management" },
     { icon: Video, title: "Live Sessions" },
     { icon: BookOpen, title: "Built-in Recipe Builder" },
-    { icon: Bell, title: "Nutrition Tracker" },
+    { icon: Apple, title: "Nutrition Tracker" },
   ];
 
   const rightFeatures = [
     { icon: CreditCard, title: "Payment Tracking" },
-    { icon: ShoppingBag, title: "Workflow Automation" },
+    { icon: Network, title: "Workflow Automation" },
     { icon: ThumbsUp, title: "Easy Lead Management" },
     { icon: Smartphone, title: "Built-in Calling" },
   ];

@@ -69,7 +69,7 @@ export default function TestimonialSection() {
           <h2 className="text-3xl md:text-4xl font-bold text-black mt-1">
             What Our Clients Say
           </h2>
-          <p className="text-black/80 mt-2 text-base md:text-lg mt-5 mb-5">
+          <p className="text-black/80 text-base md:text-lg mt-5 mb-5">
             Trusted by nutritionists, dietitians, and wellness professionals worldwide
           </p>
         </div>

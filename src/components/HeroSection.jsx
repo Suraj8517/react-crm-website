@@ -40,7 +40,7 @@ export default function HeroSection() {
           Train Smarter. Manage Better.<br/> Grow Faster.
         </h1>
         <p className="mt-4 text-base sm:text-lg md:text-xl lg:text-xl max-w-lg sm:max-w-xl md:max-w-2xl">
-          An all-in-one CRM for personal trainers, coaches, and fitness studios.
+          An all-in-one platform designed for coaches to manage clients, track progress, and grow their business effortlessly.
         </p>
         <div className="sm:flex mt-6 gap-4 mb-6">
           <button className="px-4 py-1 rounded-full font-semibold bg-gradient-to-b from-[#7025a5] to-[#49157d] text-white transition-all duration-300 hover:from-[#9b2aec] hover:to-[#52059f]">

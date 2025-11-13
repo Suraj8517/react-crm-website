@@ -13,7 +13,8 @@ import IconBoxCarousel from "./components/IconBox";
 import SupportSection from "./components/SupportSection";
 import LogoSwipper from "./components/LogoSwipper";
 import MobileAppSection from "./components/MobileAppFeatureSection";
-
+import Business from "./components/BusinessGrowthSection" ;
+import FeatureSectionNew from "./components/NewFeatureSection"
 
 export default function Landingpages() {
   return (
@@ -21,8 +22,10 @@ export default function Landingpages() {
       <Navbar />
       <HeroSection />
       <LogoSwipper/>
+      <Business/>
       <DesktopFeature />
       <MobileAppSection/>
+      <FeatureSectionNew/>
       <SwipeFeaturesSection />
       <ForWhomSection />
       <SupportSection/>
