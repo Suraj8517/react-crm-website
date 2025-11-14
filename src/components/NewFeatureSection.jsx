@@ -1,65 +1,133 @@
-import React from 'react';
-import { Zap, TrendingUp, Shield, Smartphone, Book, MessageCircle } from 'lucide-react';
+import React from "react";
+import integrations from "../assets/integrations.png";
+import report from "../assets/diagonostic-report.jpg";
+import security from "../assets/security.jpg";
+import customersupport from "../assets/customer-support.webp";
+import freeresources from "../assets/free-resources.webp";
+import app from "../assets/mobile-app.webp";
+
+
 
 export default function WhySection() {
-  const features = [
-    {
+  const block1 = {
+    leftVertical: {
       title: "Integrations",
-      description: "Seamlessly integrate with dozens of third-party tools so you can manage everything from one place.",
-      icon: <Zap className="w-12 h-12 text-purple-600" />,
+      description:
+        "Integrate effortlessly with all your favorite tools—from payment gateways and communication apps to analytics platforms and automation services. Streamline your operations, reduce manual work, and create a smooth, connected experience for both you and your clients",
+      image: integrations,
+      type: "vertical",
     },
-    {
-      title: "Generate Passive Income",
-      description: "Make commissions whenever your customers buy products or book labs — your business grows as theirs does.",
-      icon: <TrendingUp className="w-12 h-12 text-purple-600" />,
+    rightTop: {
+      title: "Diagnostic Reports",
+      description:
+        "Connect directly with diagnostic labs to access client reports in real time. View blood tests, body assessments, and medical insights instantly so you can make informed decisions, personalize plans, and track improvements with complete accuracy.",
+      image: report,
+      type: "horizontal",
     },
-    {
-      title: "Data Security & Privacy",
-      description: "Build your business with confidence — our 3-tier data security and privacy protocols keep you safe.",
-      icon: <Shield className="w-12 h-12 text-purple-600" />,
+    rightBottom: {
+      title: "Security",
+      description:
+        "Your data is protected with enterprise-grade security, end-to-end encryption, and secure cloud storage. We follow strict compliance standards to ensure that every report, client profile, and conversation stays private and fully safeguarded at all times.",
+      image: security,
+      type: "horizontal",
     },
-    {
-      title: "Branded Mobile Apps",
-      description: "Elevate your brand with world-class iOS and Android apps that look and feel premium.",
-      icon: <Smartphone className="w-12 h-12 text-purple-600" />,
-    },
-    {
+  };
+
+  const block2 = {
+    leftTop: {
       title: "Free Resources",
-      description: "Access hundreds of templates, workout plans, recipes and more — so you hit the ground running.",
-      icon: <Book className="w-12 h-12 text-purple-600" />,
+      description:
+        "Unlock a complete library of premium resources designed to help you scale—recipe collections, workout templates, meal planners, content packs, and educational guides. These ready-to-use tools save hours of preparation time and help you deliver high-value coaching effortlessly.",
+      image: freeresources,
+      type: "horizontal",
     },
-    {
+    rightVertical: {
+      title: "Branded Apps",
+      description:
+        "Deliver your coaching experience through a beautifully branded mobile app that reflects your identity at every touchpoint. Enjoy personalized dashboards, tailored features, and a smooth interface designed to enhance client engagement. All of this comes ready-to-use—no coding, configuration, or technical setup required—so you can focus entirely on coaching while offering a professional, high-quality mobile experience.",
+      image: app,
+      type: "vertical",
+    },
+    leftBottom: {
       title: "Customer Support",
-      description: "Our friendly, expert team is always ready to assist via live chat, email, or phone.",
-      icon: <MessageCircle className="w-12 h-12 text-purple-600" />,
+      description:
+        "Get round-the-clock support from a dedicated team available across chat, calls, email, Teams, and WhatsApp. Whether you need technical help, onboarding assistance, or quick troubleshooting, our experts are always ready to assist you 24/7.",
+      image: customersupport,
+      type: "horizontal",
     },
-  ];
+  };
 
   return (
-    <div className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-purple-50 to-white">
-      <div className="max-w-7xl mx-auto text-center mb-12">
-        <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">Why Choose Us?</h2>
-        <p className="text-lg text-gray-700 max-w-2xl mx-auto">
-          If the product and its features themselves are not enough, here are a few more reasons to pick us.
-        </p>
-        <button className="mt-6 bg-purple-600 hover:bg-purple-700 text-white font-semibold px-8 py-3 rounded-full transition-colors duration-200">
-          Join Waitlist
-        </button>
+    <section className="px-6 md:px-26 py-16 max-w-7xl mx-auto space-y-20">
+        <div>
+            <h1>
+                Why Choose Us?
+            </h1>
+            <p>
+                Beyond our powerful features, here are a few more reasons coaches love choosing Coach Club.
+            </p>
+        </div>
+      {/* BLOCK 1 */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {/* LEFT — VERTICAL */}
+        <FeatureCard data={block1.leftVertical} />
+
+        {/* RIGHT — TWO HORIZONTAL */}
+        <div className="space-y-6">
+          <FeatureCard data={block1.rightTop} />
+          <FeatureCard data={block1.rightBottom} />
+        </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {features.map((feature, idx) => (
-          <div key={idx} className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-purple-100">
-            <div className="flex items-start justify-between mb-4">
-              <h3 className="text-2xl font-bold text-black pr-4">{feature.title}</h3>
-              <div className="p-3 bg-purple-100 rounded-xl flex-shrink-0">
-                {feature.icon}
-              </div>
-            </div>
-            <p className="text-gray-700 leading-relaxed">{feature.description}</p>
-          </div>
-        ))}
+      {/* BLOCK 2 */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {/* LEFT — TWO HORIZONTAL */}
+        <div className="space-y-6">
+          <FeatureCard data={block2.leftTop} />
+          <FeatureCard data={block2.leftBottom} />
+        </div>
+
+        {/* RIGHT — VERTICAL */}
+        <FeatureCard data={block2.rightVertical} />
       </div>
+    </section>
+  );
+}
+
+function FeatureCard({ data }) {
+  const isVertical = data.type === "vertical";
+
+  return (
+    <div
+      className={`
+        rounded-2xl p-6 bg-white transition-all duration-300 
+        border border-purple-300 
+        shadow-[0_4px_20px_rgba(168,85,247,0.15)]
+        hover:shadow-[0_6px_30px_rgba(168,85,247,0.30)]
+        hover:border-purple-500
+
+        /* MOBILE = ALWAYS VERTICAL */
+        flex flex-col
+
+        /* DESKTOP LOGIC */
+        md:${isVertical ? "flex-col h-full" : "flex-row items-center justify-between"}
+      `}
+    >
+      {/* TEXT */}
+      <div className={`md:${isVertical ? "" : "flex-1"}`}>
+        <h3 className="text-2xl font-bold text-purple-950">{data.title}</h3>
+        <p className={`text-gray-600 text-base mt-1 ${isVertical ? "px-4 pt-4":"pr-1"}`}>{data.description}</p>
+      </div>
+
+      {/* IMAGE */}
+      <img
+        src={data.image}
+        alt={data.title}
+        className={`
+          rounded-xl object-contain mt-4
+          md:mt-0 md:${isVertical ? "w-full h-84 mt-16 pt-16" : "w-50 h-50 ml-4"}
+        `}
+      />
     </div>
   );
 }

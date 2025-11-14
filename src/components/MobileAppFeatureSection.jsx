@@ -8,7 +8,7 @@ import {CreditCard,
   ThumbsUp,
   Smartphone,
 } from "lucide-react";
-import mobileImg from "../assets/mockup.png";
+import mobileImg from "../assets/mockup.webp";
 
 export default function MobileAppSection() {
   const leftFeatures = [

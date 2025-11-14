@@ -52,7 +52,7 @@ const OurCombinedFeature = () => {
         {/* Left text */}
         <div className="lg:w-1/3 text-left z-20">
           <h4 className="text-[#6E0ACE] rounded font-semibold uppercase tracking-wide">
-            Why COACH CLUB
+            Our Features
           </h4>
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mt-2 mb-4 leading-tight">
             Everything you need to run people operations

@@ -25,8 +25,8 @@ export default function Landingpages() {
       <Business/>
       <DesktopFeature />
       <MobileAppSection/>
-      <FeatureSectionNew/>
       <SwipeFeaturesSection />
+      <FeatureSectionNew/>
       <ForWhomSection />
       <SupportSection/>
       <CallToActionSection />

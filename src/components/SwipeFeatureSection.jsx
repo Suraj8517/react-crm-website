@@ -27,7 +27,7 @@ const SwipeFeaturesSection = () => {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            Why Choose Us?
+           Our Features
           </motion.h2>
           <motion.p
             className="mt-4 text-lg text-gray-600"
