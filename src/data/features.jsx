@@ -11,7 +11,6 @@ import payments from "../assets/Payments -_ List of Payments 5.jpg";
 import client_progress from "../assets/Clients -_ Progress -_ Progress Images.jpg";
 import workflow from "../assets/Workflow.jpg";
 import engage from "../assets/interactions.png";
-import logo from "../assets/Vmax Logo 2.png";
 import finance from "../assets/finance.png";
 const features = [
   {
@@ -66,7 +65,7 @@ const features = [
   {
     title: "Finance Management",
     shortTitle: "Finance",
-    desc: "Easily manage revenues, expenses, and memberships with clear financial reports and insights for better decision making.",
+    desc: "Easily manage revenues and payment with clear financial reports and insights for better decision making.",
     img: finance,
     icon: <MdPayments />,
   },

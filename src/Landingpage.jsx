@@ -14,7 +14,7 @@ import SupportSection from "./components/SupportSection";
 import LogoSwipper from "./components/LogoSwipper";
 import MobileAppSection from "./components/MobileAppFeatureSection";
 import Business from "./components/BusinessGrowthSection" ;
-import FeatureSectionNew from "./components/NewFeatureSection"
+import WhyUsSection from "./components/NewFeatureSection"
 
 export default function Landingpages() {
   return (
@@ -24,9 +24,9 @@ export default function Landingpages() {
       <LogoSwipper/>
       <Business/>
       <DesktopFeature />
-      <MobileAppSection/>
       <SwipeFeaturesSection />
-      <FeatureSectionNew/>
+      <MobileAppSection/>
+      <WhyUsSection/>
       <ForWhomSection />
       <SupportSection/>
       <CallToActionSection />

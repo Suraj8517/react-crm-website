@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import logo from "../assets/Vmax Logo 2.png";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);

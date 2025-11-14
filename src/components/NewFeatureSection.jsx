@@ -4,11 +4,13 @@ import report from "../assets/diagonostic-report.jpg";
 import security from "../assets/security.jpg";
 import customersupport from "../assets/customer-support.webp";
 import freeresources from "../assets/free-resources.webp";
-import app from "../assets/mobile-app.webp";
+import mobileapp from "../assets/mobile-app.webp";
+import { motion } from "framer-motion";
 
 
 
-export default function WhySection() {
+
+export default function WhyUsSection() {
   const block1 = {
     leftVertical: {
       title: "Integrations",
@@ -45,7 +47,7 @@ export default function WhySection() {
       title: "Branded Apps",
       description:
         "Deliver your coaching experience through a beautifully branded mobile app that reflects your identity at every touchpoint. Enjoy personalized dashboards, tailored features, and a smooth interface designed to enhance client engagement. All of this comes ready-to-use—no coding, configuration, or technical setup required—so you can focus entirely on coaching while offering a professional, high-quality mobile experience.",
-      image: app,
+      image: mobileapp,
       type: "vertical",
     },
     leftBottom: {
@@ -58,15 +60,27 @@ export default function WhySection() {
   };
 
   return (
-    <section className="px-6 md:px-26 py-16 max-w-7xl mx-auto space-y-20">
-        <div>
-            <h1>
+    <section className="px-6 md:px-26 py-26 max-w-7xl mx-auto space-y-20">
+        <div className="text-center mb-16">
+                  <motion.h2
+                    className="text-3xl sm:text-4xl font-extrabold text-gray-900"
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6 }}
+                    viewport={{ once: true }}
+                  >
                 Why Choose Us?
-            </h1>
-            <p>
+                  </motion.h2>
+                  <motion.p
+                    className="mt-4 text-lg text-gray-600"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.2 }}
+                    viewport={{ once: true }}
+                  >
                 Beyond our powerful features, here are a few more reasons coaches love choosing Coach Club.
-            </p>
-        </div>
+                  </motion.p>
+                </div>
       {/* BLOCK 1 */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {/* LEFT — VERTICAL */}
@@ -107,7 +121,7 @@ function FeatureCard({ data }) {
         hover:border-purple-500
 
         /* MOBILE = ALWAYS VERTICAL */
-        flex flex-col
+        flex flex-col min-h-[320px]
 
         /* DESKTOP LOGIC */
         md:${isVertical ? "flex-col h-full" : "flex-row items-center justify-between"}

@@ -3,7 +3,6 @@ import { MdManageAccounts } from 'react-icons/md';
 import { FaUsers } from "react-icons/fa6";
 import { AiFillSchedule } from "react-icons/ai";
 import { GiProgression } from "react-icons/gi";
-import logo from '../assets/Vmax Logo 2.png';
 import lead from '../assets/card-img-1.png';
 import client from '../assets/card-img-2.png';
 import appointment from '../assets/card-img-3.png';
