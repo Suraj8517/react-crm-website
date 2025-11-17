@@ -14,8 +14,8 @@ import SupportSection from "./components/SupportSection";
 import LogoSwipper from "./components/LogoSwipper";
 import MobileAppSection from "./components/MobileAppFeatureSection";
 import Business from "./components/BusinessGrowthSection" ;
-import WhyUsSection from "./components/NewFeatureSection"
-
+import WhyUsSection from "./components/NewFeatureSection";
+import SuccessSection from "./components/successSection";
 export default function Landingpages() {
   return (
     <div className="min-h-screen bg-white-50 text-gray-900 antialiased">
@@ -28,7 +28,7 @@ export default function Landingpages() {
       <MobileAppSection/>
       <WhyUsSection/>
       <ForWhomSection />
-      <SupportSection/>
+      <SuccessSection/>
       <CallToActionSection />
       <TestimonialSection />
       <FAQSection />

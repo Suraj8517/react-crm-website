@@ -6,7 +6,7 @@ const ForWhomSection = () => {
   return (
     <section
       id="for-whom"
-      className="relative max-w-7xl mx-auto px-6 lg:px-12 py-10 flex flex-col lg:flex-row items-center gap-10 my-25"
+      className="relative max-w-7xl mx-auto px-6 lg:px-12 py-10 flex flex-col lg:flex-row items-center gap-10 lg:my-25 sm:my-10"
     >
       {/* Top-right decorative circle */}
       <img

@@ -70,7 +70,7 @@ export default function TestimonialSection() {
             What Our Clients Say
           </h2>
           <p className="text-black/80 text-base md:text-lg mt-5 mb-5">
-            Trusted by nutritionists, dietitians, and wellness professionals worldwide
+            Trusted by coaches and wellness professionals worldwide.
           </p>
         </div>
 

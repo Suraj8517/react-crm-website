@@ -23,7 +23,7 @@ export default function HeroCarouselMobile({ heroImage, setHeroImage, setIsPause
             key={i}
             onClick={() => { setHeroImage(i); setIsPaused(true); }}
             className={`flex items-center gap-2 px-3 py-2 rounded-lg border text-sm font-medium whitespace-nowrap transition
-              ${heroImage === i ? 'bg-white text-purple-600 border-purple-600' : 'bg-purple-600 text-white border-white'}`}>
+              ${heroImage === i ? 'bg-white text-[#2E005C] border-[#2E005C]' : 'bg-gradient-to-b from-[#7025a5] to-[#2E005C] text-white border-white'}`}>
             <span className="text-xl">{f.icon}</span>
             <span className="text-sm sm:text-base">{f.shortTitle}</span>
           </button>
