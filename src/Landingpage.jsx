@@ -16,6 +16,7 @@ import MobileAppSection from "./components/MobileAppFeatureSection";
 import Business from "./components/BusinessGrowthSection" ;
 import WhyUsSection from "./components/NewFeatureSection";
 import SuccessSection from "./components/successSection";
+import BusinessResultsSection from "./components/BusinessResultsSection";
 export default function Landingpages() {
   return (
     <div className="min-h-screen bg-white-50 text-gray-900 antialiased">
@@ -28,9 +29,10 @@ export default function Landingpages() {
       <MobileAppSection/>
       <WhyUsSection/>
       <ForWhomSection />
-      <SuccessSection/>
-      <CallToActionSection />
+      <BusinessResultsSection/>
       <TestimonialSection />
+       <SuccessSection/>
+      <CallToActionSection />
       <FAQSection />
       <Footer />
       

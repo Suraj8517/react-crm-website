@@ -1,11 +1,19 @@
 import React from "react";
+import fitkid from "../assets/fitkid.png";
+import fitdad from "../assets/fitdad.png";
+import miracle from "../assets/miracle.png";
+import fitmomclub from "../assets/fitmomclub.jpg";
+
+
+
 
 const clientLogos = [
-  { name: "FitMom Club", logo: "/logos/clinic.png" },
-  { name: "VMax", logo: "/logos/frommonday.png" },
-  { name: "Miracle", logo: "/logos/healthtotal.png" },
-  { name: "F2F", logo: "/logos/healthtotal.png" },
-  { name: "LK", logo: "/logos/healthtotal.png" },
+  { name: "FitMom Club", logo: fitmomclub },
+  { name: "FitMom Miracle", logo: miracle },
+  { name: "Yours Mindfully", logo: "/logos/healthtotal.png" },
+  { name: "FitKids Club", logo: fitkid },
+    { name: "FitDad Club", logo: fitdad },
+
 ];
 
 export default function ClientLogoSection() {
@@ -27,14 +35,14 @@ export default function ClientLogoSection() {
                 key={index}
                 className="flex items-center justify-center flex-shrink-0"
               >
-                <h4 className="text-base sm:text-xl md:text-3xl text-black-700 font-bold whitespace-nowrap">
+                {/*<h4 className="text-base sm:text-xl md:text-3xl text-black-700 font-bold whitespace-nowrap">
                   {client.name}
-                </h4>
-                {/* <img
+                </h4>*/}
+                <img
                   src={client.logo}
                   alt={client.name}
-                  className="h-8 sm:h-10 md:h-12 object-contain opacity-90 hover:opacity-100 transition"
-                /> */}
+                  className="h-12 sm:h-10 md:h-16 object-contain opacity-90 hover:opacity-100 transition"
+                /> 
               </div>
             ))}
           </div>

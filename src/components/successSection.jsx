@@ -6,30 +6,31 @@ const iconWrapper =
 
 const features = [
   {
-    title: "Built for Long-Term Growth",
+    title: "Built to Scale Your Coaching",
     description:
-      "Unlock faster ROI with a platform that adapts as your business expands. Scale your customer lifecycle effortlessly.",
+      "Grow your client base with a platform that adapts as you do. Manage more clients, programs, and tasks without slowing down.",
     icon: <TrendingUp className="w-10 h-10 text-purple-600" />,
   },
   {
-    title: "Reliable at Any Volume",
+    title: "Reliable for Every Client Load",
     description:
-      "Enterprise-grade stability and performance designed to handle even the highest customer volumes without downtime.",
+      "A stable, high-performance system built to handle hundreds of clients, programs, and daily activities without interruptions.",
     icon: <ShieldCheck className="w-10 h-10 text-purple-600" />,
   },
   {
-    title: "Experience That Leads",
+    title: "Designed with Coaching Expertise",
     description:
-      "A platform backed by years of innovation, trusted by leading brands for early access to world-class capabilities.",
+      "Built with industry insights and tested by top coaches to deliver smart tools, intuitive workflows, and real coaching impact.",
     icon: <Sparkles className="w-10 h-10 text-purple-600" />,
   },
   {
-    title: "Support with Real Experts",
+    title: "Always-On Expert Assistance",
     description:
-      "Get fast, human support from specialists who help you grow with confidence and achieve ambitious goals.",
+      "Get fast, human support from experts who understand coaching workflows and help you grow your business with confidence.",
     icon: <Headphones className="w-10 h-10 text-purple-600" />,
   },
 ];
+
 
 export default function WhyUsSection() {
   return (
