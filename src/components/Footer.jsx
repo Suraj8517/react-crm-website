@@ -27,7 +27,7 @@ export default function Footer() {
 </p>           
           </div>
 
-          {/* Quick Links */}
+          {/* Quick Links 
           <div>
             <h3 className="font-semibold text-white mb-3">Quick Links</h3>
             <ul className="space-y-2 text-sm text-gray-200">
@@ -50,7 +50,7 @@ export default function Footer() {
               </li>
             </ul>
           </div>
-
+*/}
           {/* Resources */}
           <div>
             <h3 className="font-semibold text-white mb-3">Resources</h3>
