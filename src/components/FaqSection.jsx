@@ -4,14 +4,14 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const faqs = [
   {
-    question: "What is COACH360 CRM used for?",
+    question: "What is Coach Club used for?",
     answer:
-      "COACH360 CRM helps wellness professionals organize client information, track progress, and manage their daily operations more efficiently.",
+      "Coach Club helps wellness professionals organize client information, track progress, and manage their daily operations more efficiently.",
   },
   {
     question: "Do I need technical skills to use it?",
     answer:
-      "No, COACH360 CRM is built to be simple and user-friendly, so you can focus on your work without worrying about technical setup.",
+      "No, Coach Club is built to be simple and user-friendly, so you can focus on your work without worrying about technical setup.",
   },
   {
     question: "Can I manage multiple clients at the same time?",
@@ -42,7 +42,7 @@ export default function FAQSection() {
             Frequently Asked Questions
           </h2>
           <p className="text-gray-600 text-lg">
-            Find answers to the most common questions about <span className="font-bold text-purple-900 ">COACH360</span> CRM.  
+            Find answers to the most common questions about <span className="font-bold text-purple-900 ">Coach Club</span> CRM.  
             If you still need help, our support team is always here.
           </p>
         </div>
