@@ -5,7 +5,7 @@ import features from "../data/features";
 import HeroCarouselDesktop from "./HeroCarouselDesktop";
 import HeroCarouselMobile from "./HeroCarouselMobile";
 
-export default function HeroSection() {
+export default function HeroSection({ onOpenForm }) {
   const [heroImage, setHeroImage] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
 
@@ -45,7 +45,7 @@ With our all-in-one platform, coaches can manage clients, track progress, and gr
           <button className="px-4 py-1 rounded-full font-semibold bg-gradient-to-b from-[#7025a5] to-[#49157d] text-white transition-all duration-300 hover:from-[#9b2aec] hover:to-[#52059f]">
  Get Started
 </button>
-          <button className="bg-purple-900 px-3 py-2 rounded-full font-semibold text-white hover:bg-purple-800 hover:text-white border border-white transition">
+          <button onClick={onOpenForm} className="bg-purple-900 px-3 py-2 rounded-full font-semibold text-white hover:bg-purple-800 hover:text-white border border-white transition">
             Book A Demo
           </button>
         </div>

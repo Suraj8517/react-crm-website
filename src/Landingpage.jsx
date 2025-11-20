@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
 import DesktopFeature from "./components/FeatureSectionDesktop";
@@ -13,29 +13,40 @@ import IconBoxCarousel from "./components/IconBox";
 import SupportSection from "./components/SupportSection";
 import LogoSwipper from "./components/LogoSwipper";
 import MobileAppSection from "./components/MobileAppFeatureSection";
-import Business from "./components/BusinessGrowthSection" ;
+import Business from "./components/BusinessGrowthSection";
 import WhyUsSection from "./components/NewFeatureSection";
 import SuccessSection from "./components/successSection";
 import BusinessResultsSection from "./components/BusinessResultsSection";
+
+// ⬇️ IMPORT THE FORM
+import DemoForm from "./components/DemoForm";
+
 export default function Landingpages() {
+  const [openForm, setOpenForm] = useState(false);
+
   return (
     <div className="min-h-screen bg-white-50 text-gray-900 antialiased">
-      <Navbar />
-      <HeroSection />
-      <LogoSwipper/>
-      <Business/>
+      
+      {/* Pass the function to Navbar */}
+      <Navbar onOpenForm={() => setOpenForm(true)} />
+
+      {/* Show the form when openForm is true */}
+      {openForm && <DemoForm onClose={() => setOpenForm(false)} />}
+
+<HeroSection onOpenForm={() => setOpenForm(true)} />
+      <LogoSwipper />
+      <Business />
       <DesktopFeature />
       <SwipeFeaturesSection />
-      <MobileAppSection/>
-      <WhyUsSection/>
+      <MobileAppSection />
+      <WhyUsSection />
       <ForWhomSection />
-      <BusinessResultsSection/>
+      <BusinessResultsSection />
       <TestimonialSection />
-       <SuccessSection/>
+      <SuccessSection />
       <CallToActionSection />
       <FAQSection />
       <Footer />
-      
     </div>
   );
 }
