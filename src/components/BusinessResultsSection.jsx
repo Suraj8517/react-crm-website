@@ -161,7 +161,7 @@ export default function BusinessResult() {
                       />
 
                       {/* Full Overlay */}
-                      <div className="absolute inset-0 bg-gradient-to-tl from-black/90 to-purple-900/95 pointer-events-none rounded-xl" />
+                      <div className="absolute inset-0 bg-gradient-to-tl from-black/90 to-purple-950/95 pointer-events-none rounded-xl" />
 
                       {/* Card Content */}
                       <div className="relative z-10 flex flex-col h-full p-5">
@@ -174,7 +174,7 @@ export default function BusinessResult() {
                         )}
 
                         <div className="mt-auto">
-                          <h3 className="text-base text-white">
+                          <h3 className="text-sm text-white">
                             {item.title}
                           </h3>
                         </div>

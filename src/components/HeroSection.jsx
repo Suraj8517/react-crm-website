@@ -36,12 +36,11 @@ export default function HeroSection() {
   </h5>
 </div>
 
-        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold drop-shadow-lg">
-          Train Smarter. Manage Better.<br/> Grow Faster.
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-extrabold drop-shadow-lg">
+          Coaching, tracking, scheduling…<br/> juggling too many things at once?
         </h1>
         <p className="mt-4 text-base sm:text-lg md:text-xl lg:text-xl max-w-lg sm:max-w-xl md:max-w-2xl">
-          An all-in-one platform designed for coaches to manage clients, track progress, and grow their business effortlessly.
-        </p>
+With our all-in-one platform, coaches can manage clients, track progress, and grow their business effortlessly — all from one place.        </p>
         <div className="sm:flex mt-6 gap-4 mb-6">
           <button className="px-4 py-1 rounded-full font-semibold bg-gradient-to-b from-[#7025a5] to-[#49157d] text-white transition-all duration-300 hover:from-[#9b2aec] hover:to-[#52059f]">
  Get Started
