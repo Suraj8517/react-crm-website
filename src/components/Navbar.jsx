@@ -15,7 +15,7 @@ export default function Navbar() {
 
       {menuOpen && (
         <div className="md:hidden bg-white border-t border-gray-200 px-4 py-3 flex flex-col gap-3">
-          <button className="bg-gradient-to-b from-[#7025a5] to-[#2E005C] text-white px-4 py-2 rounded-xl shadow-md">Get started</button>
+          <button className="bg-gradient-to-b from-[#7025a5] to-[#2E005C] text-white px-4 py-2 rounded-xl shadow-md">Book A Demo</button>
         </div>
       )}
     </header>

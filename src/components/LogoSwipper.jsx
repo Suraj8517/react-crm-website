@@ -3,6 +3,9 @@ import fitkid from "../assets/fitkid.png";
 import fitdad from "../assets/fitdad.png";
 import miracle from "../assets/miracle.png";
 import fitmomclub from "../assets/fitmomclub.jpg";
+import yoursmindfully from "../assets/yours-mindfully.png";
+import lk from "../assets/lk.jpg";
+
 
 
 
@@ -10,9 +13,10 @@ import fitmomclub from "../assets/fitmomclub.jpg";
 const clientLogos = [
   { name: "FitMom Club", logo: fitmomclub },
   { name: "FitMom Miracle", logo: miracle },
-  { name: "Yours Mindfully", logo: "/logos/healthtotal.png" },
+  { name: "Yours Mindfully", logo: yoursmindfully },
   { name: "FitKids Club", logo: fitkid },
     { name: "FitDad Club", logo: fitdad },
+     { name: "LK", logo: lk },
 
 ];
 
