@@ -11,8 +11,11 @@ export default function Footer() {
           {/* Brand Info */}
           <div>
             <h2 className="font-bold text-white text-2xl mb-2">COACH CLUB</h2>
-            <p className="text-purple-200 text-sm font-medium mb-3">
+            <p className="text-purple-200 text-sm font-medium">
               #1 Software for Coaches
+            </p>
+            <p className="text-purple-200 text-sm font-medium mb-3">
+              Powered by VMax health tech
             </p>
             <p className="text-gray-200 text-sm leading-relaxed">
               Empowering coaches to build, manage, and grow their business with ease.
@@ -60,6 +63,7 @@ export default function Footer() {
                   FAQs
                 </a>
               </li>
+                {/*
               <li>
                 <a href="#support" className="hover:text-white transition">
                   Support
@@ -70,10 +74,11 @@ export default function Footer() {
                   Privacy Policy
                 </a>
               </li>
+              */}
             </ul>
           </div>
 
-          {/* Social */}
+          {/* Social 
           <div>
             <h3 className="font-semibold text-white mb-3">Connect With Us</h3>
             <div className="flex gap-4 mt-2">
@@ -95,6 +100,7 @@ export default function Footer() {
               </a>
             </div>
           </div>
+          */}
         </div>
 
         {/* Divider */}
