@@ -8,19 +8,19 @@ const testimonials = [
     name: "Loga Prithika",
     role: "LK",
     feedback:
-      "I struggled to grow my client base because marketing and lead management were overwhelming. The platform’s built-in client tracking and automated reminders have streamlined my workflow. I’m now reaching more clients with less effort, and my revenue has increased noticeably.",
+      "We wanted a scalable way to track client success and ensure accountability among our coaching staff. Coach Club gave us full visibility into all programs and results. Not only has it improved team coordination, but it has also helped our club retain clients more effectively",
   },
   {
     name: "John",
     role: "Coach FitMom Club",
     feedback:
-      "I struggled to grow my client base because marketing and lead management were overwhelming. The platform’s built-in client tracking and automated reminders have streamlined my workflow. I’m now reaching more clients with less effort, and my revenue has increased noticeably.",
+      "I struggled to grow my client base because marketing and lead management were overwhelming. Coach Club’s built-in client tracking and automated reminders have streamlined my workflow. I’m now reaching more clients with less effort, and my revenue has increased noticeably.",
   },
   {
     name: "Praveen",
     role: "Client Success Representative, FitMom Club",
     feedback:
-      "Handling inquiries and follow-ups manually was exhausting and error-prone. The platform’s automated workflows and lead tracking system have made our sales process smooth and efficient. We can now focus on converting leads rather than chasing them.",
+      "Handling inquiries and follow-ups manually was exhausting and error-prone. Coach Club’s automated workflows and lead tracking system have made our sales process smooth and efficient. We can now focus on converting leads rather than chasing them.",
   },
 ];
 
@@ -88,7 +88,7 @@ export default function TestimonialSection() {
                 if (offset.x > 100) paginate(-1);
                 else if (offset.x < -100) paginate(1);
               }}
-              className=" rounded-xl shadow-xl flex flex-col w-full max-w-xl mx-auto min-h-[220px] p-6 md:p-8 relative z-10 border border-gray-200 md:border-0 md:shadow-xl"
+              className="shadow-xl flex flex-col w-full max-w-xl mx-auto min-h-[220px] p-6 md:p-8 relative z-10 border border-gray-200 md:border-0 md:shadow-xl"
             >
               {/* Feedback Text */}
               <p className="text-gray-600 italic leading-relaxed text-sm md:text-lg mb-4">

@@ -75,24 +75,27 @@ export default function FormToSheet({ onClose }) {
   };
 
   return (
-    <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
-      <div className="bg-white rounded-xl w-full max-w-md p-6 relative shadow-lg sm:p-8">
+    <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-2">
+      <div className="bg-white rounded-xl w-full max-w-md p-4 relative shadow-lg sm:p-6">
         {/* Close button */}
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 text-gray-500 hover:text-gray-700"
+          className="absolute top-3 right-3 text-gray-500 hover:text-gray-700"
         >
           ✕
         </button>
 
-        <h2 className="text-2xl font-bold text-purple-800 mb-4 text-center">
+        <h2 className="text-xl font-bold text-purple-800 mb-1 text-center">
           Book A Demo
         </h2>
+        <p className="text-sm text-gray-500 mb-3 text-center">
+          Fill out the form below and our team will contact you shortly.
+        </p>
 
         {/* Status message */}
         {status.message && (
           <p
-            className={`mb-4 text-center font-medium ${
+            className={`mb-3 text-center font-medium ${
               status.type === "error" ? "text-red-500" : "text-green-500"
             }`}
           >
@@ -101,14 +104,14 @@ export default function FormToSheet({ onClose }) {
         )}
 
         {/* Form */}
-        <form onSubmit={handleSubmit} className="flex flex-col gap-3">
+        <form onSubmit={handleSubmit} className="flex flex-col gap-2">
           <input
             type="text"
             name="name"
             placeholder="Name"
             value={formData.name}
             onChange={handleChange}
-            className="border border-gray-300 rounded-lg px-3 py-2 w-full focus:outline-none focus:ring-2 focus:ring-purple-500"
+            className="border border-gray-300 rounded-lg px-2 py-1.5 w-full focus:outline-none focus:ring-2 focus:ring-purple-500 text-sm"
           />
 
           <input
@@ -117,16 +120,16 @@ export default function FormToSheet({ onClose }) {
             placeholder="Email"
             value={formData.email}
             onChange={handleChange}
-            className="border border-gray-300 rounded-lg px-3 py-2 w-full focus:outline-none focus:ring-2 focus:ring-purple-500"
+            className="border border-gray-300 rounded-lg px-2 py-1.5 w-full focus:outline-none focus:ring-2 focus:ring-purple-500 text-sm"
           />
 
           {/* Phone with country code */}
-          <div className="flex flex-col sm:flex-row gap-2">
+          <div className="flex flex-col sm:flex-row gap-1">
             <select
               name="countryCode"
               value={formData.countryCode}
               onChange={handleChange}
-              className="border border-gray-300 rounded-lg px-3 py-2 w-full sm:w-28 focus:outline-none focus:ring-2 focus:ring-purple-500"
+              className="border border-gray-300 rounded-lg px-2 py-1.5 w-full sm:w-24 focus:outline-none focus:ring-2 focus:ring-purple-500 text-sm"
             >
               <option value="+91">+91 (IN)</option>
               <option value="+1">+1 (US)</option>
@@ -139,7 +142,7 @@ export default function FormToSheet({ onClose }) {
               placeholder="Phone"
               value={formData.phone}
               onChange={handleChange}
-              className="flex-1 border border-gray-300 rounded-lg px-3 py-2 w-full focus:outline-none focus:ring-2 focus:ring-purple-500"
+              className="flex-1 border border-gray-300 rounded-lg px-2 py-1.5 w-full focus:outline-none focus:ring-2 focus:ring-purple-500 text-sm"
             />
           </div>
 
@@ -149,7 +152,7 @@ export default function FormToSheet({ onClose }) {
             placeholder="Organization"
             value={formData.organization}
             onChange={handleChange}
-            className="border border-gray-300 rounded-lg px-3 py-2 w-full focus:outline-none focus:ring-2 focus:ring-purple-500"
+            className="border border-gray-300 rounded-lg px-2 py-1.5 w-full focus:outline-none focus:ring-2 focus:ring-purple-500 text-sm"
           />
 
           <input
@@ -158,18 +161,18 @@ export default function FormToSheet({ onClose }) {
             placeholder="Role"
             value={formData.role}
             onChange={handleChange}
-            className="border border-gray-300 rounded-lg px-3 py-2 w-full focus:outline-none focus:ring-2 focus:ring-purple-500"
+            className="border border-gray-300 rounded-lg px-2 py-1.5 w-full focus:outline-none focus:ring-2 focus:ring-purple-500 text-sm"
           />
 
-          {/* Submit Button with Spinner */}
+          {/* Submit Button */}
           <button
             type="submit"
-            className="bg-gradient-to-b from-[#7025a5] to-[#2E005C] text-white font-semibold py-2 rounded-xl shadow-md hover:brightness-105 transition flex justify-center items-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed"
+            className="bg-gradient-to-b from-[#7025a5] to-[#2E005C] text-white font-semibold py-1.5 rounded-xl shadow-md hover:brightness-105 transition flex justify-center items-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed text-sm"
             disabled={loading}
           >
             {loading && (
               <svg
-                className="animate-spin h-5 w-5 text-white"
+                className="animate-spin h-4 w-4 text-white"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
