@@ -130,7 +130,7 @@ export default function BusinessResult() {
                       bg-gradient-to-l from-[#551486] to-transparent pointer-events-none" />
                 </div>
                 <p className="text-purple-200 text-base">
-                  Quicker engagement with prospects
+                  Faster responses
                 </p>
               </div>
             </div>
@@ -138,7 +138,7 @@ export default function BusinessResult() {
 
           {/* RIGHT SLIDER */}
           <div className="md:col-span-1 lg:col-span-3">
-            <div className="flex gap-4 h-full overflow-x-auto md:overflow-x-hidden pb-2 scrollbar-hide snap-x snap-mandatory">
+            <div className="flex gap-4 h-full overflow-x-hidden pb-2 scrollbar-hide">
               <AnimatePresence initial={false}>
                 {getVisibleCards().map((item, idx) => (
                   <motion.div
@@ -147,8 +147,7 @@ export default function BusinessResult() {
                     animate={{ x: 0, opacity: 1 }}
                     exit={{ x: -300, opacity: 0 }}
                     transition={{ duration: 0.5 }}
-                    className="flex-shrink-0 snap-start
-                               w-full sm:w-[260px] md:w-[260px] lg:w-[280px]" // full width on mobile
+                    className="w-[200px] md:w-[260px] lg:w-[280px] flex-shrink-0"
                   >
                     <div className="relative rounded-2xl overflow-hidden border-2 border-purple-950/95 
                       hover:border-purple-400/50 transition-all group cursor-pointer h-[350px]">
@@ -175,7 +174,9 @@ export default function BusinessResult() {
                         )}
 
                         <div className="mt-auto">
-                          <h3 className="text-sm text-white">{item.title}</h3>
+                          <h3 className="text-sm text-white">
+                            {item.title}
+                          </h3>
                         </div>
                       </div>
 
@@ -203,6 +204,7 @@ export default function BusinessResult() {
                 <ChevronRight className="w-5 h-5" />
               </button>
             </div>
+
           </div>
         </div>
       </div>

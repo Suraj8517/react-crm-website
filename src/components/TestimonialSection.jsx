@@ -5,25 +5,22 @@ import "../App.css";
 
 const testimonials = [
   {
-    name: "Victoria Kolozian",
-    role: "Nutritionist, BSc, ND, Pn1",
+    name: "Loga Prithika",
+    role: "LK",
     feedback:
-      "Since I started to use this platform the time spent on meal planning and nutrition analysis has significantly decreased. The perfect link between me and my clients because we're connected, have access to all important data and track progress any time from anywhere in the world.",
-    image: "https://randomuser.me/api/portraits/women/65.jpg",
+      "I struggled to grow my client base because marketing and lead management were overwhelming. The platform’s built-in client tracking and automated reminders have streamlined my workflow. I’m now reaching more clients with less effort, and my revenue has increased noticeably.",
   },
   {
-    name: "Paul Lester",
-    role: "Performance Nutritionist @ Nova Centurion",
+    name: "John",
+    role: "Coach FitMom Club",
     feedback:
-      "The software is very user-friendly, enabling more effective discussions with clients. Overall my clients have been able to understand how data produced by the platform can be used such as distributing macronutrients more effectively around training and competition.",
-    image: "https://randomuser.me/api/portraits/men/22.jpg",
+      "I struggled to grow my client base because marketing and lead management were overwhelming. The platform’s built-in client tracking and automated reminders have streamlined my workflow. I’m now reaching more clients with less effort, and my revenue has increased noticeably.",
   },
   {
-    name: "Sophia Almeida",
-    role: "Sports Dietitian, Portugal",
+    name: "Praveen",
+    role: "Client Success Representative, FitMom Club",
     feedback:
-      "This platform has streamlined my workflow and made communication with clients seamless. It truly empowers nutrition professionals.",
-    image: "https://randomuser.me/api/portraits/women/32.jpg",
+      "Handling inquiries and follow-ups manually was exhausting and error-prone. The platform’s automated workflows and lead tracking system have made our sales process smooth and efficient. We can now focus on converting leads rather than chasing them.",
   },
 ];
 
@@ -56,26 +53,26 @@ export default function TestimonialSection() {
     }),
   };
 
-  const { name, role, feedback, image } = testimonials[current];
+  const { name, role, feedback } = testimonials[current];
 
   return (
     <section className="relative py-16 bg-white flex items-center justify-center mt-10">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 relative">
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 relative text-center">
         {/* Title */}
-        <div className="text-center mb-10">
+        <div className="mb-10">
           <h4 className="text-[#6E0ACE] rounded font-semibold uppercase tracking-wide">
             Testimonials
           </h4>
-          <h2 className="text-3xl md:text-4xl font-bold text-black mt-1">
+          <h2 className="text-2xl md:text-3xl font-bold text-black mt-1">
             What Our Clients Say
           </h2>
-          <p className="text-black/80 text-base md:text-lg mt-5 mb-5">
+          <p className="text-black/80 text-sm md:text-base mt-5 mb-5">
             Trusted by coaches and wellness professionals worldwide.
           </p>
         </div>
 
         {/* Card with Animation */}
-        <div className="relative w-full md:w-[500px] lg:w-[700px] mx-auto overflow-hidden">
+        <div className="relative w-full mx-auto overflow-hidden">
           <AnimatePresence custom={direction} mode="wait">
             <motion.div
               key={current}
@@ -87,40 +84,23 @@ export default function TestimonialSection() {
               drag="x"
               dragConstraints={{ left: 0, right: 0 }}
               dragElastic={1}
-              onDragEnd={(e, { offset, velocity }) => {
+              onDragEnd={(e, { offset }) => {
                 if (offset.x > 100) paginate(-1);
                 else if (offset.x < -100) paginate(1);
               }}
-              className="
-                bg-gradient-to-r from-white to-purple-300
-    rounded-xl shadow-xl 
-    flex flex-col md:flex-row 
-    w-full md:w-[500px] lg:w-[700px] 
-    min-h-[320px] md:min-h-[360px]   
-    overflow-hidden relative z-10 mx-auto
-    border border-gray-200 
-    md:border-0 md:shadow-xl
-              "
+              className=" rounded-xl shadow-xl flex flex-col w-full max-w-xl mx-auto min-h-[220px] p-6 md:p-8 relative z-10 border border-gray-200 md:border-0 md:shadow-xl"
             >
-              {/* Left side - Text */}
-              <div className="w-full md:w-1/2 p-6 md:p-8 flex flex-col justify-center text-center md:text-left">
-                <h3 className="text-xl md:text-2xl font-bold text-purple-800 mb-2">
+              {/* Feedback Text */}
+              <p className="text-gray-600 italic leading-relaxed text-sm md:text-lg mb-4">
+                “{feedback}”
+              </p>
+
+              {/* Name and Role */}
+              <div>
+                <h3 className="text-lg md:text-xl font-bold text-purple-800">
                   {name}
                 </h3>
-                <p className="text-gray-500 font-medium mb-4">{role}</p>
-                <p className="text-gray-600 italic leading-relaxed text-sm md:text-base">
-                  “{feedback}”
-                </p>
-              </div>
-
-              {/* Right side - Image */}
-              <div className="w-full md:w-1/2 relative clip-slant h-56 md:h-auto">
-                <img
-                  src={image}
-                  alt={name}
-                  className="w-full h-full object-cover grayscale"
-                />
-                <div className="absolute inset-0 bg-white/40"></div>
+                <p className="text-gray-500 text-sm">{role}</p>
               </div>
             </motion.div>
           </AnimatePresence>

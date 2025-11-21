@@ -105,7 +105,7 @@ export default function Footer() {
 
         {/* Divider */}
         <div className="border-t border-purple-500 mt-10 pt-6 text-center text-sm text-gray-200">
-          © {new Date().getFullYear()} Coach360. All rights reserved.
+          © {new Date().getFullYear()} Coach Club. All rights reserved.
         </div>
       </div>
     </footer>
