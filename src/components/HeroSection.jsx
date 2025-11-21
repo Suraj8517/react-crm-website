@@ -23,7 +23,7 @@ export default function HeroSection({ onOpenForm }) {
       <div className="absolute inset-0 bg-gradient-to-b from-[#7025a5] to-[#2E005C]"></div>
 
       {/* Hero Content */}
-      <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-4 md:px-6">
+      <div className=" absolute inset-0 flex flex-col items-center justify-center text-center text-white px-4 md:px-6">
         <div
   className="border border-amber-50 rounded-3xl py-1 px-4 
              flex items-center justify-center 
@@ -41,7 +41,7 @@ export default function HeroSection({ onOpenForm }) {
         </h1>
         <p className="mt-4 text-base sm:text-lg md:text-xl lg:text-xl max-w-lg sm:max-w-xl md:max-w-2xl">
 With our all-in-one platform, coaches can manage clients, track progress, and grow their business effortlessly — all from one place.        </p>
-        <div className="sm:flex mt-6 gap-4 mb-6">
+        <div className="sm:flex mt-6 gap-4 mb-10">
           <button className="px-4 py-1 rounded-full font-semibold bg-gradient-to-b from-[#7025a5] to-[#49157d] text-white transition-all duration-300 hover:from-[#9b2aec] hover:to-[#52059f]">
  Get Started
 </button>

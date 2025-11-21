@@ -18,22 +18,28 @@ import WhyUsSection from "./components/NewFeatureSection";
 import SuccessSection from "./components/successSection";
 import BusinessResultsSection from "./components/BusinessResultsSection";
 
-// ⬇️ IMPORT THE FORM
 import DemoForm from "./components/DemoForm";
+import ContactForm from "./components/ContactForm";
 
 export default function Landingpages() {
-  const [openForm, setOpenForm] = useState(false);
+  const [openDemoForm, setOpenDemoForm] = useState(false);
+  const [openContactForm, setOpenContactForm] = useState(false);
 
   return (
     <div className="min-h-screen bg-white-50 text-gray-900 antialiased">
       
-      {/* Pass the function to Navbar */}
-      <Navbar onOpenForm={() => setOpenForm(true)} />
+      {/* Pass functions to Navbar */}
+      <Navbar 
+        onOpenForm={() => setOpenDemoForm(true)} 
+        onOpenContactForm={() => setOpenContactForm(true)} 
+      />
 
-      {/* Show the form when openForm is true */}
-      {openForm && <DemoForm onClose={() => setOpenForm(false)} />}
+      {/* Show the modals */}
+      {openDemoForm && <DemoForm onClose={() => setOpenDemoForm(false)} />}
+      {openContactForm && <ContactForm onClose={() => setOpenContactForm(false)} />}
 
-<HeroSection onOpenForm={() => setOpenForm(true)} />
+      {/* Other sections */}
+      <HeroSection onOpenForm={() => setOpenDemoForm(true)} />
       <LogoSwipper />
       <Business />
       <DesktopFeature />
