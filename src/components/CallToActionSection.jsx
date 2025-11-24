@@ -3,7 +3,9 @@ import { ArrowRight, Sparkles, Zap } from "lucide-react";
 
 const CallToActionSection = () => {
   return (
+    
     <section className="relative py-20 bg-gradient-to-br from-purple-700 via-purple-800 to-purple-900 overflow-hidden">
+      
       {/* Animated background elements */}
       <div className="absolute inset-0">
         <div className="absolute top-20 left-10 w-32 h-32 bg-purple-500/20 rounded-full animate-float blur-3xl" />
@@ -14,6 +16,7 @@ const CallToActionSection = () => {
       <div className="container mx-auto px-6 relative z-10">
         {/* Main CTA Card */}
         <div className="max-w-4xl mx-auto">
+          
           <div className="relative bg-white/10 backdrop-blur-lg rounded-3xl shadow-2xl hover:shadow-purple-500/30 transition-all duration-500 p-10 md:p-14 overflow-hidden group border border-white/10">
             
             {/* Decorative elements */}

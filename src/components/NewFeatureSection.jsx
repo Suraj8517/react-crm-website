@@ -133,8 +133,8 @@ function FeatureCard({ data }) {
         src={data.image}
         alt={data.title}
         className={`
-          rounded-xl object-contain mt-4
-          ${isVertical ? "h-60 sm:h-52 md:h-80" : "h-32 sm:h-40 md:h-48 md:ml-4"}
+          rounded-xl object-contain mt-4 md:hidden lg:block sm:block
+          ${isVertical ? "h-60 sm:h-52 md:h-80 lg:object-cover mt-20" : "h-32 sm:h-40 md:h-48 md:ml-4"}
         `}
       />
     </div>

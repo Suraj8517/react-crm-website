@@ -7,9 +7,10 @@ import {
   Apple,
   LayoutDashboard,
   ClipboardPlus,
-  Smartphone,
+  HandHeart,
 } from "lucide-react";
 import mobileImg from "../assets/mockup.webp";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function MobileAppSection() {
   const leftFeatures = [
@@ -23,7 +24,7 @@ export default function MobileAppSection() {
     { icon: ScanHeart, title: "Daily Activity Monitoring" },
     { icon: LayoutDashboard, title: "Simple Dashboards" },
     { icon: ClipboardPlus, title: "In-App Lab Reports" },
-    { icon: Smartphone, title: "Built-in Calling" },
+    { icon: HandHeart, title: "Community Support" },
   ];
 
   const allFeatures = [...leftFeatures, ...rightFeatures];
@@ -36,6 +37,7 @@ export default function MobileAppSection() {
 
   return (
     <div className="bg-gradient-to-b from-[#4B0082] to-[#2E005C] mt-16 py-20 px-4">
+        
       <div className="max-w-7xl mx-auto flex flex-col items-center">
         
         {/* Heading */}

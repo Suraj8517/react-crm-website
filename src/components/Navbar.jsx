@@ -8,17 +8,16 @@ export default function Navbar({ onOpenForm, onOpenContactForm }) {
 
   return (
     <header className="sticky top-0 bg-white/80 backdrop-blur-md z-40 border-b border-gray-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-6 flex items-center justify-between">
         <h4 className="uppercase text-purple-800 text-xl font-bold">
           COACH CLUB
         </h4>
 
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-6 mr-4">
           {/* Desktop Contact Us */}
           <a
-            href="#"
             onClick={onOpenContactForm}
-            className="hidden md:inline-flex text-purple-800 text-sm font-medium hover:underline"
+            className="hidden md:inline-flex text-purple-800 text-base font-medium hover:text-purple-950"
           >
             Contact Us
           </a>
@@ -26,7 +25,7 @@ export default function Navbar({ onOpenForm, onOpenContactForm }) {
           {/* Desktop Book A Demo */}
           <button
             onClick={onOpenForm}
-            className="hidden md:inline-flex items-center gap-2 bg-gradient-to-b from-[#7025a5] to-[#2E005C] text-white text-sm px-4 py-2 rounded-xl shadow-md hover:brightness-105 transition"
+            className="hidden md:inline-flex items-center gap-3 bg-gradient-to-b from-[#7025a5] to-[#2E005C] text-white text-base px-6 py-1 rounded-xl shadow-md hover:brightness-105 transition"
           >
             Book A Demo
           </button>

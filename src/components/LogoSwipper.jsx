@@ -11,17 +11,19 @@ import lk from "../assets/lk.jpg";
 
 
 const clientLogos = [
+  { name: "FitKids Club", logo: fitkid },
+   { name: "Yours Mindfully", logo: yoursmindfully },
   { name: "FitMom Club", logo: fitmomclub },
+  { name: "LK", logo: lk },
   { name: "FitMom Miracle", logo: miracle },
   { name: "Yours Mindfully", logo: yoursmindfully },
-  { name: "FitKids Club", logo: fitkid },
     { name: "FitDad Club", logo: fitdad },
      { name: "LK", logo: lk },
 
 ];
 
 export default function ClientLogoSection() {
-  const logos = [...clientLogos, ...clientLogos]; // duplicate for seamless loop
+  const logos = [...clientLogos, ...clientLogos];
 
   return (
     <div className="bg-white flex flex-col items-center mt-50 sm:mt-60 md:mt-66 lg:mt-92 xl:mt-90">
