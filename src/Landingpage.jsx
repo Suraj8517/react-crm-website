@@ -48,7 +48,7 @@ if (loading) return <PageLoader />;
       <HeroSection onOpenForm={() => setOpenDemoForm(true)} />
       <LogoSwipper />
       <Business />
-      <DesktopFeature />
+      <DesktopFeature onOpenForm={() => setOpenDemoForm(true)} />
       <SwipeFeaturesSection />
       <MobileAppSection />
       <WhyUsSection />
@@ -56,7 +56,7 @@ if (loading) return <PageLoader />;
       <PerformanceSection/>
       <TestimonialSection />
       <SuccessSection />
-      <CallToActionSection />
+      <CallToActionSection onOpenForm={() => setOpenDemoForm(true)}/>
       <FAQSection />
       <Footer />
     </div>

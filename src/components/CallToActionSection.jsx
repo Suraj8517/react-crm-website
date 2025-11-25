@@ -1,7 +1,7 @@
 import React from "react";
 import { ArrowRight, Sparkles, Zap } from "lucide-react";
 
-const CallToActionSection = () => {
+const CallToActionSection = ({onOpenForm}) => {
   return (
     
     <section className="relative py-20 bg-gradient-to-br from-purple-700 via-purple-800 to-purple-900 overflow-hidden">
@@ -71,8 +71,8 @@ const CallToActionSection = () => {
 
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <button className="px-6 py-3 bg-gradient-to-r from-purple-500 to-purple-700 text-white font-semibold rounded-lg shadow-lg hover:shadow-purple-400/40 transition text-sm md:text-base">
-                  Get Started
+                <button onClick={onOpenForm}  className="px-6 py-3 bg-gradient-to-r from-purple-500 to-purple-700 text-white font-semibold rounded-lg shadow-lg hover:shadow-purple-400/40 transition text-sm md:text-base">
+                  Request Demo
                 </button>
               </div>
             </div>

@@ -17,7 +17,7 @@ const testimonials = [
       "I struggled to grow my client base because marketing and lead management were overwhelming. Coach Club’s built-in client tracking and automated reminders have streamlined my workflow. I’m now reaching more clients with less effort, and my revenue has increased noticeably.",
   },
   {
-    name: "Praveen",
+    name: "Pramod",
     role: "Client Success Representative, FitMom Club",
     feedback:
       "Handling inquiries and follow-ups manually was exhausting and error-prone. Coach Club’s automated workflows and lead tracking system have made our sales process smooth and efficient. We can now focus on converting leads rather than chasing them.",
