@@ -6,7 +6,7 @@ import "../App.css";
 const testimonials = [
   {
     name: "Loga Prithika",
-    role: "LK",
+    role: "FitMom Club",
     feedback:
       "We wanted a scalable way to track client success and ensure accountability among our coaching staff. Coach Club gave us full visibility into all programs and results. Not only has it improved team coordination, but it has also helped our club retain clients more effectively",
   },

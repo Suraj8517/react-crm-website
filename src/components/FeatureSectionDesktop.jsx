@@ -43,10 +43,10 @@ const OurCombinedFeature = ({onOpenForm}) => {
   const [activeMobile, setActiveMobile] = useState(null);
 
   return (
-    <section className="relative pt-6 pb-24 px-4 lg:px-20 bg-white ">
+<section className="relative pt-6 pb-24 px-4 lg:px-20 2xl:px-32 bg-white">
       
       {/* Desktop layout */}
-      <div className="hidden lg:flex max-w-6xl mx-auto flex-row items-start gap-10 mt-30">
+      <div className="hidden lg:flex max-w-6xl 2xl:max-w-9xl mx-auto flex-row items-start gap-10 mt-30">
 
         {/* Left text */}
         <div className="lg:w-1/3 text-left z-20">
@@ -60,7 +60,7 @@ const OurCombinedFeature = ({onOpenForm}) => {
             From client management to payments — <span className="font-bold text-purple-900 ">COACH CLUB</span> streamlines your fitness & wellness business in one place.
           </p>
           <button  onClick={onOpenForm} className="bg-gradient-to-b from-[#4B0082] to-[#2E005C] text-white font-semibold px-6 py-3 rounded-full shadow-md hover:bg-[#5e0ace] transition">
-            Request demo →
+            Book a Demo →
           </button>
         </div>
 
@@ -120,7 +120,7 @@ const OurCombinedFeature = ({onOpenForm}) => {
        From client management to payments — Coach Club streamlines your fitness & wellness business in one place.
 </p>
     <button onClick={onOpenForm} className="bg-[#6E0ACE] text-white font-semibold px-6 py-3 rounded-full shadow-md hover:bg-[#5e0ace] transition">
-      Request demo →
+      Book a Demo →
     </button>
   </div>
 
@@ -163,7 +163,7 @@ const OurCombinedFeature = ({onOpenForm}) => {
       From client management to payments — <span className="font-bold text-purple-900">COACH CLUB</span> streamlines your fitness & wellness business in one place.
     </p>
     <button onClick={onOpenForm}  className="bg-gradient-to-b from-[#4B0082] to-[#2E005C] text-white font-semibold px-8 py-3.5 rounded-full shadow-lg hover:bg-[#5e0ace] transition-all hover:shadow-xl active:scale-95">
-      Request demo →
+      Book a Demo →
     </button>
   </div>
 

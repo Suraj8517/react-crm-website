@@ -5,34 +5,33 @@ import miracle from "../assets/miracle.png";
 import fitmomclub from "../assets/fitmomclub.jpg";
 import yoursmindfully from "../assets/yours-mindfully.png";
 import lk from "../assets/lk.jpg";
+import vmax from "../assets/vmax.png";
 
 
 
 
 
 const clientLogos = [
-  { name: "FitKids Club", logo: fitkid },
-   { name: "Yours Mindfully", logo: yoursmindfully },
   { name: "FitMom Club", logo: fitmomclub },
-  { name: "LK", logo: lk },
+  {name:"VMax",logo:vmax},
   { name: "FitMom Miracle", logo: miracle },
   { name: "Yours Mindfully", logo: yoursmindfully },
     { name: "FitDad Club", logo: fitdad },
      { name: "LK", logo: lk },
-
+      { name: "FitKids Club", logo: fitkid },
 ];
 
 export default function ClientLogoSection() {
   const logos = [...clientLogos, ...clientLogos];
 
   return (
-    <div className="bg-white flex flex-col items-center mt-50 sm:mt-60 md:mt-66 lg:mt-92 xl:mt-90">
+    <div className="bg-white flex flex-col items-center mt-50 sm:mt-60 md:mt-66 lg:mt-92 xl:mt-90 2xl:mt-140">
       {/* Outer relative wrapper for heading overlap */}
       <div className="relative w-full flex justify-center overflow-visible">
         
         {/* Capsule container */}
         <div className="relative bg-white border-2 border-purple-200 rounded-full shadow-sm px-4 sm:px-6 md:px-10 overflow-hidden 
-          w-[85%] sm:w-[80%] md:max-w-4xl lg:max-w-5xl h-16 sm:h-20 md:h-24 flex items-center">
+          w-[85%] sm:w-[80%] md:max-w-4xl lg:max-w-5xl 2xl:max-w-6xl h-16 sm:h-20 md:h-24 2xl:h-30 flex items-center">
           
           {/* Scrolling logos */}
           <div className="flex items-center gap-8 sm:gap-12 md:gap-20 animate-scroll">
@@ -41,13 +40,11 @@ export default function ClientLogoSection() {
                 key={index}
                 className="flex items-center justify-center flex-shrink-0"
               >
-                {/*<h4 className="text-base sm:text-xl md:text-3xl text-black-700 font-bold whitespace-nowrap">
-                  {client.name}
-                </h4>*/}
+
                 <img
                   src={client.logo}
                   alt={client.name}
-                  className="h-12 sm:h-10 md:h-16 object-contain opacity-90 hover:opacity-100 transition"
+                  className="2xl:h-20 h-12 sm:h-10 md:h-16 object-contain opacity-90 hover:opacity-100 transition"
                 /> 
               </div>
             ))}

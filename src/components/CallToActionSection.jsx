@@ -72,7 +72,7 @@ const CallToActionSection = ({onOpenForm}) => {
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <button onClick={onOpenForm}  className="px-6 py-3 bg-gradient-to-r from-purple-500 to-purple-700 text-white font-semibold rounded-lg shadow-lg hover:shadow-purple-400/40 transition text-sm md:text-base">
-                  Request Demo
+                  Book a Demo
                 </button>
               </div>
             </div>

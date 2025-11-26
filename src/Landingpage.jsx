@@ -52,8 +52,8 @@ if (loading) return <PageLoader />;
       <SwipeFeaturesSection />
       <MobileAppSection />
       <WhyUsSection />
-      <ForWhomSection />
       <PerformanceSection/>
+      <ForWhomSection />
       <TestimonialSection />
       <SuccessSection />
       <CallToActionSection onOpenForm={() => setOpenDemoForm(true)}/>
