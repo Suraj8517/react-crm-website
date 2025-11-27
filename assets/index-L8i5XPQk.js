@@ -53,19 +53,20 @@ Error generating stack: `+a.message+`
           py-4 lg:py-5\r
           flex items-center justify-between\r
         `,children:[y.jsxs("div",{className:"flex items-center gap-2",children:[y.jsx("div",{className:"w-10 h-10 lg:w-12 lg:h-12 rounded-xl bg-gradient-to-br from-purple-600 via-purple-700 to-indigo-600 flex items-center justify-center shadow-lg shadow-purple-500/30",children:y.jsx("span",{className:"text-white font-bold text-lg lg:text-xl",children:"CC"})}),y.jsx("h4",{className:`text-transparent bg-clip-text bg-gradient-to-r from-purple-900 via-purple-700 to-indigo-600\r
-            text-xl lg:text-2xl 2xl:text-3xl font-bold tracking-tight`,children:"Coach Club"})]}),y.jsxs("div",{className:"flex items-center gap-4 lg:gap-5 xl:gap-8",children:[y.jsx("button",{onClick:n,className:`hidden md:inline-flex text-purple-900/80 \r
+            text-xl lg:text-2xl 2xl:text-3xl font-bold tracking-tight`,children:"Coach Club"})]}),y.jsxs("div",{className:"flex items-center gap-2 lg:gap-3 xl:gap-4",children:[y.jsx("button",{onClick:n,className:`hidden md:inline-flex text-purple-900/80 \r
               text-sm lg:text-base 2xl:text-lg font-semibold\r
               hover:text-purple-700 transition-all duration-300\r
+              py-2 lg:py-2\r
               relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 \r
               after:bg-gradient-to-r after:from-purple-600 after:to-indigo-600\r
-              hover:after:w-full after:transition-all after:duration-300`,children:"Contact Us"}),y.jsxs("button",{onClick:i,className:`\r
+              `,children:"Contact Us"}),y.jsxs("button",{onClick:i,className:`\r
               hidden md:inline-flex items-center gap-2\r
               bg-gradient-to-r from-purple-600 via-purple-700 to-indigo-600\r
               text-white \r
               text-sm lg:text-base 2xl:text-lg font-semibold\r
-              px-5 lg:px-6 xl:px-7 \r
-              py-2.5 lg:py-3\r
-              rounded-full shadow-lg shadow-purple-500/40\r
+              px-4 lg:px-4 xl:px-5\r
+              py-2 lg:py-2\r
+              rounded-lg shadow-lg shadow-purple-500/40\r
               hover:shadow-xl hover:shadow-purple-500/50 hover:scale-105\r
               transition-all duration-300\r
               relative overflow-hidden group\r
@@ -74,9 +75,9 @@ Error generating stack: `+a.message+`
               border-2 border-purple-200 bg-white/50\r
               text-purple-900 \r
               text-sm lg:text-base 2xl:text-lg font-semibold\r
-              px-5 lg:px-6 xl:px-7 \r
-              py-2.5 lg:py-3\r
-              rounded-full \r
+              px-4 lg:px-4 xl:px-5\r
+              py-2 lg:py-2\r
+              rounded-lg \r
               hover:bg-purple-50 hover:border-purple-300 hover:scale-105\r
               transition-all duration-300 shadow-sm\r
             `,children:y.jsx("span",{children:"Login"})}),y.jsx("button",{onClick:()=>l(!s),className:`md:hidden p-2.5 rounded-xl bg-gradient-to-br from-purple-100 to-indigo-100 \r
