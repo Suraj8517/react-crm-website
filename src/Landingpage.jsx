@@ -58,7 +58,7 @@ if (loading) return <PageLoader />;
       <SuccessSection />
       <CallToActionSection onOpenForm={() => setOpenDemoForm(true)}/>
       <FAQSection />
-      <Footer />
+      <Footer onOpenForm={() => setOpenDemoForm(true)} onOpenContactForm={() => setOpenContactForm(true)}/>
     </div>
   );
 }

@@ -2,7 +2,7 @@ import React from "react";
 import { Facebook, Instagram, Linkedin, Mail } from "lucide-react";
 import indianFlag from "../assets/indian_flag.png";
 
-export default function Footer() {
+export default function Footer({ onOpenForm, onOpenContactForm }) {
   return (
     <footer className="bg-gradient-to-b from-[#7025a5] to-[#49157d] text-gray-100 mt-16">
       <div className="max-w-7xl mx-auto px-6 md:px-8 py-14">
@@ -42,6 +42,22 @@ export default function Footer() {
                 >
                   FAQs
                 </a>
+              </li>
+              <li>
+                <button
+                  onClick={onOpenForm}
+                  className="hover:text-white transition-colors duration-300"
+                >
+                  Book a Demo
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={onOpenContactForm}
+                  className="hover:text-white transition-colors duration-300"
+                >
+                  Contact Us
+                </button>
               </li>
               
             </ul>
