@@ -25,7 +25,8 @@ export default function ClientLogoSection() {
   const logos = [...clientLogos, ...clientLogos];
 
   return (
-    <div className="bg-white flex flex-col items-center mt-50 sm:mt-60 md:mt-66 lg:mt-92 xl:mt-90 2xl:mt-140">
+<div className="bg-white flex flex-col items-center 
+  mt-[120px] sm:mt-[160px] md:mt-[200px] lg:mt-[300px] xl:mt-[400px] 2xl:mt-[450px]">
       {/* Outer relative wrapper for heading overlap */}
       <div className="relative w-full flex justify-center overflow-visible">
         
