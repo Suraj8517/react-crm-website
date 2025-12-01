@@ -47,11 +47,11 @@ const SwipeFeaturesSection = () => {
 
         {/* Left Fog Overlay */}
         <div className="absolute left-0 top-0 h-full w-16 sm:w-24 z-20 pointer-events-none 
-          bg-gradient-to-r from-white via-white/70 to-transparent"></div>
+          bg-gradient-to-r from-white via-white/70 to-transparent hidden sm:block"></div>
 
         {/* Right Fog Overlay */}
         <div className="absolute right-0 top-0 h-full w-16 sm:w-24 z-20 pointer-events-none
-          bg-gradient-to-l from-white via-white/70 to-transparent"></div>
+          bg-gradient-to-l from-white via-white/70 to-transparent hidden sm:block"></div>
 
         <Swiper
           modules={[Pagination, FreeMode]}
