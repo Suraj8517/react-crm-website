@@ -88,13 +88,7 @@ export default function Footer({ onOpenForm, onOpenContactForm }) {
               >
                 <Linkedin size={22} />
               </a>
-              <a
-                href="mailto:info@coachclub.in"
-                aria-label="Email"
-                className="text-gray-200 hover:text-white transition-colors duration-300"
-              >
-                <Mail size={22} />
-              </a>
+             
             </div>
           </div>
         </div>
