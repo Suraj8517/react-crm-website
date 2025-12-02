@@ -73,15 +73,15 @@ export default function GrowthSection() {
         <h2 className="text-2xl md:text-5xl font-bold mb-4">
           Scale business growth with every customer conversation
         </h2>
-        <p className="text-gray-400 mb-10 text-lg">
+        <p className="text-gray-400 mb-10 text-lg 2xl:text-xl">
           Streamline your customer journey by centralizing every interaction.
           Stay organized, responsive, and efficient—no matter how many customers
           you have.
         </p>
 
-        {/* ✅ Progress Line Container */}
+        {/*  Progress Line Container */}
         <div className="relative pl-6 border-l border-gray-700">
-          {/* ✅ Glowing progress line */}
+          {/*  Glowing progress line */}
           <motion.div
             className="absolute left-[-2px] w-[3px] rounded-full bg-gradient-to-b from-blue-400 to-purple-500 shadow-[0_0_12px_4px_rgba(99,102,241,0.5)]"
             style={{
@@ -93,7 +93,7 @@ export default function GrowthSection() {
             }}
           ></motion.div>
 
-          {/* ✅ Soft blur glow behind main line */}
+          {/*  Soft blur glow behind main line */}
           <motion.div
             className="absolute left-[-2px] w-[6px] rounded-full bg-gradient-to-b from-blue-400/30 to-purple-500/30 blur-md"
             style={{
@@ -103,7 +103,7 @@ export default function GrowthSection() {
             }}
           ></motion.div>
 
-          {/* ✅ Titles */}
+          {/*  Titles */}
           {sections.map((sec, i) => (
             <div
               key={i}
@@ -114,7 +114,7 @@ export default function GrowthSection() {
               }`}
               onClick={() => handleClick(i)}
             >
-              <h4 className="font-semibold text-xl">{sec.title}</h4>
+              <h4 className="font-semibold text-xl 2xl:text-3xl">{sec.title}</h4>
               {active === i && (
                 <motion.p
                   key={i}
@@ -122,7 +122,7 @@ export default function GrowthSection() {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0 }}
                   transition={{ duration: 0.4 }}
-                  className="text-gray-300 mt-2 text-sm"
+                  className="text-gray-300 mt-2 text-sm 2xl:text-xl"
                 >
                   {sec.content}
                 </motion.p>
