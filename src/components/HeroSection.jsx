@@ -31,15 +31,15 @@ export default function HeroSection({ onOpenForm }) {
              transition-all duration-500 
              hover:scale-105 hover:shadow-lg hover:shadow-purple-500/30"
 >
-  <h5 className="text-sm font-medium text-white animate-pulse 2xl:text-4xl">
-    <span className="bg-purple-700 p-0.5 rounded-sm font-bold text-sm 2xl:text-4xl">#1</span> Software for Coaches 🏋🏻
+  <h5 className="text-sm font-medium text-white animate-pulse 2xl:text-2xl">
+    <span className="bg-purple-700 p-0.5 rounded-sm font-bold text-sm 2xl:text-2xl">#1</span> Software for Coaches 🏋🏻
   </h5>
 </div>
 
-        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl 2xl:text-8xl font-extrabold drop-shadow-lg">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl 2xl:text-6xl font-extrabold drop-shadow-lg">
           Coaching, tracking, scheduling…<br/> juggling too many things at once?
         </h1>
-        <p className="mt-4 text-base sm:text-lg md:text-xl lg:text-xl 2xl:mt-8 2xl:text-3xl max-w-lg sm:max-w-xl md:max-w-2xl">
+        <p className="mt-4 text-base sm:text-lg md:text-xl lg:text-xl 2xl:mt-8 2xl:text-2xl max-w-lg sm:max-w-xl md:max-w-2xl">
 With our all-in-one platform, coaches can manage clients, track progress, and grow their business effortlessly — all from one place.        </p>
         <div className="sm:flex mt-6 gap-4 mb-10">
           <button onClick={onOpenForm} className="bg-purple-900 mb-20 px-3 py-2 rounded-full font-semibold text-white hover:bg-purple-800 hover:text-white border border-white transition 2xl:text-2xl">
