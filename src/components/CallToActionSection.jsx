@@ -4,7 +4,7 @@ import { ArrowRight, Sparkles, Zap } from "lucide-react";
 const CallToActionSection = ({onOpenForm}) => {
   return (
     
-    <section className="relative py-20 bg-gradient-to-br from-purple-700 via-purple-800 to-purple-900 overflow-hidden">
+    <section className="relative py-20 bg-gradient-to-br from-purple-800 via-purple-900 to-purple-950 overflow-hidden">
       
       {/* Animated background elements */}
       <div className="absolute inset-0">
@@ -28,10 +28,10 @@ const CallToActionSection = ({onOpenForm}) => {
               {/* Icon */}
               <div className="flex justify-center mb-5">
                 <div className="relative">
-                  <div className="w-14 h-14 bg-gradient-to-r from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center shadow-lg">
+                  <div className="w-14 h-14 bg-gradient-to-r from-purple-500 to-purple-700 rounded-2xl flex items-center justify-center shadow-lg">
                     <Sparkles className="w-7 h-7 text-white" />
                   </div>
-                  <div className="absolute inset-0 rounded-2xl animate-ping bg-purple-500/30" />
+                  <div className="absolute inset-0 rounded-2xl animate-ping bg-purple-800/30" />
                 </div>
               </div>
 
@@ -71,7 +71,7 @@ const CallToActionSection = ({onOpenForm}) => {
 
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <button onClick={onOpenForm}  className="px-6 py-3 bg-gradient-to-r from-purple-500 to-purple-700 text-white font-semibold rounded-lg shadow-lg hover:shadow-purple-400/40 transition text-sm md:text-base">
+                <button onClick={onOpenForm}  className="px-6 py-3 bg-gradient-to-r from-purple-500 to-purple-900 text-white font-semibold rounded-lg shadow-lg hover:shadow-purple-400/40 transition text-sm md:text-base">
                   Book a Demo
                 </button>
               </div>
