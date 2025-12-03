@@ -56,7 +56,7 @@ export default function TestimonialSection() {
   const { name, role, feedback } = testimonials[current];
 
   return (
-    <section className="relative py-16 bg-white flex items-center justify-center mt-10">
+<section className="relative py-12 bg-white flex items-center justify-center mt-10">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 relative text-center">
         {/* Title */}
         <div className="mb-10">
@@ -110,13 +110,13 @@ export default function TestimonialSection() {
         <div className="flex justify-between absolute inset-x-0 -bottom-14 md:inset-y-1/2 md:-left-16 md:-right-16 px-4 md:px-0">
           <button
             onClick={() => paginate(-1)}
-            className="bg-purple-900 hover:bg-purple-300 shadow-lg w-10 h-10 rounded-full flex items-center justify-center hover:bg-purple-200 transition z-20"
+            className="bg-purple-900 hover:bg-purple-300 shadow-lg w-10 h-10 rounded-full flex items-center justify-center transition z-20"
           >
             <ChevronLeft className="w-5 h-5 text-white hover:text-purple-900 " />
           </button>
           <button
             onClick={() => paginate(1)}
-            className="bg-purple-900 hover:bg-purple-300 shadow-lg w-10 h-10 rounded-full flex items-center justify-center hover:bg-purple-200 transition z-20"
+            className="bg-purple-900 hover:bg-purple-300 shadow-lg w-10 h-10 rounded-full flex items-center justify-center transition z-20"
           >
             <ChevronRight className="w-5 h-5 text-white hover:text-purple-900" />
           </button>

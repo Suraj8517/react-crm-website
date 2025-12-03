@@ -47,7 +47,7 @@ export default function BusinessResult() {
   };
 
   return (
-    <div className="min-h-screen mb-10 bg-gradient-to-br from-purple-950 via-purple-900 to-black py-20 px-4 my-10">
+    <div className="min-h-screen bg-gradient-to-br from-purple-950 via-purple-900 to-black py-20 px-4 my-10">
       <style jsx>{`
         .scrollbar-hide::-webkit-scrollbar {
           display: none;

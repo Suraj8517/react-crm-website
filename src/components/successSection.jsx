@@ -34,7 +34,7 @@ const features = [
 
 export default function WhyUsSection() {
   return (
-    <section className="w-full bg-white lg:py-20  px-6 sm:py-6">
+    <section className="w-full bg-white lg:py-20  px-6 py-8 lg:mt-10 mt-20">
       <h2 className="text-center text-4xl md:text-5xl font-semibold text-black mb-16">
         How We Help You Succeed
       </h2>
