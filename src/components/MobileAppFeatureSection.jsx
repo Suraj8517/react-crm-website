@@ -112,35 +112,73 @@ export default function MobileAppSection() {
           </div>
         </div>
 
-        {/*MOBILE LAYOUT*/}
-        <div className="lg:hidden flex flex-col items-center gap-6 mt-4">
+        {/* ==================== MOBILE LAYOUT ==================== */}
+        <div className="lg:hidden w-full flex justify-center mt-4 px-4">
+          <div className="w-full max-w-4xl">
+            <img
+              src={mobileImg}
+              alt="Mobile App"
+              className="w-60 sm:w-72 mx-auto mb-12 drop-shadow-xl"
+            />
 
-          <img
-            src={mobileImg}
-            alt="Mobile App"
-            className="w-60 sm:w-72 mb-10 drop-shadow-xl"
-          />
+            <div className="grid grid-cols-2 gap-x-8 gap-y-4">
+              {/* Left Column */}
+              <div className="space-y-8">
+                {leftFeatures.map((feature, index) => (
+                  <div
+                    key={index}
+                    className="flex items-center gap-3 text-white"
+                  >
+                    <div className="flex-shrink-0 w-6 h-6 rounded-full bg-purple-500 flex items-center justify-center">
+                      <svg
+                        className="w-4 h-4 text-white"
+                        fill="none"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="3"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path d="M5 13l4 4L19 7"></path>
+                      </svg>
+                    </div>
 
-          {allFeatures.map((feature, index) => {
-            const Icon = feature.icon;
-
-            return (
-              <div
-                key={index}
-                className="w-full max-w-md bg-[#6E0ACE] hover:bg-[#8A2BE2] 
-                transition-all rounded-2xl p-4 flex items-center gap-4 
-                text-white shadow-lg"
-              >
-                <div className="bg-white p-3 rounded-full">
-                  <Icon className="w-6 h-6 text-[#6E0ACE]" />
-                </div>
-
-                <span className="font-medium text-base whitespace-pre-line leading-tight">
-                  {formatTitle(feature.title)}
-                </span>
+                    <span className="font-medium text-sm sm:text-base">
+                      {feature.title}
+                    </span>
+                  </div>
+                ))}
               </div>
-            );
-          })}
+
+              {/* Right Column */}
+              <div className="space-y-7">
+                {rightFeatures.map((feature, index) => (
+                  <div
+                    key={index}
+                    className="flex items-center gap-3 text-white"
+                  >
+                    <div className="flex-shrink-0 w-6 h-6 rounded-full bg-purple-500 flex items-center justify-center">
+                      <svg
+                        className="w-4 h-4 text-white"
+                        fill="none"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="3"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path d="M5 13l4 4L19 7"></path>
+                      </svg>
+                    </div>
+
+                    <span className="font-medium text-sm sm:text-base">
+                      {feature.title}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
