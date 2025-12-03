@@ -16,9 +16,7 @@ export default function Navbar({ onOpenForm, onOpenContactForm }) {
       >
         {/* LOGO */}
         <div className="flex items-center gap-2">
-          <div className="w-10 h-10 lg:w-12 lg:h-12 rounded-xl bg-gradient-to-br from-purple-600 via-purple-700 to-indigo-600 flex items-center justify-center shadow-lg shadow-purple-500/30">
-            <span className="text-white font-bold text-lg lg:text-xl">CC</span>
-          </div>
+          
           <h4
             className="text-transparent bg-clip-text bg-gradient-to-r from-purple-900 via-purple-700 to-indigo-600
             text-xl lg:text-2xl 2xl:text-3xl font-bold tracking-tight"

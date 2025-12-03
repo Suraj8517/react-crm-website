@@ -60,13 +60,13 @@ export default function TestimonialSection() {
       <div className="max-w-3xl mx-auto px-4 sm:px-6 relative text-center">
         {/* Title */}
         <div className="mb-10">
-          <h4 className="text-[#6E0ACE] rounded font-semibold uppercase tracking-wide">
+          <h4 className="text-purple-900 2xl:text-2xl font-semibold uppercase tracking-wide">
             Testimonials
           </h4>
-          <h2 className="text-2xl md:text-3xl font-bold text-black mt-1">
+          <h2 className="text-2xl 2xl:text-4xl md:text-3xl font-bold text-black mt-1">
             What Our Clients Say
           </h2>
-          <p className="text-black/80 text-sm md:text-base mt-5 mb-5">
+          <p className="text-black/80 text-sm md:text-base mt-5 mb-5 2xl:text-xl">
             Trusted by coaches and wellness professionals worldwide.
           </p>
         </div>
@@ -91,7 +91,7 @@ export default function TestimonialSection() {
               className="shadow-xl flex flex-col w-full max-w-xl mx-auto min-h-[220px] p-6 md:p-8 relative z-10 border border-gray-200 md:border-0 md:shadow-xl"
             >
               {/* Feedback Text */}
-              <p className="text-gray-600 italic leading-relaxed text-sm md:text-lg mb-4">
+              <p className="text-gray-600 italic leading-relaxed 2xl:text-xl text-sm md:text-lg mb-4">
                 “{feedback}”
               </p>
 
@@ -110,15 +110,15 @@ export default function TestimonialSection() {
         <div className="flex justify-between absolute inset-x-0 -bottom-14 md:inset-y-1/2 md:-left-16 md:-right-16 px-4 md:px-0">
           <button
             onClick={() => paginate(-1)}
-            className="bg-purple-600 shadow-lg w-10 h-10 rounded-full flex items-center justify-center hover:bg-purple-200 transition z-20"
+            className="bg-purple-900 hover:bg-purple-300 shadow-lg w-10 h-10 rounded-full flex items-center justify-center hover:bg-purple-200 transition z-20"
           >
-            <ChevronLeft className="w-5 h-5 text-white hover:text-purple-600" />
+            <ChevronLeft className="w-5 h-5 text-white hover:text-purple-900 " />
           </button>
           <button
             onClick={() => paginate(1)}
-            className="bg-purple-600 shadow-lg w-10 h-10 rounded-full flex items-center justify-center hover:bg-purple-200 transition z-20"
+            className="bg-purple-900 hover:bg-purple-300 shadow-lg w-10 h-10 rounded-full flex items-center justify-center hover:bg-purple-200 transition z-20"
           >
-            <ChevronRight className="w-5 h-5 text-white hover:text-purple-600" />
+            <ChevronRight className="w-5 h-5 text-white hover:text-purple-900" />
           </button>
         </div>
 
