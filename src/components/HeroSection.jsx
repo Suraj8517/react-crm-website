@@ -36,7 +36,7 @@ export default function HeroSection({ onOpenForm }) {
   </h5>
 </div>
 
-        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl 2xl:text-6xl font-extrabold drop-shadow-lg">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl 2xl:text-6xl font-extrabold drop-shadow-lg 2xl:mt-6 mt-4 sm:mt-3">
           Coaching, tracking, scheduling…<br/> juggling too many things at once?
         </h1>
         <p className="mt-4 text-base sm:text-lg md:text-xl lg:text-xl 2xl:mt-8 2xl:text-2xl max-w-lg sm:max-w-xl md:max-w-2xl">
