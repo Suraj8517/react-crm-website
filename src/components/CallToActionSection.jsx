@@ -4,20 +4,20 @@ import { ArrowRight, Sparkles, Zap } from "lucide-react";
 const CallToActionSection = ({onOpenForm}) => {
   return (
     
-    <section className="relative py-20 bg-gradient-to-br from-purple-800 via-purple-900 to-purple-950 overflow-hidden">
+    <section className="relative py-20 sm:mt-8 bg-gradient-to-br from-purple-950 via-purple-950 to-black overflow-hidden">
       
       {/* Animated background elements */}
       <div className="absolute inset-0">
-        <div className="absolute top-20 left-10 w-32 h-32 bg-purple-500/20 rounded-full animate-float blur-3xl" />
-        <div className="absolute bottom-20 right-20 w-40 h-40 bg-purple-400/20 rounded-full animate-float animation-delay-2000 blur-3xl" />
-        <div className="absolute top-1/2 left-1/3 w-28 h-28 bg-purple-300/20 rounded-full animate-pulse blur-2xl" />
+        <div className="absolute top-20 left-10 w-32 h-32 bg-purple-500/10 rounded-full animate-float blur-3xl" />
+        <div className="absolute bottom-20 right-20 w-40 h-40 bg-purple-400/10 rounded-full animate-float animation-delay-2000 blur-3xl" />
+        <div className="absolute top-1/2 left-1/3 w-28 h-28 bg-purple-300/10 rounded-full animate-pulse blur-2xl" />
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
         {/* Main CTA Card */}
         <div className="max-w-4xl mx-auto">
           
-          <div className="relative bg-white/10 backdrop-blur-lg rounded-3xl shadow-2xl hover:shadow-purple-500/30 transition-all duration-500 p-10 md:p-14 overflow-hidden group border border-white/10">
+          <div className="relative bg-white/5 backdrop-blur-lg rounded-3xl shadow-2xl hover:shadow-purple-500/20 transition-all duration-500 p-10 md:p-14 overflow-hidden group border border-white/5">
             
             {/* Decorative elements */}
             <div className="absolute top-0 right-0 w-32 h-32 bg-purple-400/10 rounded-full -translate-y-16 translate-x-16 group-hover:scale-110 transition-transform duration-700 blur-2xl" />
