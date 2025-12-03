@@ -50,10 +50,10 @@ const ForWhomSection = () => {
 
       {/* Right Side */}
       <div className="w-full lg:w-2/3 lg:ml-10 lg:mr-10 text-center lg:text-left relative z-10">
-        <p className="uppercase tracking-wide text-purple-900 font-medium hidden lg:block 2xl:text-xl">
+        <p className="uppercase tracking-wide text-purple-900 font-medium hidden lg:block sm:text-xl 2xl:text-xl">
           Who Is Coach Club For?
         </p>
-        <h2 className="hidden lg:block 2xl:text-4xl text-3xl sm:text-4xl font-bold text-gray-900 mt-2">
+        <h2 className="hidden lg:block 2xl:text-4xl text-3xl sm:text-5xl font-bold text-gray-900 mt-2">
           Designed for Wellness Professionals Like You
         </h2>
 
