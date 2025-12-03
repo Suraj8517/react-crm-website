@@ -16,11 +16,11 @@ const ForWhomSection = () => {
       />
 
       {/* Purple background overlay */}
-      <div className="absolute inset-0 bg-purple-100 opacity-20 -z-10 rounded-2xl"></div>
+      <div className="absolute inset-0 opacity-20 -z-10 rounded-2xl"></div>
 
       {/* Headings for mobile/tablet */}
       <div className="text-center mb-6 lg:hidden">
-        <p className="uppercase tracking-wide text-purple-500 text-xl">
+        <p className="uppercase tracking-wide text-purple-950 text-xl">
           Who Is Coach Club For?
         </p>
         <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mt-2">
@@ -50,20 +50,20 @@ const ForWhomSection = () => {
 
       {/* Right Side */}
       <div className="w-full lg:w-2/3 lg:ml-10 lg:mr-10 text-center lg:text-left relative z-10">
-        <p className="uppercase tracking-wide text-purple-500 font-medium hidden lg:block">
+        <p className="uppercase tracking-wide text-purple-900 font-medium hidden lg:block 2xl:text-xl">
           Who Is Coach Club For?
         </p>
-        <h2 className="hidden lg:block text-3xl sm:text-4xl font-bold text-gray-900 mt-2">
+        <h2 className="hidden lg:block 2xl:text-4xl text-3xl sm:text-4xl font-bold text-gray-900 mt-2">
           Designed for Wellness Professionals Like You
         </h2>
 
-        <p className="text-gray-600 mt-4">
+        <p className="text-gray-600 mt-4 2xl:text-lg">
           <span className="font-bold text-purple-900">COACH CLUB</span> is designed to support health and wellness professionals who want
           to streamline their practice, engage clients more effectively, and
           grow their business with ease.
         </p>
 
-        <ul className="mt-6 space-y-3 text-gray-700 inline-block text-left">
+        <ul className="mt-6 space-y-3 text-gray-700 inline-block text-left 2xl:text-lg">
           <li className="flex items-start gap-3 font-bold">
             <span className="w-5 h-5 flex items-center justify-center bg-purple-100 text-purple-600 rounded-full text-xs font-bold">✓</span> Nutritionists & Dietitians
           </li>

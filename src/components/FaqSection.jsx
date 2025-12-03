@@ -95,7 +95,7 @@ export default function FAQSection() {
           </motion.div>
 
           {/* Main Heading */}
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black mb-4 md:mb-6" style={{ color: '#2E005C' }}>
+          <h2 className="text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-black mb-4 md:mb-6" style={{ color: '#2E005C' }}>
             Got Questions?
             <br />
             <span className="relative inline-block">
@@ -112,7 +112,7 @@ export default function FAQSection() {
           </h2>
 
           {/* Subtitle */}
-          <p className="text-gray-600 text-base sm:text-lg md:text-base leading-relaxed mb-6 md:mb-8">
+          <p className="text-gray-600 text-base sm:text-lg md:text-base 2xl:text-xl leading-relaxed mb-6 md:mb-8">
             Find answers to the most common questions about{" "}
             <span className="font-bold" style={{ color: '#4B0082' }}>
               Coach Club
