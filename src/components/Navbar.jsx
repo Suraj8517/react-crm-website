@@ -9,8 +9,8 @@ export default function Navbar({ onOpenForm, onOpenContactForm }) {
         className="
           max-w-7xl xl:max-w-8xl 2xl:max-w-[1650px]
           mx-auto 
-          px-4 sm:px-6 lg:px-8 xl:px-10 2xl:px-12
-          py-4 lg:py-5
+          px-4 sm:px-6 lg:px-8 xl:px-10 2xl:px-4
+          py-4 lg:py-4
           flex items-center justify-between
         "
       >
@@ -28,7 +28,7 @@ export default function Navbar({ onOpenForm, onOpenContactForm }) {
         </div>
 
         {/* Right Section */}
-        <div className="flex items-center gap-2 lg:gap-3 xl:gap-4">
+        <div className="flex items-center gap-2 lg:gap-3 xl:gap-4 2xl:gap-8">
 
           {/* Desktop Contact Us */}
           <button
@@ -54,7 +54,7 @@ export default function Navbar({ onOpenForm, onOpenContactForm }) {
               text-sm lg:text-base 2xl:text-lg font-semibold
               px-4 lg:px-4 xl:px-5
               py-2 lg:py-2
-              rounded-lg shadow-lg shadow-purple-500/40
+              rounded-full shadow-lg shadow-purple-500/40
               hover:shadow-xl hover:shadow-purple-500/50 hover:scale-105
               transition-all duration-300
               relative overflow-hidden group
@@ -78,7 +78,7 @@ export default function Navbar({ onOpenForm, onOpenContactForm }) {
               text-sm lg:text-base 2xl:text-lg font-semibold
               px-4 lg:px-4 xl:px-5
               py-2 lg:py-2
-              rounded-lg 
+              rounded-full 
               hover:bg-purple-50 hover:border-purple-300 hover:scale-105
               transition-all duration-300 shadow-sm
             "
@@ -150,7 +150,7 @@ export default function Navbar({ onOpenForm, onOpenContactForm }) {
               transition-all duration-300 flex items-center justify-center gap-2
             "
           >
-            <span>Book A Demo</span>
+            <span>Book a Demo</span>
           </button>
 
           <button
