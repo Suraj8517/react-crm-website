@@ -51,6 +51,7 @@ export default function Navbar({ onOpenForm, onOpenContactForm }) {
 
           {/* Mobile Menu Button */}
           <button
+            aria-label="mobile-menu"
             onClick={() => setMenuOpen(!menuOpen)}
             className="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors duration-200"
           >

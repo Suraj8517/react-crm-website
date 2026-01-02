@@ -1,5 +1,5 @@
 import React from "react";
-import forwhom from "../assets/forwhom1.jpg";
+import forwhom from "../assets/forwhom1.webp";
 import bg_circle from "../assets/background-circle.svg";
 
 const ForWhomSection = () => {

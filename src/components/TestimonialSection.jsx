@@ -125,10 +125,13 @@ export default function TestimonialSection() {
         {/* Dots Pagination */}
         <div className="flex justify-center mt-16 md:mt-6 space-x-2">
           {testimonials.map((_, idx) => (
-            <button aria-label="dots"
+            <button 
               key={idx}
               onClick={() => setCurrent([idx, idx > current ? 1 : -1])}
-              className={`w-3 h-3 rounded-full ${
+              aria-label={`Go to testimonial ${idx + 1}`}
+        aria-current={current}
+        role="tab"
+              className={`w-4 h-4 rounded-full ${
                 idx === current ? "bg-purple-600" : "bg-purple-300"
               }`}
             ></button>
