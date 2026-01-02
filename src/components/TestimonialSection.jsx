@@ -108,13 +108,13 @@ export default function TestimonialSection() {
 
         {/* Navigation Arrows */}
         <div className="flex justify-between absolute inset-x-0 -bottom-14 md:inset-y-1/2 md:-left-16 md:-right-16 px-4 md:px-0">
-          <button
+          <button aria-label="Previous slide"
             onClick={() => paginate(-1)}
             className="bg-purple-900 hover:bg-purple-300 shadow-lg w-10 h-10 rounded-full flex items-center justify-center transition z-20"
           >
             <ChevronLeft className="w-5 h-5 text-white hover:text-purple-900 " />
           </button>
-          <button
+          <button aria-label="Next slide"
             onClick={() => paginate(1)}
             className="bg-purple-900 hover:bg-purple-300 shadow-lg w-10 h-10 rounded-full flex items-center justify-center transition z-20"
           >
@@ -125,7 +125,7 @@ export default function TestimonialSection() {
         {/* Dots Pagination */}
         <div className="flex justify-center mt-16 md:mt-6 space-x-2">
           {testimonials.map((_, idx) => (
-            <button
+            <button aria-label="dots"
               key={idx}
               onClick={() => setCurrent([idx, idx > current ? 1 : -1])}
               className={`w-3 h-3 rounded-full ${

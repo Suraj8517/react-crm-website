@@ -12,6 +12,9 @@ import client_progress from "../assets/Clients -_ Progress -_ Progress Images.jp
 import workflow from "../assets/Workflow.jpg";
 import engage from "../assets/interactions.png";
 import finance from "../assets/finance.png";
+import realtime from"../assets/Lead Management.jpg"
+import interaction from"../assets/interactions.png"
+
 const features = [
   {
     title: "Lead Management",
@@ -31,7 +34,7 @@ const features = [
     title: "Appointment Scheduling",
     shortTitle: "Schedule",
     desc: "Allow clients to easily book diet consultations, training sessions, or fitness classes with automated reminders.",
-    img: leads,
+    img: interaction,
     icon: <AiFillSchedule />,
   },
   {
@@ -73,7 +76,7 @@ const features = [
     title: "Real-time Insights",
     shortTitle: "Insights",
     desc: "Get live visibility into membership status, active plans, and financial performance — anytime, anywhere.",
-    img: leads,
+    img: realtime,
     icon: <CgInsights />,
   },
 ];

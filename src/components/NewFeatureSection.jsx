@@ -1,5 +1,4 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useState } from "react";
 
 export default function WhyUsSection() {
   const features = [
@@ -35,176 +34,75 @@ export default function WhyUsSection() {
     }
   ];
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1
-      }
-    }
-  };
-
-  const cardVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.6,
-        ease: "easeOut"
-      }
-    }
-  };
-
   return (
-    <section className="relative px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20 py-16 sm:py-20 md:py-24 lg:py-28 xl:py-32 max-w-[1600px] mx-auto overflow-hidden">
+    <section className="relative px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20 py-16 sm:py-20 md:py-24 lg:py-28 xl:py-32 max-w-[1600px] mx-auto bg-gradient-to-br from-purple-50 via-white to-indigo-50">
       
-      {/* Animated Background Gradient Orbs */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <motion.div
-          className="absolute top-0 left-1/4 w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 rounded-full mix-blend-multiply filter blur-3xl opacity-20"
-          style={{ backgroundColor: '#4B0082' }}
-          animate={{
-            x: [0, 100, 0],
-            y: [0, 50, 0],
-          }}
-          transition={{
-            duration: 20,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        />
-        <motion.div
-          className="absolute bottom-0 right-1/4 w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 rounded-full mix-blend-multiply filter blur-3xl opacity-20"
-          style={{ backgroundColor: '#2E005C' }}
-          animate={{
-            x: [0, -100, 0],
-            y: [0, -50, 0],
-          }}
-          transition={{
-            duration: 25,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        />
-      </div>
-
       {/* Heading */}
-      <div className="relative text-center mb-12 sm:mb-14 md:mb-16 lg:mb-20">
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="inline-block"
-        >
-          <span className="inline-block px-4 py-2 rounded-full bg-gradient-to-b from-[#4B0082] to-[#2E005C] text-white text-xs sm:text-sm font-semibold mb-3 sm:mb-4">
-            Why Choose Us
-          </span>
-        </motion.div>
+      <div className="text-center mb-16 md:mb-20">
+        <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-purple-100 text-purple-700 text-sm font-semibold mb-6">
+          <span className="w-2 h-2 rounded-full bg-purple-600 animate-pulse"></span>
+          Why Choose Us
+        </div>
 
-        <motion.h2
-          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black mb-4 sm:mb-5 md:mb-6 px-4"
-          style={{ color: '#2E005C' }}
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          viewport={{ once: true }}
-        >
+        <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mb-6 bg-gradient-to-r from-purple-900 via-purple-700 to-indigo-900 bg-clip-text text-transparent">
           Elevate Your Coaching
-        </motion.h2>
+        </h2>
 
-        <motion.p
-          className="mt-3 sm:mt-4 text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed px-4"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          viewport={{ once: true }}
-        >
+        <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
           Beyond our powerful features, here are a few more reasons coaches love choosing Coach Club
-        </motion.p>
+        </p>
       </div>
 
-      {/* Feature Cards Grid - 1 column mobile, 2 columns tablet, 3 columns desktop */}
-      <motion.div
-        className="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 md:gap-6 lg:gap-7 xl:gap-8"
-        variants={containerVariants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, margin: "-100px" }}
-      >
+      {/* Feature Cards Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
         {features.map((feature, index) => (
-          <FeatureCard key={index} data={feature} variants={cardVariants} />
+          <FeatureCard key={index} data={feature} index={index} />
         ))}
-      </motion.div>
+      </div>
     </section>
   );
 }
 
-function FeatureCard({ data, variants }) {
-  const [isHovered, setIsHovered] = React.useState(false);
+function FeatureCard({ data, index }) {
+  const [isHovered, setIsHovered] = useState(false);
+
+  const colors = [
+    { from: 'from-purple-600', to: 'to-indigo-600', bg: 'bg-purple-50', border: 'border-purple-200' },
+    { from: 'from-indigo-600', to: 'to-blue-600', bg: 'bg-indigo-50', border: 'border-indigo-200' },
+    { from: 'from-blue-600', to: 'to-cyan-600', bg: 'bg-blue-50', border: 'border-blue-200' },
+    { from: 'from-violet-600', to: 'to-purple-600', bg: 'bg-violet-50', border: 'border-violet-200' },
+    { from: 'from-fuchsia-600', to: 'to-pink-600', bg: 'bg-fuchsia-50', border: 'border-fuchsia-200' },
+    { from: 'from-purple-700', to: 'to-indigo-700', bg: 'bg-purple-50', border: 'border-purple-200' },
+  ];
+
+  const color = colors[index % colors.length];
 
   return (
-    <motion.div
-      variants={variants}
-      className="group relative"
+    <div
+      className="group relative h-full"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      {/* Card Container with Glassmorphism */}
-      <div className="relative h-full min-h-[280px] sm:min-h-[320px] md:min-h-[360px] lg:min-h-[400px] xl:min-h-[420px] rounded-2xl sm:rounded-3xl overflow-hidden backdrop-blur-xl bg-white/70 border border-purple-200/40 shadow-xl hover:shadow-2xl transition-all duration-500">
+      <div className={`relative h-full min-h-[320px] p-8 rounded-2xl bg-white border-2 ${color.border} shadow-sm hover:shadow-2xl transition-all duration-300 ${isHovered ? 'transform -translate-y-2' : ''}`}>
         
-        {/* Gradient Accent Bar */}
-        <motion.div
-          className="absolute top-0 left-0 right-0 h-1 sm:h-1.5"
-          style={{ background: 'linear-gradient(to bottom, #4B0082, #2E005C)' }}
-          initial={{ scaleX: 0 }}
-          whileInView={{ scaleX: 1 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          viewport={{ once: true }}
-        />
-
-        {/* Hover Gradient Background */}
-        <motion.div
-          className="absolute inset-0 opacity-0 transition-opacity duration-500"
-          style={{ background: 'linear-gradient(to bottom right, #4B0082, #2E005C)' }}
-          animate={{ opacity: isHovered ? 0.05 : 0 }}
-        />
-
-        {/* Content */}
-        <div className="relative p-5 sm:p-6 md:p-7 lg:p-8 h-full flex flex-col">
-          {/* Icon with animated background */}
-          <motion.div
-            className="relative inline-flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 mb-4 sm:mb-5 md:mb-6"
-            whileHover={{ scale: 1.1, rotate: 5 }}
-            transition={{ type: "spring", stiffness: 300 }}
-          >
-            <div className="absolute inset-0 rounded-xl sm:rounded-2xl opacity-20 blur-xl" style={{ background: 'linear-gradient(to bottom right, #4B0082, #2E005C)' }} />
-            <div className="relative w-full h-full rounded-xl sm:rounded-2xl flex items-center justify-center text-2xl sm:text-3xl shadow-lg" style={{ background: 'linear-gradient(to bottom, #4B0082, #2E005C)' }}>
-              {data.icon}
-            </div>
-          </motion.div>
-
-          {/* Title */}
-          <h3 className="text-xl sm:text-2xl md:text-2xl lg:text-3xl font-bold mb-3 sm:mb-4 transition-all duration-300" style={{ color: isHovered ? '#4B0082' : '#111827' }}>
-            {data.title}
-          </h3>
-
-          {/* Description */}
-          <p className="text-gray-600 text-sm sm:text-base leading-relaxed flex-grow">
-            {data.description}
-          </p>
+        {/* Icon Circle */}
+        <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${color.from} ${color.to} flex items-center justify-center text-3xl mb-6 shadow-lg transition-transform duration-300 ${isHovered ? 'scale-110 rotate-6' : ''}`}>
+          {data.icon}
         </div>
 
-        {/* Shimmer Effect on Hover */}
-        <motion.div
-          className="absolute inset-0 -translate-x-full"
-          style={{ background: 'linear-gradient(to right, transparent, rgba(75, 0, 130, 0.15), transparent)' }}
-          animate={{ translateX: isHovered ? "200%" : "-100%" }}
-          transition={{ duration: 0.8, ease: "easeInOut" }}
-        />
+        {/* Title */}
+        <h3 className="text-2xl font-bold mb-4 text-gray-900">
+          {data.title}
+        </h3>
+
+        {/* Description */}
+        <p className="text-gray-600 leading-relaxed">
+          {data.description}
+        </p>
+
+        {/* Corner Decoration */}
+        <div className={`absolute bottom-0 right-0 w-32 h-32 bg-gradient-to-tl ${color.from} ${color.to} opacity-5 rounded-tl-full transition-opacity duration-300 ${isHovered ? 'opacity-10' : ''}`}></div>
       </div>
-    </motion.div>
+    </div>
   );
 }
