@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import {
   ScanHeart,
   ChartNoAxesCombined,
@@ -9,25 +9,45 @@ import {
   ClipboardPlus,
   HandHeart,
 } from "lucide-react";
-import mobileImg from "../assets/mockup.webp";
-import { motion, AnimatePresence } from "framer-motion";
+
+import dashboard from "../assets/app-images/dashboard.webp";
+import progress from "../assets/app-images/progress tracking.webp";
+import live from "../assets/app-images/live session.webp";
+import nutrition from "../assets/app-images/nutrition tracker.webp";
+import female from "../assets/app-images/Female Tracker.webp";
+import community from "../assets/app-images/community.webp";
+import workout from "../assets/app-images/workout tracker.webp";
+import health from "../assets/app-images/health tracker.webp";
 
 export default function MobileAppSection() {
   const leftFeatures = [
-    { icon: ChartNoAxesCombined, title: "Progress Tracking" },
-    { icon: Video, title: "Live Sessions" },
-    { icon: Dumbbell, title: "Workout Plans" },
-    { icon: Apple, title: "Nutrition Tracker" },
+    { icon: ChartNoAxesCombined, title: "Progress Tracking", image: progress },
+    { icon: Video, title: "Live Sessions", image: live },
+    { icon: Dumbbell, title: "Workout Tracker", image: workout },
+    { icon: Apple, title: "Nutrition Tracker", image: nutrition },
   ];
 
   const rightFeatures = [
-    { icon: ScanHeart, title: "Daily Activity Monitoring" },
-    { icon: LayoutDashboard, title: "Simple Dashboards" },
-    { icon: ClipboardPlus, title: "In-App Lab Reports" },
-    { icon: HandHeart, title: "Community Support" },
+    { icon: LayoutDashboard, title: "Simple Dashboard", image: dashboard },
+    { icon: ScanHeart, title: "Female Tracker", image: female },
+    { icon: HandHeart, title: "Community Support", image: community },
+    { icon: ClipboardPlus, title: "Health tracker", image: health },
   ];
 
   const allFeatures = [...leftFeatures, ...rightFeatures];
+
+  const [appImage, setappImage] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+
+  useEffect(() => {
+    if (isPaused) return;
+
+    const interval = setInterval(() => {
+      setappImage((prev) => (prev + 1) % allFeatures.length);
+    }, 2000);
+
+    return () => clearInterval(interval);
+  }, [isPaused, allFeatures.length]);
 
   const formatTitle = (title) => {
     const words = title.split(" ");
@@ -37,9 +57,7 @@ export default function MobileAppSection() {
 
   return (
     <div className="bg-gradient-to-b from-[#4B0082] to-[#2E005C] mt-16 py-20 px-4">
-        
       <div className="max-w-7xl mx-auto flex flex-col items-center">
-        
         {/* Heading */}
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
@@ -51,20 +69,28 @@ export default function MobileAppSection() {
           </p>
         </div>
 
-        {/* ==================== DESKTOP LAYOUT ==================== */}
+        {/* ==================== DESKTOP ==================== */}
         <div className="hidden lg:grid grid-cols-3 items-center gap-8">
-          
-          {/* Left Column (Zig-Zag) */}
+          {/* Left */}
           <div className="flex flex-col gap-10">
             {leftFeatures.map((feature, index) => {
               const Icon = feature.icon;
+
               return (
-                <div
-                  key={index}
-                  className={`w-fit bg-[#6E0ACE] hover:bg-[#8A2BE2] 
-                  transition-all rounded-2xl p-5 flex items-center gap-5 
-                  text-white shadow-xl 
-                  ${index === 0 || index === 2 ? "self-start" : "self-end"}`}
+                <button
+                  key={feature.title}
+                  onClick={() => {
+                    setappImage(index);
+                    setIsPaused(true);
+                  }}
+                  className={`w-56 bg-[#6E0ACE] hover:bg-[#8A2BE2]
+                  transition-all rounded-2xl p-5 flex items-center gap-5
+                  text-white shadow-xl text-left
+                  ${index === 1 || index === 2 ? "self-start" : "self-end"}
+                  ${appImage === index
+    ? "bg-[#8A2BE2] ring-2 ring-white scale-[1.02]"
+    : "bg-[#6E0ACE] hover:bg-[#8A2BE2]"
+  }`}
                 >
                   <div className="bg-white p-4 rounded-full shadow-md">
                     <Icon className="w-7 h-7 text-[#6E0ACE]" />
@@ -73,7 +99,7 @@ export default function MobileAppSection() {
                   <span className="font-semibold text-lg whitespace-pre-line leading-tight">
                     {formatTitle(feature.title)}
                   </span>
-                </div>
+                </button>
               );
             })}
           </div>
@@ -81,23 +107,33 @@ export default function MobileAppSection() {
           {/* Center Image */}
           <div className="flex justify-center">
             <img
-              src={mobileImg}
+              src={allFeatures[appImage].image}
               alt="Mobile App Interface"
               className="w-72 h-auto drop-shadow-[0_0_40px_rgba(255,255,255,0.3)]"
             />
           </div>
 
-          {/* Right Column (Zig-Zag) */}
+          {/* Right */}
           <div className="flex flex-col gap-10">
             {rightFeatures.map((feature, index) => {
               const Icon = feature.icon;
+              const globalIndex = index + leftFeatures.length;
+
               return (
-                <div
-                  key={index}
-                  className={`w-fit bg-[#6E0ACE] hover:bg-[#8A2BE2] 
-                  transition-all rounded-2xl p-5 flex items-center gap-5 
-                  text-white shadow-xl 
-                  ${index === 0 || index === 2 ? "self-start" : "self-end"}`}
+                <button
+                  key={feature.title}
+                  onClick={() => {
+                    setappImage(globalIndex);
+                    setIsPaused(true);
+                  }}
+                  className={`w-56 bg-[#6E0ACE] hover:bg-[#8A2BE2]
+                  transition-all rounded-2xl p-5 flex items-center gap-5
+                  text-white shadow-xl text-left
+                  ${index === 0 || index === 3 ? "self-start" : "self-end"}
+                  ${appImage === globalIndex
+    ? "bg-[#8A2BE2] ring-2 ring-white scale-[1.02]"
+    : "bg-[#6E0ACE] hover:bg-[#8A2BE2]"
+  }`}
                 >
                   <div className="bg-white p-4 rounded-full shadow-md">
                     <Icon className="w-7 h-7 text-[#6E0ACE]" />
@@ -106,66 +142,51 @@ export default function MobileAppSection() {
                   <span className="font-semibold text-lg whitespace-pre-line leading-tight">
                     {formatTitle(feature.title)}
                   </span>
-                </div>
+                </button>
               );
             })}
           </div>
         </div>
 
-    {/*MOBILE LAYOUT*/}
-        <div className="lg:hidden flex flex-col items-center gap-6 mt-4">
+        {/* ==================== MOBILE ==================== */}
+<div className="lg:hidden w-full flex flex-col items-center gap-4 mt-4">
 
-          {/* Top 4 Features */}
-          {allFeatures.slice(0, 4).map((feature, index) => {
-            const Icon = feature.icon;
+  {/* Mobile Image */}
+  <img
+    src={allFeatures[appImage].image}
+    alt="Mobile App"
+    className="w-56 sm:w-64 drop-shadow-xl"
+  />
 
-            return (
-              <div
-                key={index}
-                className="w-full max-w-md bg-[#6E0ACE] hover:bg-[#8A2BE2] 
-                transition-all rounded-2xl p-4 flex items-center gap-4 
-                text-white shadow-lg"
-              >
-                <div className="bg-white p-3 rounded-full">
-                  <Icon className="w-6 h-6 text-[#6E0ACE]" />
-                </div>
+  {/* Mobile Features Grid */}
+  <div className="grid grid-cols-2 gap-3 w-full max-w-md mt-2">
+    {allFeatures.map((feature, index) => {
+      const Icon = feature.icon;
 
-                <span className="font-medium text-base whitespace-pre-line leading-tight">
-                  {formatTitle(feature.title)}
-                </span>
-              </div>
-            );
-          })}
+      return (
+        <button
+          key={feature.title}
+          onClick={() => {
+            setappImage(index);
+            setIsPaused(true);
+          }}
+          className="bg-[#6E0ACE] hover:bg-[#8A2BE2]
+          transition-all rounded-xl p-3 flex items-center gap-3
+          text-white shadow-md text-left"
+        >
+          <div className="bg-white p-2 rounded-full">
+            <Icon className="w-5 h-5 text-[#6E0ACE]" />
+          </div>
 
-          {/* Mobile Image */}
-          <img
-            src={mobileImg}
-            alt="Mobile App"
-            className="w-60 sm:w-72 my-10 drop-shadow-xl"
-          />
+          <span className="text-sm font-medium leading-tight">
+            {formatTitle(feature.title)}
+          </span>
+        </button>
+      );
+    })}
+  </div>
+</div>
 
-          {/* Bottom 4 Features */}
-          {allFeatures.slice(4, 8).map((feature, index) => {
-            const Icon = feature.icon;
-
-            return (
-              <div
-                key={index + 4}
-                className="w-full max-w-md bg-[#6E0ACE] hover:bg-[#8A2BE2] 
-                transition-all rounded-2xl p-4 flex items-center gap-4 
-                text-white shadow-lg"
-              >
-                <div className="bg-white p-3 rounded-full">
-                  <Icon className="w-6 h-6 text-[#6E0ACE]" />
-                </div>
-
-                <span className="font-medium text-base whitespace-pre-line leading-tight">
-                  {formatTitle(feature.title)}
-                </span>
-              </div>
-            );
-          })}
-        </div>
       </div>
     </div>
   );

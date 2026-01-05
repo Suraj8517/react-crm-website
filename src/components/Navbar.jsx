@@ -4,7 +4,7 @@ export default function Navbar({ onOpenForm, onOpenContactForm }) {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-white border-b border-gray-200 lg:py-6">
+    <header className="sticky top-0 z-50 bg-white border-b border-gray-200 lg:py-2">
       <div className="xl:max-w-7xl 2xl:max-w-10xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* LOGO */}
