@@ -125,7 +125,7 @@ export default function PageLoader({ onLoadingComplete }) {
               ]
             }}
             transition={{ duration: 2, repeat: Infinity }}
-            className="w-24 h-24 bg-gradient-to-br from-purple-600 to-blue-600 rounded-2xl flex items-center justify-center relative overflow-hidden"
+            className="w-24 h-24 bg-gradient-to-br from-purple-300 to-white rounded-2xl flex items-center justify-center relative overflow-hidden"
             style={{ animation: 'float 3s ease-in-out infinite' }}
           >
             {/* Shine Effect */}
