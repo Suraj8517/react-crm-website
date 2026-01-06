@@ -84,51 +84,51 @@ export default function ContactForm({ onClose }) {
     <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50 p-4 animate-fadeIn">
       <div className="bg-white rounded-2xl w-full max-w-lg relative shadow-2xl transform transition-all animate-slideUp">
         {/* Header */}
-        <div className="relative bg-gradient-to-br from-purple-600 to-purple-900 rounded-t-2xl p-6 pb-8">
+        <div className="relative bg-gradient-to-br from-purple-600 to-purple-900 rounded-t-2xl p-4 md:p-5">
           <button
             onClick={onClose}
-            className="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors"
+            className="absolute top-3 right-3 w-7 h-7 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors"
           >
-            <X className="w-5 h-5" />
+            <X className="w-4 h-4" />
           </button>
 
           <div className="text-center">
-            <div className="w-16 h-16 bg-white/10 backdrop-blur rounded-2xl flex items-center justify-center mx-auto mb-4">
-              <Send className="w-8 h-8 text-white" />
+            <div className="w-12 h-12 md:w-14 md:h-14 bg-white/10 backdrop-blur rounded-xl flex items-center justify-center mx-auto mb-2 md:mb-3">
+              <Send className="w-6 h-6 md:w-7 md:h-7 text-white" />
             </div>
-            <h2 className="text-2xl font-bold text-white mb-2">
+            <h2 className="text-xl md:text-2xl font-bold text-white mb-1">
               Get in Touch
             </h2>
-            <p className="text-purple-100 text-sm">
-              Fill out the form below and we'll get back to you shortly
+            <p className="text-purple-100 text-xs md:text-sm">
+              Fill out the form and we'll get back to you shortly
             </p>
           </div>
         </div>
 
         {/* Form Container */}
-        <div className="p-6 -mt-4">
+        <div className="p-4 md:p-5">
           {/* Status Message */}
           {status.message && (
             <div
-              className={`mb-4 p-3 rounded-lg flex items-center gap-2 ${
+              className={`mb-3 p-2 md:p-2.5 rounded-lg flex items-center gap-2 ${
                 status.type === "error"
                   ? "bg-red-50 text-red-700 border border-red-200"
                   : "bg-green-50 text-green-700 border border-green-200"
               }`}
             >
               {status.type === "error" ? (
-                <AlertCircle className="w-5 h-5 flex-shrink-0" />
+                <AlertCircle className="w-4 h-4 flex-shrink-0" />
               ) : (
-                <CheckCircle className="w-5 h-5 flex-shrink-0" />
+                <CheckCircle className="w-4 h-4 flex-shrink-0" />
               )}
-              <span className="text-sm font-medium">{status.message}</span>
+              <span className="text-xs md:text-sm font-medium">{status.message}</span>
             </div>
           )}
 
-          <div className="space-y-4">
+          <div className="space-y-3 md:space-y-3.5">
             {/* Name Input */}
             <div>
-              <label className="block text-sm font-semibold text-gray-700 mb-1.5">
+              <label className="block text-xs md:text-sm font-semibold text-gray-700 mb-1">
                 Full Name
               </label>
               <input
@@ -137,13 +137,13 @@ export default function ContactForm({ onClose }) {
                 placeholder="John Doe"
                 value={formData.name}
                 onChange={handleChange}
-                className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all text-sm"
+                className="w-full px-3 py-2 md:py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all text-sm"
               />
             </div>
 
             {/* Email Input */}
             <div>
-              <label className="block text-sm font-semibold text-gray-700 mb-1.5">
+              <label className="block text-xs md:text-sm font-semibold text-gray-700 mb-1">
                 Email Address
               </label>
               <input
@@ -152,13 +152,13 @@ export default function ContactForm({ onClose }) {
                 placeholder="john@example.com"
                 value={formData.email}
                 onChange={handleChange}
-                className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all text-sm"
+                className="w-full px-3 py-2 md:py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all text-sm"
               />
             </div>
 
             {/* Phone Input */}
             <div>
-              <label className="block text-sm font-semibold text-gray-700 mb-1.5">
+              <label className="block text-xs md:text-sm font-semibold text-gray-700 mb-1">
                 Phone Number
               </label>
               <div className="flex gap-2">
@@ -166,7 +166,7 @@ export default function ContactForm({ onClose }) {
                   name="countryCode"
                   value={formData.countryCode}
                   onChange={handleChange}
-                  className="w-28 px-3 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all text-sm bg-white"
+                  className="w-20 md:w-24 px-2 md:px-3 py-2 md:py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all text-sm bg-white"
                 >
                   <option value="+91">+91</option>
                   <option value="+1">+1</option>
@@ -207,14 +207,14 @@ export default function ContactForm({ onClose }) {
                   placeholder="1234567890"
                   value={formData.phone}
                   onChange={handleChange}
-                  className="flex-1 px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all text-sm"
+                  className="flex-1 px-3 py-2 md:py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all text-sm"
                 />
               </div>
             </div>
 
             {/* Organization Input */}
             <div>
-              <label className="block text-sm font-semibold text-gray-700 mb-1.5">
+              <label className="block text-xs md:text-sm font-semibold text-gray-700 mb-1">
                 Organization
               </label>
               <input
@@ -223,13 +223,13 @@ export default function ContactForm({ onClose }) {
                 placeholder="Your Company"
                 value={formData.organization}
                 onChange={handleChange}
-                className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all text-sm"
+                className="w-full px-3 py-2 md:py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all text-sm"
               />
             </div>
 
             {/* Role Input */}
             <div>
-              <label className="block text-sm font-semibold text-gray-700 mb-1.5">
+              <label className="block text-xs md:text-sm font-semibold text-gray-700 mb-1">
                 Role / Profession
               </label>
               <input
@@ -238,13 +238,13 @@ export default function ContactForm({ onClose }) {
                 placeholder="Health Coach"
                 value={formData.role}
                 onChange={handleChange}
-                className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all text-sm"
+                className="w-full px-3 py-2 md:py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all text-sm"
               />
             </div>
 
             {/* Message Textarea */}
             <div>
-              <label className="block text-sm font-semibold text-gray-700 mb-1.5">
+              <label className="block text-xs md:text-sm font-semibold text-gray-700 mb-1">
                 Message
               </label>
               <textarea
@@ -252,21 +252,21 @@ export default function ContactForm({ onClose }) {
                 placeholder="Tell us about your needs..."
                 value={formData.message}
                 onChange={handleChange}
-                className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all text-sm resize-none"
-                rows="4"
+                className="w-full px-3 py-2 md:py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all text-sm resize-none"
+                rows="3"
               />
             </div>
 
             {/* Submit Button */}
             <button
               onClick={handleSubmit}
-              className="w-full bg-gradient-to-r from-purple-600 to-purple-800 text-white font-semibold py-3 rounded-lg shadow-lg shadow-purple-500/30 hover:shadow-purple-500/50 hover:scale-[1.02] transition-all flex justify-center items-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed disabled:hover:scale-100"
+              className="w-full bg-gradient-to-r from-purple-600 to-purple-800 text-white font-semibold py-2.5 md:py-3 rounded-lg shadow-lg shadow-purple-500/30 hover:shadow-purple-500/50 hover:scale-[1.02] transition-all flex justify-center items-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed disabled:hover:scale-100 text-sm md:text-base"
               disabled={loading}
             >
               {loading ? (
                 <>
                   <svg
-                    className="animate-spin h-5 w-5 text-white"
+                    className="animate-spin h-4 w-4 text-white"
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
                     viewBox="0 0 24 24"
@@ -289,7 +289,7 @@ export default function ContactForm({ onClose }) {
                 </>
               ) : (
                 <>
-                  <Send className="w-5 h-5" />
+                  <Send className="w-4 h-4" />
                   Send Message
                 </>
               )}
