@@ -47,8 +47,7 @@ export default function ContactForm({ onClose }) {
 
     setLoading(true);
     const combinedPhone = `${formData.countryCode}${formData.phone}`;
-    const url =
-      "https://script.google.com/macros/s/AKfycbxLgP35OLK1iRJDwHDk1LUo-1iyIOKsBmP5JwnHphvI3CmSGA5rl5RF5xqELmU8o6Q/exec";
+const url = import.meta.env.VITE_CONTACT_FORM_URL;
 
     fetch(url, {
       method: "POST",

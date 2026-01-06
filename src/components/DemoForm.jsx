@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { X, Calendar, CheckCircle, AlertCircle } from "lucide-react";
 
 export default function FormToSheet({ onClose }) {
   const [formData, setFormData] = useState({
@@ -42,8 +43,7 @@ export default function FormToSheet({ onClose }) {
 
     setLoading(true);
     const combinedPhone = `${formData.countryCode}${formData.phone}`;
-    const url =
-      "https://script.google.com/macros/s/AKfycbx00R0EwQz8D_OCQAPhKNQsvONJKGWl-j0CjskzCHNYrVOIWeljFMGSBnVDW3gU8fCc/exec";
+    const url =import.meta.env.VITE_DEMO_FORM_URL;
 
     fetch(url, {
       method: "POST",
@@ -75,155 +75,234 @@ export default function FormToSheet({ onClose }) {
   };
 
   return (
-    <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-2">
-      <div className="bg-white rounded-xl w-full max-w-md p-4 relative shadow-lg sm:p-6">
-        {/* Close button */}
-        <button
-          onClick={onClose}
-          className="absolute top-3 right-3 text-gray-500 hover:text-gray-700"
-        >
-          ✕
-        </button>
-
-        <h2 className="text-xl font-bold text-purple-800 mb-1 text-center">
-          Book A Demo
-        </h2>
-        <p className="text-sm text-gray-500 mb-3 text-center">
-          Fill out the form below and our team will contact you shortly.
-        </p>
-
-        {/* Status message */}
-        {status.message && (
-          <p
-            className={`mb-3 text-center font-medium ${
-              status.type === "error" ? "text-red-500" : "text-green-500"
-            }`}
-          >
-            {status.message}
-          </p>
-        )}
-
-        {/* Form */}
-        <form onSubmit={handleSubmit} className="flex flex-col gap-2">
-          <input
-            type="text"
-            name="name"
-            placeholder="Name"
-            value={formData.name}
-            onChange={handleChange}
-            className="border border-gray-300 rounded-lg px-2 py-1.5 w-full focus:outline-none focus:ring-2 focus:ring-purple-500 text-sm"
-          />
-
-          <input
-            type="email"
-            name="email"
-            placeholder="Email"
-            value={formData.email}
-            onChange={handleChange}
-            className="border border-gray-300 rounded-lg px-2 py-1.5 w-full focus:outline-none focus:ring-2 focus:ring-purple-500 text-sm"
-          />
-
-          {/* Phone with country code */}
-          <div className="flex flex-col sm:flex-row gap-1">
-            <select
-              name="countryCode"
-              value={formData.countryCode}
-              onChange={handleChange}
-              className="border border-gray-300 rounded-lg px-2 py-1.5 w-full sm:w-24 focus:outline-none focus:ring-2 focus:ring-purple-500 text-sm"
-            >
-              <option value="" selected disabled>Select Country Code</option>
-                            <option value="+91">+91 (India)</option>
-                            <option value="+1">+1 (United States)</option>
-                            <option value="+44">+44 (United Kingdom)</option>
-                            <option value="+61">+61 (Australia)</option>
-                            <option value="+971">+971 (United Arab Emirates)</option>
-                            <option value="+65">+65 (Singapore)</option>
-                            <option value="+49">+49 (Germany)</option>
-                            <option value="+33">+33 (France)</option>
-                            <option value="+39">+39 (Italy)</option>
-                            <option value="+81">+81 (Japan)</option>
-                            <option value="+60">+60 (Malaysia)</option>
-                            <option value="+66">+66 (Thailand)</option>
-                            <option value="+62">+62 (Indonesia)</option>
-                            <option value="+94">+94 (Sri Lanka)</option>
-                            <option value="+92">+92 (Pakistan)</option>
-                            <option value="+880">+880 (Bangladesh)</option>
-                            <option value="+27">+27 (South Africa)</option>
-                            <option value="+254">+254 (Kenya)</option>
-                            <option value="+34">+34 (Spain)</option>
-                            <option value="+46">+46 (Sweden)</option>
-                            <option value="+31">+31 (Netherlands)</option>
-                            <option value="+41">+41 (Switzerland)</option>
-                            <option value="+52">+52 (Mexico)</option>
-                            <option value="+55">+55 (Brazil)</option>
-                            <option value="+63">+63 (Philippines)</option>
-                            <option value="+84">+84 (Vietnam)</option>
-                            <option value="+90">+90 (Turkey)</option>
-                            <option value="+20">+20 (Egypt)</option>
-                            <option value="+974">+974 (Qatar)</option>
-                            <option value="+968">+968 (Oman)</option>
-                            <option value="+973">+973 (Bahrain)</option>
-            </select>
-            <input
-              type="text"
-              name="phone"
-              placeholder="Phone"
-              value={formData.phone}
-              onChange={handleChange}
-              className="flex-1 border border-gray-300 rounded-lg px-2 py-1.5 w-full focus:outline-none focus:ring-2 focus:ring-purple-500 text-sm"
-            />
-          </div>
-
-          <input
-            type="text"
-            name="organization"
-            placeholder="Organization"
-            value={formData.organization}
-            onChange={handleChange}
-            className="border border-gray-300 rounded-lg px-2 py-1.5 w-full focus:outline-none focus:ring-2 focus:ring-purple-500 text-sm"
-          />
-
-          <input
-            type="text"
-            name="role"
-            placeholder="Role"
-            value={formData.role}
-            onChange={handleChange}
-            className="border border-gray-300 rounded-lg px-2 py-1.5 w-full focus:outline-none focus:ring-2 focus:ring-purple-500 text-sm"
-          />
-
-          {/* Submit Button */}
+    <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50 p-4 animate-fadeIn">
+      <div className="bg-white rounded-2xl w-full max-w-lg relative shadow-2xl transform transition-all animate-slideUp">
+        {/* Header */}
+        <div className="relative bg-gradient-to-br from-purple-600 to-purple-900 rounded-t-2xl p-4 md:p-5">
           <button
-            type="submit"
-            className="bg-gradient-to-b from-[#7025a5] to-[#2E005C] text-white font-semibold py-1.5 rounded-xl shadow-md hover:brightness-105 transition flex justify-center items-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed text-sm"
-            disabled={loading}
+            onClick={onClose}
+            className="absolute top-3 right-3 w-7 h-7 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors"
           >
-            {loading && (
-              <svg
-                className="animate-spin h-4 w-4 text-white"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-              >
-                <circle
-                  className="opacity-25"
-                  cx="12"
-                  cy="12"
-                  r="10"
-                  stroke="currentColor"
-                  strokeWidth="4"
-                ></circle>
-                <path
-                  className="opacity-75"
-                  fill="currentColor"
-                  d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
-                ></path>
-              </svg>
-            )}
-            {loading ? "Submitting..." : "Submit"}
+            <X className="w-4 h-4" />
           </button>
-        </form>
+
+          <div className="text-center">
+            <div className="w-12 h-12 md:w-14 md:h-14 bg-white/10 backdrop-blur rounded-xl flex items-center justify-center mx-auto mb-2 md:mb-3">
+              <Calendar className="w-6 h-6 md:w-7 md:h-7 text-white" />
+            </div>
+            <h2 className="text-xl md:text-2xl font-bold text-white mb-1">
+              Book A Demo
+            </h2>
+            <p className="text-purple-100 text-xs md:text-sm">
+              Fill out the form and our team will contact you shortly
+            </p>
+          </div>
+        </div>
+
+        {/* Form Container */}
+        <div className="p-4 md:p-5">
+          {/* Status Message */}
+          {status.message && (
+            <div
+              className={`mb-3 p-2 md:p-2.5 rounded-lg flex items-center gap-2 ${
+                status.type === "error"
+                  ? "bg-red-50 text-red-700 border border-red-200"
+                  : "bg-green-50 text-green-700 border border-green-200"
+              }`}
+            >
+              {status.type === "error" ? (
+                <AlertCircle className="w-4 h-4 flex-shrink-0" />
+              ) : (
+                <CheckCircle className="w-4 h-4 flex-shrink-0" />
+              )}
+              <span className="text-xs md:text-sm font-medium">{status.message}</span>
+            </div>
+          )}
+
+          <div className="space-y-3 md:space-y-3.5">
+            {/* Name Input */}
+            <div>
+              <label className="block text-xs md:text-sm font-semibold text-gray-700 mb-1">
+                Full Name
+              </label>
+              <input
+                type="text"
+                name="name"
+                placeholder="John Doe"
+                value={formData.name}
+                onChange={handleChange}
+                className="w-full px-3 py-2 md:py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all text-sm"
+              />
+            </div>
+
+            {/* Email Input */}
+            <div>
+              <label className="block text-xs md:text-sm font-semibold text-gray-700 mb-1">
+                Email Address
+              </label>
+              <input
+                type="email"
+                name="email"
+                placeholder="john@example.com"
+                value={formData.email}
+                onChange={handleChange}
+                className="w-full px-3 py-2 md:py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all text-sm"
+              />
+            </div>
+
+            {/* Phone Input */}
+            <div>
+              <label className="block text-xs md:text-sm font-semibold text-gray-700 mb-1">
+                Phone Number
+              </label>
+              <div className="flex gap-2">
+                <select
+                  name="countryCode"
+                  value={formData.countryCode}
+                  onChange={handleChange}
+                  className="w-20 md:w-24 px-2 md:px-3 py-2 md:py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all text-sm bg-white"
+                >
+                  <option value="+91">+91</option>
+                  <option value="+1">+1</option>
+                  <option value="+44">+44</option>
+                  <option value="+61">+61</option>
+                  <option value="+971">+971</option>
+                  <option value="+65">+65</option>
+                  <option value="+49">+49</option>
+                  <option value="+33">+33</option>
+                  <option value="+39">+39</option>
+                  <option value="+81">+81</option>
+                  <option value="+60">+60</option>
+                  <option value="+66">+66</option>
+                  <option value="+62">+62</option>
+                  <option value="+94">+94</option>
+                  <option value="+92">+92</option>
+                  <option value="+880">+880</option>
+                  <option value="+27">+27</option>
+                  <option value="+254">+254</option>
+                  <option value="+34">+34</option>
+                  <option value="+46">+46</option>
+                  <option value="+31">+31</option>
+                  <option value="+41">+41</option>
+                  <option value="+52">+52</option>
+                  <option value="+55">+55</option>
+                  <option value="+63">+63</option>
+                  <option value="+84">+84</option>
+                  <option value="+90">+90</option>
+                  <option value="+20">+20</option>
+                  <option value="+974">+974</option>
+                  <option value="+968">+968</option>
+                  <option value="+973">+973</option>
+                </select>
+
+                <input
+                  type="text"
+                  name="phone"
+                  placeholder="1234567890"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  className="flex-1 px-3 py-2 md:py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all text-sm"
+                />
+              </div>
+            </div>
+
+            {/* Organization Input */}
+            <div>
+              <label className="block text-xs md:text-sm font-semibold text-gray-700 mb-1">
+                Organization
+              </label>
+              <input
+                type="text"
+                name="organization"
+                placeholder="Your Company"
+                value={formData.organization}
+                onChange={handleChange}
+                className="w-full px-3 py-2 md:py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all text-sm"
+              />
+            </div>
+
+            {/* Role Input */}
+            <div>
+              <label className="block text-xs md:text-sm font-semibold text-gray-700 mb-1">
+                Role / Profession
+              </label>
+              <input
+                type="text"
+                name="role"
+                placeholder="Health Coach"
+                value={formData.role}
+                onChange={handleChange}
+                className="w-full px-3 py-2 md:py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all text-sm"
+              />
+            </div>
+
+            {/* Submit Button */}
+            <button
+              onClick={handleSubmit}
+              className="w-full bg-gradient-to-r from-purple-600 to-purple-800 text-white font-semibold py-2.5 md:py-3 rounded-lg shadow-lg shadow-purple-500/30 hover:shadow-purple-500/50 hover:scale-[1.02] transition-all flex justify-center items-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed disabled:hover:scale-100 text-sm md:text-base"
+              disabled={loading}
+            >
+              {loading ? (
+                <>
+                  <svg
+                    className="animate-spin h-4 w-4 text-white"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                  >
+                    <circle
+                      className="opacity-25"
+                      cx="12"
+                      cy="12"
+                      r="10"
+                      stroke="currentColor"
+                      strokeWidth="4"
+                    ></circle>
+                    <path
+                      className="opacity-75"
+                      fill="currentColor"
+                      d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
+                    ></path>
+                  </svg>
+                  Submitting...
+                </>
+              ) : (
+                <>
+                  <Calendar className="w-4 h-4" />
+                  Book Demo
+                </>
+              )}
+            </button>
+          </div>
+        </div>
       </div>
+
+      <style jsx>{`
+        @keyframes fadeIn {
+          from {
+            opacity: 0;
+          }
+          to {
+            opacity: 1;
+          }
+        }
+        @keyframes slideUp {
+          from {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        .animate-fadeIn {
+          animation: fadeIn 0.2s ease-out;
+        }
+        .animate-slideUp {
+          animation: slideUp 0.3s ease-out;
+        }
+      `}</style>
     </div>
   );
 }
