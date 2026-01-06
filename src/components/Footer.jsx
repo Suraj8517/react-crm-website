@@ -53,7 +53,6 @@ export default function Footer({ onOpenForm, onOpenContactForm }) {
             <div className="flex items-center gap-2 mb-6">
               <span className="text-gray-400 text-sm">Made with ❤️ in</span>
               <div className="flex items-center gap-1 px-3 py-1 bg-white/10 rounded-full backdrop-blur-sm">
-                <span className="text-lg">🇮🇳</span>
                 <span className="text-sm font-medium text-white">India</span>
               </div>
             </div>

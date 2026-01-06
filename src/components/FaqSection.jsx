@@ -28,7 +28,7 @@ const faqs = [
   },
 ];
 
-export default function FAQSection() {
+export default function FAQSection({onOpenContactForm}) {
   const [openIndex, setOpenIndex] = useState(null);
 
   const toggleFAQ = (index) => {
@@ -84,7 +84,7 @@ export default function FAQSection() {
                   <p className="text-purple-100 text-sm mb-4">
                     Can't find the answer you're looking for? Our support team is here to help.
                   </p>
-                  <button className="group flex items-center gap-2 text-white font-semibold text-sm hover:gap-3 transition-all">
+                  <button className="group flex items-center gap-2 text-white font-semibold text-sm hover:gap-3 transition-all" onClick={onOpenContactForm}>
                     Contact Support
                     <ArrowRight className="w-4 h-4" />
                   </button>
