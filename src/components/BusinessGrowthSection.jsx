@@ -64,9 +64,9 @@ export default function GrowthSection() {
   };
  
   return (
-    <div className="relative h-280 flex flex-col md:flex-row items-center justify-between bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-900 text-white py-20 px-6 md:px-20 mt-24 overflow-hidden">
+    <div className="relative h-220 flex flex-col md:flex-row items-center justify-between bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-900 text-white py-20 px-6 md:px-20 mt-24 overflow-hidden">
       <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-20 left-20 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
+        <div className="absolute top-20 left-20 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
         <div className="absolute bottom-20 right-20 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
       </div>
  
@@ -77,7 +77,7 @@ export default function GrowthSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-2xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent leading-tight">
+          <h2 className="text-2xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-400 via-purple-400 to-purple-900 bg-clip-text text-transparent leading-tight">
             Scale business growth with every customer conversation
           </h2>
           <p className="text-gray-300 mb-10 text-lg 2xl:text-xl leading-relaxed">
@@ -101,7 +101,6 @@ export default function GrowthSection() {
             }}
           ></motion.div>
  
-          {/* Enhanced blur glow */}
           <motion.div
             className="absolute left-[-6px] w-[12px] rounded-full bg-gradient-to-b from-cyan-400/40 via-blue-500/40 to-purple-600/40 blur-xl"
             style={{
@@ -166,8 +165,7 @@ export default function GrowthSection() {
       {/* Right Side Image */}
       <div className="md:w-1/2 mt-10 md:mt-0 flex justify-center items-center relative z-10">
         <div className="relative">
-          {/* Decorative glow behind image */}
-          <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-3xl blur-2xl transform scale-105"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-purple-500/20 rounded-3xl blur-2xl transform scale-105"></div>
           
           <AnimatePresence mode="wait">
             <motion.div
@@ -181,11 +179,9 @@ export default function GrowthSection() {
               <img
                 src={sections[active].image}
                 alt={sections[active].title}
-                className="w-[90%] mx-auto rounded-3xl shadow-2xl shadow-purple-900/50 border border-purple-500/20"
+                className="w-[70%] mx-auto rounded-3xl shadow-2xl shadow-purple-900/50 border border-purple-500/20"
               />
-              {/* Gradient overlay on image */}
-              <div className="absolute inset-0 bg-gradient-to-tr from-cyan-500/10 to-purple-500/10 rounded-3xl w-[90%] mx-auto"></div>
-            </motion.div>
+               </motion.div>
           </AnimatePresence>
  
           {/* Floating indicator */}
