@@ -44,7 +44,7 @@ export default function WhyUsSection() {
           Why Choose Us
         </div>
 
-        <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mb-6 bg-gradient-to-r from-purple-900 via-purple-700 to-indigo-900 bg-clip-text text-transparent">
+        <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mb-6 bg-gradient-to-r from-purple-900 via-purple-700 to-indigo-900 bg-clip-text text-transparent pb-6">
           Elevate Your Coaching
         </h2>
 
