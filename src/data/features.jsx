@@ -7,13 +7,15 @@ import { IoIosChatbubbles } from "react-icons/io";
 import { CgInsights } from "react-icons/cg";
 import client from "../assets/clients.png";
 import leads from "../assets/leads.png";
-import payments from "../assets/Payments -_ List of Payments 5.jpg";
-import client_progress from "../assets/Clients -_ Progress -_ Progress Images.jpg";
-import workflow from "../assets/Workflow.jpg";
-import engage from "../assets/interactions.png";
-import finance from "../assets/finance.png";
-import realtime from"../assets/Lead Management.jpg"
+import payments from "../assets/payments.webp";
+import client_progress from "../assets/client-progress.webp";
+import workflow from "../assets/Workflow.webp";
+import engage from "../assets/engage.png";
+import finance from "../assets/finance.webp";
+import realtime from"../assets/Lead Management.png"
 import interaction from"../assets/interactions.png"
+
+
 
 const features = [
   {

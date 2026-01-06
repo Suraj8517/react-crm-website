@@ -44,7 +44,7 @@ export default function MobileAppSection() {
 
     const interval = setInterval(() => {
       setappImage((prev) => (prev + 1) % allFeatures.length);
-    }, 2000);
+    }, 5000);
 
     return () => clearInterval(interval);
   }, [isPaused, allFeatures.length]);
@@ -56,7 +56,7 @@ export default function MobileAppSection() {
   };
 
   return (
-    <div className="bg-gradient-to-b from-[#4B0082] to-[#2E005C] mt-16 py-20 px-4">
+    <div id="app-features" className="bg-gradient-to-b from-[#4B0082] to-[#2E005C] mt-16 py-20 px-4">
       <div className="max-w-7xl mx-auto flex flex-col items-center">
         {/* Heading */}
         <div className="text-center mb-16">
@@ -170,9 +170,12 @@ export default function MobileAppSection() {
             setappImage(index);
             setIsPaused(true);
           }}
-          className="bg-[#6E0ACE] hover:bg-[#8A2BE2]
+          className={`bg-[#6E0ACE] hover:bg-[#8A2BE2]
           transition-all rounded-xl p-3 flex items-center gap-3
-          text-white shadow-md text-left"
+          text-white shadow-md text-left${appImage === index
+    ? "bg-[#8A2BE2] ring-2 ring-white scale-[1.02]"
+    : "bg-[#6E0ACE] hover:bg-[#8A2BE2]"
+  }`}
         >
           <div className="bg-white p-2 rounded-full">
             <Icon className="w-5 h-5 text-[#6E0ACE]" />

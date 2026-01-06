@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import logo from "../assets/Coach 360 logo.png"
 
 export default function PageLoader({ onLoadingComplete }) {
   const [isLoading, setIsLoading] = useState(true);
@@ -135,7 +136,13 @@ export default function PageLoader({ onLoadingComplete }) {
             />
             
             {/* CC Letter */}
-            <span className="text-4xl font-bold text-white z-10">CC</span>
+<span className="z-10">
+  <img
+    src={logo}
+    alt="CC"
+    className="w-32 h-32 object-contain"
+  />
+</span>
           </motion.div>
         </motion.div>
 
@@ -147,7 +154,7 @@ export default function PageLoader({ onLoadingComplete }) {
           className="mb-6"
         >
           <h1 className="text-4xl font-bold bg-gradient-to-r from-purple-400 via-purple-300 to-blue-400 bg-clip-text text-transparent tracking-wider">
-            CoachClub
+            Coach360
           </h1>
         </motion.div>
 

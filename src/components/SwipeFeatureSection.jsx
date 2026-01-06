@@ -9,16 +9,16 @@ import "../App.css";
 
 const SwipeFeaturesSection = () => {
   const purpleShades = [
-    "bg-gradient-to-br from-purple-50 to-purple-100",
-    "bg-gradient-to-br from-purple-100 to-purple-200",
-    "bg-gradient-to-br from-purple-200 to-purple-100",
-    "bg-gradient-to-br from-purple-50 to-purple-200",
-    "bg-gradient-to-br from-purple-100 to-purple-300",
-    "bg-gradient-to-br from-purple-50 to-purple-150",
+    "bg-gradient-to-br from-purple-100 via-purple-50 to-pink-50",
+    "bg-gradient-to-br from-indigo-100 via-purple-100 to-purple-50",
+    "bg-gradient-to-br from-purple-50 via-fuchsia-50 to-purple-100",
+    "bg-gradient-to-br from-violet-100 via-purple-50 to-indigo-50",
+    "bg-gradient-to-br from-purple-100 via-pink-50 to-purple-200",
+    "bg-gradient-to-br from-fuchsia-100 via-purple-100 to-purple-50",
   ];
 
   return (
-    <div className="w-full max-w-7xl 2xl:max-w-screen-2xl mx-auto py-15 2xl:py-24">
+    <div id="features" className="w-full max-w-7xl 2xl:max-w-screen-2xl mx-auto py-15 2xl:py-24">
       {/* Section Header */}
       <div className="text-center mb-16 2xl:mb-24">
         <motion.h2

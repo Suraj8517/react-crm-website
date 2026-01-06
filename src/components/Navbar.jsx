@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import logo from '../assets/Coach 360 Logo.png'
 export default function Navbar({ onOpenForm, onOpenContactForm }) {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -9,9 +9,7 @@ export default function Navbar({ onOpenForm, onOpenContactForm }) {
         <div className="flex items-center justify-between h-16">
           {/* LOGO */}
           <div className="flex items-center">
-            <h4 className="text-2xl font-bold text-gray-900">
-              Coach360
-            </h4>
+            <img src={logo} className="w-18"></img>
           </div>
 
           {/* Desktop Navigation */}
