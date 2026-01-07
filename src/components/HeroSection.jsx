@@ -41,8 +41,8 @@ export default function HeroSection({ onOpenForm }) {
         </h1>
         <p className="mt-4 text-base sm:text-lg md:text-xl lg:text-xl 2xl:mt-8 2xl:text-2xl max-w-lg sm:max-w-xl md:max-w-2xl">
 With our all-in-one platform, coaches can manage clients, track progress, and grow their business effortlessly — all from one place.        </p>
-        <div className="sm:flex mt-6 gap-4 mb-10">
-          <button onClick={onOpenForm} className="inline-flex items-center justify-center bg-purple-800 hover:bg-purple-700 text-white text-base font-medium px-5 py-2 mb-16 rounded-lg transition-colors duration-200">
+        <div className="sm:flex mt-6 gap-4 mb-20">
+          <button onClick={onOpenForm} className="md:mb-18 inline-flex items-center justify-center bg-purple-800 hover:bg-purple-700 text-white text-base font-medium px-5 py-2 rounded-lg transition-colors duration-200">
             Book a Demo
           </button>
         </div>
