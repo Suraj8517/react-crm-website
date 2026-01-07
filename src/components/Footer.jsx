@@ -144,7 +144,7 @@ export default function Footer({ onOpenForm, onOpenContactForm }) {
             </ul>
           </div>
 
-          {/* Contact & Social */}
+          {/* Contact & Social 
           <div>
             <h3 className="font-bold text-white mb-6 text-lg flex items-center gap-2">
               <div className="w-1 h-6 bg-gradient-to-b from-purple-400 to-purple-800 rounded-full"></div>
@@ -186,7 +186,7 @@ export default function Footer({ onOpenForm, onOpenContactForm }) {
                 ))}
               </div>
             </div>
-          </div>
+          </div>*/}
         </div>
 
         {/* Bottom bar */}
