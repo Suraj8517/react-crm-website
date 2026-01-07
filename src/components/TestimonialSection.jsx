@@ -6,7 +6,7 @@ const testimonials = [
     name: "Loga Prithika",
     role: "FitMom Club",
     feedback:
-      "We wanted a scalable way to track client success and ensure accountability among our coaching staff. Coach360 gave us full visibility into all programs and results. Not only has it improved team coordination, but it has also helped our club retain clients more effectively",
+      "We wanted a scalable way to track client success and ensure accountability among our coaching staff. Coach360 gave us full visibility into all programs and results. Not only has it improved team coordination, but it has also helped us to retain clients more effectively",
   },
   {
     name: "John",
