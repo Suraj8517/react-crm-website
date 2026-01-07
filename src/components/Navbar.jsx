@@ -36,7 +36,7 @@ export default function Navbar({ onOpenForm, onOpenContactForm }) {
             <button
               onClick={() => {
                 window.location.href =
-                  "https://sso.coachclub.ai/auth/login?appId=JgqxADnj&tenantId=JgqxADnj&redirectUrl=https%3A%2F%2Fwww.coachclub.ai";
+                  "https://sso.coachclub.ai/auth/login?appId=JgqxADnj&tenantId=JgqxADnj&redirectUrl=https%3A%2F%2Fenterprise.coachclub.ai";
               }}
               className="inline-flex items-center justify-center border border-gray-300 hover:border-gray-400 bg-white hover:bg-gray-50 text-gray-700 hover:text-gray-900 text-sm font-medium px-5 py-2 rounded-lg transition-all duration-200"
             >
