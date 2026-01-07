@@ -1,5 +1,6 @@
 import React from "react";
 import { Facebook, Instagram, Linkedin, Mail, ArrowRight, Phone, MapPin } from "lucide-react";
+import indianFlag from "../assets/indian_flag.png";
 
 export default function Footer({ onOpenForm, onOpenContactForm }) {
   return (
@@ -13,7 +14,7 @@ export default function Footer({ onOpenForm, onOpenContactForm }) {
       <div className="relative max-w-7xl mx-auto px-6 md:px-8 py-16">
         
         {/* Top section with CTA */}
-        <div className="bg-gradient-to-r from-purple-600 to-indigo-600 rounded-2xl p-8 md:p-12 mb-16 shadow-2xl transform hover:scale-[1.02] transition-transform duration-300">
+        <div className="bg-gradient-to-r from-purple-900 to-indigo-600 rounded-2xl p-8 md:p-12 mb-16 shadow-2xl transform hover:scale-[1.02] transition-transform duration-300">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="text-center md:text-left">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-2">
@@ -25,7 +26,7 @@ export default function Footer({ onOpenForm, onOpenContactForm }) {
             </div>
             <button
               onClick={onOpenForm}
-              className="group bg-white text-purple-600 px-8 py-4 rounded-full font-semibold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 flex items-center gap-2 whitespace-nowrap"
+              className="group bg-white text-purple-900 px-8 py-4 rounded-full font-semibold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 flex items-center gap-2 whitespace-nowrap"
             >
               Book a Demo
               <ArrowRight className="group-hover:translate-x-1 transition-transform" size={20} />
@@ -40,7 +41,7 @@ export default function Footer({ onOpenForm, onOpenContactForm }) {
           <div className="lg:col-span-1">
             <div className="mb-6">
               <h2 className="font-extrabold text-white text-4xl mb-2 tracking-wide">
-                COACH<span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">360</span>
+                COACH<span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-purple-600">360</span>
               </h2>
               <p className="text-purple-300 text-sm font-semibold">#1 Software for Coaches</p>
               <p className="text-purple-300 text-sm font-medium mb-4">Powered by VMax Health Tech</p>
@@ -52,16 +53,18 @@ export default function Footer({ onOpenForm, onOpenContactForm }) {
 
             <div className="flex items-center gap-2 mb-6">
               <span className="text-gray-400 text-sm">Made with ❤️ in</span>
-              <div className="flex items-center gap-1 px-3 py-1 bg-white/10 rounded-full backdrop-blur-sm">
-                <span className="text-sm font-medium text-white">India</span>
-              </div>
+                <img
+                                src={indianFlag}
+                                alt="India Flag"
+                                className="w-6 h-4 object-contain"
+                              />
             </div>
           </div>
 
           {/* Quick Links */}
           <div>
             <h3 className="font-bold text-white mb-6 text-lg flex items-center gap-2">
-              <div className="w-1 h-6 bg-gradient-to-b from-purple-400 to-pink-400 rounded-full"></div>
+              <div className="w-1 h-6 bg-gradient-to-b from-purple-400 to-purple-800 rounded-full"></div>
               Quick Links
             </h3>
             <ul className="space-y-3 text-sm">
@@ -87,7 +90,7 @@ export default function Footer({ onOpenForm, onOpenContactForm }) {
           {/* Resources */}
           <div>
             <h3 className="font-bold text-white mb-6 text-lg flex items-center gap-2">
-              <div className="w-1 h-6 bg-gradient-to-b from-purple-400 to-pink-400 rounded-full"></div>
+              <div className="w-1 h-6 bg-gradient-to-b from-purple-400 to-purple-800 rounded-full"></div>
               Resources
             </h3>
             <ul className="space-y-3 text-sm">
@@ -144,7 +147,7 @@ export default function Footer({ onOpenForm, onOpenContactForm }) {
           {/* Contact & Social */}
           <div>
             <h3 className="font-bold text-white mb-6 text-lg flex items-center gap-2">
-              <div className="w-1 h-6 bg-gradient-to-b from-purple-400 to-pink-400 rounded-full"></div>
+              <div className="w-1 h-6 bg-gradient-to-b from-purple-400 to-purple-800 rounded-full"></div>
               Get in Touch
             </h3>
             
@@ -176,7 +179,7 @@ export default function Footer({ onOpenForm, onOpenContactForm }) {
                     key={label}
                     href={href}
                     aria-label={label}
-                    className="p-3 bg-white/10 rounded-lg text-gray-300 hover:text-white hover:bg-gradient-to-br hover:from-purple-500 hover:to-pink-500 transition-all duration-300 transform hover:scale-110 hover:-translate-y-1"
+                    className="p-3 bg-white/10 rounded-lg text-gray-300 hover:text-white hover:bg-gradient-to-br hover:from-purple-500 hover:to-purple-800 transition-all duration-300 transform hover:scale-110 hover:-translate-y-1"
                   >
                     <Icon size={18} />
                   </a>

@@ -1,9 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, FreeMode } from "swiper/modules";
+import { Pagination, FreeMode, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
+import "swiper/css/navigation";
 import features from "../data/features";
 import "../App.css";
 
@@ -18,7 +19,10 @@ const SwipeFeaturesSection = () => {
   ];
 
   return (
-    <div id="features" className="w-full max-w-7xl 2xl:max-w-screen-2xl mx-auto py-15 2xl:py-24">
+    <div
+      id="features"
+      className="w-full max-w-7xl 2xl:max-w-screen-2xl mx-auto py-15 2xl:py-24"
+    >
       {/* Section Header */}
       <div className="text-center mb-16 2xl:mb-24">
         <motion.h2
@@ -42,19 +46,65 @@ const SwipeFeaturesSection = () => {
         </motion.p>
       </div>
 
-      {/* === Swiper With Foggy Overlays === */}
+      {/* === Swiper Wrapper === */}
       <div className="relative">
 
-        {/* Left Fog Overlay */}
-        <div className="absolute left-0 top-0 h-full w-16 sm:w-24 z-20 pointer-events-none 
+        {/* LEFT BUTTON */}
+        <button
+  className="swiper-prev hidden md:flex absolute left-4 2xl:left-0 top-1/2 -translate-y-1/2 z-30
+    w-12 h-12 rounded-full bg-purple-200 shadow-lg
+    flex items-center justify-center
+    text-purple-700 hover:bg-purple-100 transition"
+  aria-label="Previous slide"
+>
+  <svg
+    className="w-6 h-6"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2.5"
+    viewBox="0 0 24 24"
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M15 19l-7-7 7-7"
+    />
+  </svg>
+</button>
+
+
+        {/* RIGHT BUTTON */}
+      <button
+  className="swiper-next hidden md:flex absolute 2xl:right-0 lg:right-4 top-1/2 -translate-y-1/2 z-30
+    w-12 h-12 rounded-full bg-purple-200 shadow-lg
+    flex items-center justify-center
+    text-purple-700 hover:bg-purple-100 transition"
+>
+  <svg
+    className="w-6 h-6"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2.5"
+    viewBox="0 0 24 24"
+  >
+    <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+  </svg>
+</button>
+
+
+        {/* Fog Overlays */}
+        <div className="absolute left-0 top-0 h-full w-16 sm:w-24 z-20 pointer-events-none
           bg-gradient-to-r from-white via-white/70 to-transparent hidden sm:block"></div>
 
-        {/* Right Fog Overlay */}
         <div className="absolute right-0 top-0 h-full w-16 sm:w-24 z-20 pointer-events-none
           bg-gradient-to-l from-white via-white/70 to-transparent hidden sm:block"></div>
 
         <Swiper
-          modules={[Pagination, FreeMode]}
+          modules={[Pagination, FreeMode, Navigation]}
+          navigation={{
+            prevEl: ".swiper-prev",
+            nextEl: ".swiper-next",
+          }}
           pagination={{ clickable: true, el: ".custom-pagination" }}
           spaceBetween={20}
           grabCursor={true}
@@ -69,9 +119,10 @@ const SwipeFeaturesSection = () => {
           {features.map((item, i) => (
             <SwiperSlide key={i} className="flex justify-center">
               <div
-                className={`${
-                  purpleShades[i % purpleShades.length]
-                } rounded-3xl p-8 2xl:p-12 flex flex-col justify-between items-start text-left shadow-lg h-[490px] 2xl:h-[560px] max-w-[400px] 2xl:max-w-[480px] w-full sm:mx-10`}
+                className={`${purpleShades[i % purpleShades.length]}
+                  rounded-3xl p-8 2xl:p-12 flex flex-col justify-between items-start
+                  text-left shadow-lg h-[490px] 2xl:h-[560px]
+                  max-w-[400px] 2xl:max-w-[480px] w-full sm:mx-10`}
               >
                 <div>
                   <h3 className="text-3xl 2xl:text-4xl font-bold text-purple-900 mb-4">
@@ -93,7 +144,7 @@ const SwipeFeaturesSection = () => {
         </Swiper>
       </div>
 
-      {/* Pagination Dots */}
+      {/* Pagination */}
       <div className="custom-pagination flex justify-center mt-4 2xl:mt-8"></div>
     </div>
   );
