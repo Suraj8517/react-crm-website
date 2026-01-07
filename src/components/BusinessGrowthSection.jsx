@@ -70,9 +70,9 @@ export default function GrowthSection() {
     <div className="flex flex-col md:flex-row items-center justify-between bg-purple-950 text-white py-20 px-6 md:px-20 mt-24 relative overflow-hidden">
       {/* Left Side */}
       <div className="md:w-1/2 relative">
-        <h2 className="text-2xl md:text-5xl font-bold mb-4">
-          Scale business growth with every customer conversation
-        </h2>
+        <h2 className="text-2xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-400 via-purple-400 to-purple-900 bg-clip-text text-transparent leading-tight">
+            Scale business growth with every customer conversation
+          </h2>
         <p className="text-gray-400 mb-10 text-lg 2xl:text-xl">
           Streamline your customer journey by centralizing every interaction.
           Stay organized, responsive, and efficient—no matter how many customers
