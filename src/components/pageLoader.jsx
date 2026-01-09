@@ -154,7 +154,7 @@ export default function PageLoader({ onLoadingComplete }) {
           className="mb-6"
         >
           <h1 className="text-4xl font-bold bg-gradient-to-r from-purple-400 via-purple-300 to-blue-400 bg-clip-text text-transparent tracking-wider">
-          SMARTCOACH360
+            SmartCoach360
           </h1>
         </motion.div>
 
