@@ -44,7 +44,7 @@ export default function MobileAppSection() {
 
     const interval = setInterval(() => {
       setappImage((prev) => (prev + 1) % allFeatures.length);
-    }, 5000);
+    }, 3000);
 
     return () => clearInterval(interval);
   }, [isPaused, allFeatures.length]);
