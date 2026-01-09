@@ -3,29 +3,30 @@ import { ChevronDown, MessageCircle, HelpCircle, Sparkles, ArrowRight } from "lu
 
 const faqs = [
   {
-    question: "What is Coach360 used for?",
-    answer:
-      "Coach360 helps wellness professionals organize client information, track progress, and manage their daily operations more efficiently.",
-    icon: "💼"
-  },
-  {
-    question: "Do I need technical skills to use it?",
-    answer:
-      "No, Coach360 is built to be simple and user-friendly, so you can focus on your work without worrying about technical setup.",
-    icon: "⚡"
-  },
-  {
-    question: "Can I manage multiple clients at the same time?",
-    answer:
-      "Yes, you can easily add and manage multiple clients, monitor their progress, and keep all details organized in one place.",
-    icon: "👥"
-  },
-  {
-    question: "Is customer support available?",
-    answer:
-      "Yes, our support team is available to help you with any questions or issues you may face while using the platform.",
-    icon: "💬"
-  },
+  question: "How does SmartCoach360 help with client management?",
+  answer:
+    "SmartCoach360 lets you store all client details in one place, track progress, manage programs, and communicate easily, saving you time and effort.",
+  icon: "📋"
+},
+{
+  question: "Can I track client progress and performance?",
+  answer:
+    "Yes, you can monitor workouts, nutrition, check-ins, and progress reports to see how each client is improving over time.",
+  icon: "📊"
+},
+{
+  question: "Can I manage payments and subscriptions?",
+  answer:
+    "SmartCoach360 helps you track client plans, subscriptions, and payment status so you stay organized and avoid missed renewals.",
+  icon: "💳"
+},
+{
+  question: "Is my client data secure?",
+  answer:
+    "Yes, all client information is stored securely with proper data protection, ensuring privacy and safety at all times.",
+  icon: "🔒"
+}
+
 ];
 
 export default function FAQSection({onOpenContactForm}) {
@@ -67,7 +68,7 @@ export default function FAQSection({onOpenContactForm}) {
 
             {/* Subtitle */}
             <p className="text-gray-600 text-base sm:text-lg md:text-xl leading-relaxed mb-8">
-              Find answers to the most common questions about Coach360. 
+              Find answers to the most common questions about SmartCoach360. 
               If you still need help, our support team is always here.
             </p>
 
@@ -118,7 +119,7 @@ export default function FAQSection({onOpenContactForm}) {
                   key={index}
                   className={`relative rounded-2xl backdrop-blur-xl border transition-all duration-300 overflow-hidden shadow-lg ${
                     isOpen 
-                      ? 'bg-gradient-to-br from-purple-50 to-indigo-50 border-purple-300 shadow-xl shadow-purple-200/50' 
+                      ? ' border-purple-300 shadow-xl shadow-purple-200/50' 
                       : 'bg-white border-gray-200 hover:border-purple-200 hover:shadow-xl'
                   }`}
                 >

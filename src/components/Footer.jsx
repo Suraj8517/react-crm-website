@@ -21,7 +21,7 @@ export default function Footer({ onOpenForm, onOpenContactForm }) {
                 Ready to Transform Your Coaching Business?
               </h2>
               <p className="text-purple-100 text-lg">
-                Join thousands of coaches already using Coach360
+                Join thousands of coaches already using SmartCoach360
               </p>
             </div>
             <button
@@ -40,8 +40,8 @@ export default function Footer({ onOpenForm, onOpenContactForm }) {
           {/* Brand Info */}
           <div className="lg:col-span-1">
             <div className="mb-6">
-              <h2 className="font-extrabold text-white text-4xl mb-2 tracking-wide">
-                COACH<span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-purple-600">360</span>
+              <h2 className="font-extrabold text-white text-2xl mb-2 tracking-wide">
+                SMARTCOACH<span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-purple-600">360</span>
               </h2>
               <p className="text-purple-300 text-sm font-semibold">#1 Software for Coaches</p>
               <p className="text-purple-300 text-sm font-medium mb-4">Powered by VMax Health Tech</p>
@@ -52,7 +52,7 @@ export default function Footer({ onOpenForm, onOpenContactForm }) {
             </p>
 
             <div className="flex items-center gap-2 mb-6">
-              <span className="text-gray-400 text-sm">Made with ❤️ in</span>
+              <span className="text-gray-400 text-sm">Made in</span>
                 <img
                                 src={indianFlag}
                                 alt="India Flag"
@@ -192,7 +192,7 @@ export default function Footer({ onOpenForm, onOpenContactForm }) {
         {/* Bottom bar */}
         <div className="border-t border-white/10 pt-8">
           <div className="flex flex-col md:flex-row justify-center items-center gap-4 text-sm text-gray-400">
-            <p>© {new Date().getFullYear()} Coach360. All rights reserved.</p>
+            <p>© {new Date().getFullYear()} SmartCoach360. All rights reserved.</p>
                     {/*
             <div className="flex gap-6">
               <a href="#terms" className="hover:text-white transition-colors">Terms of Service</a>

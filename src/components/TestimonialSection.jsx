@@ -6,19 +6,19 @@ const testimonials = [
     name: "Loga Prithika",
     role: "FitMom Club",
     feedback:
-      "We wanted a scalable way to track client success and ensure accountability among our coaching staff. Coach360 gave us full visibility into all programs and results. Not only has it improved team coordination, but it has also helped us to retain clients more effectively",
+      "We wanted a scalable way to track client success and ensure accountability among our coaching staff. SmartCoach360 gave us full visibility into all programs and results. Not only has it improved team coordination, but it has also helped us to retain clients more effectively",
   },
   {
     name: "John",
-    role: "Coach FitMom Club",
+    role: "Coach, FitMom Club",
     feedback:
-      "I struggled to grow my client base because marketing and lead management were overwhelming. Coach360's built-in client tracking and automated reminders have streamlined my workflow. I'm now reaching more clients with less effort, and my revenue has increased noticeably.",
+      "I struggled to grow my client base because marketing and lead management were overwhelming. SmartCoach360's built-in client tracking and automated reminders have streamlined my workflow. I'm now reaching more clients with less effort, and my revenue has increased noticeably.",
   },
   {
     name: "Pramod",
     role: "Client Success Representative, FitMom Club",
     feedback:
-      "Handling inquiries and follow-ups manually was exhausting and error-prone. Coach360's automated workflows and lead tracking system have made our sales process smooth and efficient. We can now focus on converting leads rather than chasing them.",
+      "Handling inquiries and follow-ups manually was exhausting and error-prone. SmartCoach360's automated workflows and lead tracking system have made our sales process smooth and efficient. We can now focus on converting leads rather than chasing them.",
   },
 ];
 

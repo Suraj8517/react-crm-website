@@ -57,7 +57,7 @@ const OurCombinedFeature = ({onOpenForm}) => {
             Everything you need to run people operations
           </h2>
           <p className="text-gray-600 text-lg mb-6">
-            From client management to payments — <span className="font-bold text-purple-900 ">COACH360</span> streamlines your fitness & wellness business in one place.
+            From client management to payments — <span className="font-bold text-purple-900 ">SmartCoach360</span> streamlines your fitness & wellness business in one place.
           </p>
           <button  onClick={onOpenForm} className="bg-gradient-to-b from-[#4B0082] to-[#2E005C] text-white font-semibold px-6 py-3 rounded-full shadow-md hover:bg-[#5e0ace] transition">
             Book a Demo →

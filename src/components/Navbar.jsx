@@ -33,18 +33,6 @@ export default function Navbar({ onOpenForm, onOpenContactForm }) {
             </button>
 
             {/* Login Button */}
-            <button
-              onClick={() => {
-                window.location.href =
-                  "https://sso.coachclub.ai/auth/login?appId=JgqxADnj&tenantId=JgqxADnj&redirectUrl=https%3A%2F%2Fenterprise.coachclub.ai";
-              }}
-              className="inline-flex items-center justify-center border border-gray-300 hover:border-gray-400 bg-white hover:bg-gray-50 text-gray-700 hover:text-gray-900 text-sm font-medium px-5 py-2 rounded-lg transition-all duration-200"
-            >
-              <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1" />
-              </svg>
-              Log In
-            </button>
           </div>
 
           {/* Mobile Menu Button */}

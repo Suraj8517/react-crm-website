@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import slide1 from "../assets/slide1.webp";
+import slide1 from "../assets/slide1.png";
 import slide2 from "../assets/slide2.webp";
 import slide3 from "../assets/slide3.webp";
 

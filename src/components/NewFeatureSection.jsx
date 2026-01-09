@@ -49,7 +49,7 @@ export default function WhyUsSection() {
         </h2>
 
         <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
-          Beyond our powerful features, here are a few more reasons coaches love choosing Coach360
+          Beyond our powerful features, here are a few more reasons coaches love choosing SmartCoach360
         </p>
       </div>
 
