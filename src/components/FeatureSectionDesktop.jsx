@@ -123,7 +123,11 @@ const OurCombinedFeature = ({onOpenForm}) => {
     <p className="text-gray-600 text-lg mb-6">
        From client management to payments — Coach360 streamlines your fitness & wellness business in one place.
 </p>
-    <button onClick={onOpenForm} className="bg-[#6E0ACE] text-white font-semibold px-6 py-3 rounded-full shadow-md hover:bg-[#5e0ace] transition">
+    <button onClick={() =>
+    window.open(
+      "https://calendly.com/sangameswaran-vmaxhealthtech/30min",
+      "_blank"
+    )} className="bg-[#6E0ACE] text-white font-semibold px-6 py-3 rounded-full shadow-md hover:bg-[#5e0ace] transition">
       Book a Demo →
     </button>
   </div>
@@ -166,7 +170,12 @@ const OurCombinedFeature = ({onOpenForm}) => {
     <p className="text-gray-600 text-base mb-6 leading-relaxed">
       From client management to payments — <span className="font-bold text-purple-900">COACH CLUB</span> streamlines your fitness & wellness business in one place.
     </p>
-    <button onClick={onOpenForm}  className="bg-gradient-to-b from-[#4B0082] to-[#2E005C] text-white font-semibold px-8 py-3.5 rounded-full shadow-lg hover:bg-[#5e0ace] transition-all hover:shadow-xl active:scale-95">
+    <button  onClick={() =>
+  window.open(
+    "https://calendly.com/sangameswaran-vmaxhealthtech/30min",
+    "_blank"
+  )
+} className="bg-gradient-to-b from-[#4B0082] to-[#2E005C] text-white font-semibold px-8 py-3.5 rounded-full shadow-lg hover:bg-[#5e0ace] transition-all hover:shadow-xl active:scale-95">
       Book a Demo →
     </button>
   </div>
