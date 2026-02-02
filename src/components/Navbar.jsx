@@ -9,7 +9,7 @@ export default function Navbar({ onOpenForm, onOpenContactForm }) {
         <div className="flex items-center justify-between h-16">
           {/* LOGO */}
           <div className="flex items-center">
-            <img src={logo} className="w-18"></img>
+            <img src={logo} className="w-18" alt="logo"></img>
           </div>
 
           {/* Desktop Navigation */}
@@ -26,7 +26,13 @@ export default function Navbar({ onOpenForm, onOpenContactForm }) {
             </button>
             {/* Book A Demo */}
             <button
-              onClick={onOpenForm}
+             onClick={() =>
+  window.open(
+    "https://calendly.com/sangameswaran-vmaxhealthtech/30min",
+    "_blank"
+  )
+}
+
               className="inline-flex items-center justify-center bg-purple-600 hover:bg-purple-700 text-white text-sm font-medium px-5 py-2 rounded-lg transition-colors duration-200"
             >
               Book a Demo
@@ -82,14 +88,17 @@ export default function Navbar({ onOpenForm, onOpenContactForm }) {
             </button>
 
             <button
-              onClick={() => {
-                onOpenForm();
-                setMenuOpen(false);
-              }}
-              className="w-full bg-purple-600 hover:bg-purple-700 text-white text-base font-medium py-2.5 px-4 rounded-lg transition-colors duration-200"
-            >
-              Book a Demo
-            </button>
+  onClick={() => {
+    window.open(
+      "https://calendly.com/sangameswaran-vmaxhealthtech/30min",
+      "_blank"
+    );
+    setMenuOpen(false);
+  }}
+  className="w-full bg-purple-600 hover:bg-purple-700 text-white text-base font-medium py-2.5 px-4 rounded-lg transition-colors duration-200"
+>
+  Book a Demo
+</button>
           </div>
         </div>
       )}

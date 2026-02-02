@@ -59,7 +59,11 @@ const OurCombinedFeature = ({onOpenForm}) => {
           <p className="text-gray-600 text-lg mb-6">
             From client management to payments — <span className="font-bold text-purple-900 ">SmartCoach360</span> streamlines your fitness & wellness business in one place.
           </p>
-          <button  onClick={onOpenForm} className="bg-gradient-to-b from-[#4B0082] to-[#2E005C] text-white font-semibold px-6 py-3 rounded-full shadow-md hover:bg-[#5e0ace] transition">
+          <button  onClick={() =>
+    window.open(
+      "https://calendly.com/sangameswaran-vmaxhealthtech/30min",
+      "_blank"
+    )} className="bg-gradient-to-b from-[#4B0082] to-[#2E005C] text-white font-semibold px-6 py-3 rounded-full shadow-md hover:bg-[#5e0ace] transition">
             Book a Demo →
           </button>
         </div>

@@ -17,6 +17,9 @@ import PageLoader from "./components/pageLoader";
 import DemoForm from "./components/DemoForm";
 import ContactForm from "./components/ContactForm";
 import PerformanceSection from "./components/PerformanceSection";
+
+
+
 export default function Landingpages() {
   const [openDemoForm, setOpenDemoForm] = useState(false);
   const [openContactForm, setOpenContactForm] = useState(false);

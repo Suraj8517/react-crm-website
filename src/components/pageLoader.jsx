@@ -153,9 +153,19 @@ export default function PageLoader({ onLoadingComplete }) {
           transition={{ duration: 0.8, delay: 0.3 }}
           className="mb-6"
         >
-          <h1 className="text-4xl font-bold bg-gradient-to-r from-purple-400 via-purple-300 to-blue-400 bg-clip-text text-transparent tracking-wider">
-            SmartCoach360
-          </h1>
+          <h1 className="text-5xl font-black tracking-tight">
+                {['S','m','a','r','t','C','o','a','c','h','3','6','0'].map((letter, i) => (
+                  <motion.span
+                    key={i}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.5 + i * 0.05 }}
+                    className="inline-block bg-gradient-to-br from-purple-400 via-purple-300 to-blue-400 bg-clip-text text-transparent"
+                  >
+                    {letter}
+                  </motion.span>
+                ))}
+              </h1>
         </motion.div>
 
         {/* Futuristic Loading Bar Container */}

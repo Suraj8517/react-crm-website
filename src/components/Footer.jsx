@@ -25,7 +25,11 @@ export default function Footer({ onOpenForm, onOpenContactForm }) {
               </p>
             </div>
             <button
-              onClick={onOpenForm}
+              onClick={() =>
+    window.open(
+      "https://calendly.com/sangameswaran-vmaxhealthtech/30min",
+      "_blank"
+    )}
               className="group bg-white text-purple-900 px-8 py-4 rounded-full font-semibold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 flex items-center gap-2 whitespace-nowrap"
             >
               Book a Demo
@@ -105,7 +109,11 @@ export default function Footer({ onOpenForm, onOpenContactForm }) {
               </li>
               <li>
                 <button
-                  onClick={onOpenForm}
+                  onClick={() =>
+    window.open(
+      "https://calendly.com/sangameswaran-vmaxhealthtech/30min",
+      "_blank"
+    )}
                   className="text-gray-300 hover:text-white transition-colors duration-300 flex items-center gap-2 group"
                 >
                   <ArrowRight size={14} className="opacity-0 group-hover:opacity-100 transition-opacity" />

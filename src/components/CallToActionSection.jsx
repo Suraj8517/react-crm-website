@@ -90,7 +90,11 @@ const CallToActionSection = ({ onOpenForm }) => {
               {/* CTA button */}
               <div className="flex justify-center mb-8">
                 <button
-                  onClick={onOpenForm}
+                  onClick={() =>
+    window.open(
+      "https://calendly.com/sangameswaran-vmaxhealthtech/30min",
+      "_blank"
+    )}
                   onMouseEnter={() => setIsHovered(true)}
                   onMouseLeave={() => setIsHovered(false)}
                   className="group relative px-10 py-5 bg-gradient-to-r from-purple-800 to-purple-950 text-white font-bold rounded-xl shadow-2xl shadow-purple-500/50 hover:shadow-purple-500/70 transition-all duration-300 hover:scale-105 overflow-hidden"
