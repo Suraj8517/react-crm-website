@@ -56,15 +56,18 @@ export default function MobileAppSection() {
   };
 
   return (
-    <div id="app-features" className="bg-gradient-to-b from-[#4B0082] to-[#2E005C] mt-16 py-20 px-4">
+    <div id="app-features" className="bg-[#0B1220] mt-16 py-50 px-4">
+      
       <div className="max-w-7xl mx-auto flex flex-col items-center">
+              <div className="absolute  left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-purple-600/20 blur-[140px] rounded-full" />
+
         {/* Heading */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4" style={{ fontFamily: "'Cormorant', serif" }}>
             Delight your customers with 100%<br /> digital service!
           </h1>
-          <p className="text-purple-200 text-lg">
-            Get access to mobile app that you can use as your own or offer a
+          <p className="text-white text-lg">
+            Get access to mobile app that you can use as your<br/> own or offer a
             top-notch customer experience and build loyalty.
           </p>
         </div>
@@ -89,14 +92,14 @@ export default function MobileAppSection() {
                   ${index === 1 || index === 2 ? "self-start" : "self-end"}
                   ${appImage === index
     ? "bg-[#8A2BE2] ring-2 ring-white scale-[1.02]"
-    : "bg-[#6E0ACE] hover:bg-[#8A2BE2]"
+    : "bg-[#5B21B6] hover:bg-[#8A2BE2]"
   }`}
                 >
-                  <div className="bg-white p-4 rounded-full shadow-md">
+                  <div className="bg-white p-2 rounded-full shadow-md">
                     <Icon className="w-7 h-7 text-[#6E0ACE]" />
                   </div>
 
-                  <span className="font-semibold text-lg whitespace-pre-line leading-tight">
+                  <span className="font-semibold text-base whitespace-pre-line leading-tight">
                     {formatTitle(feature.title)}
                   </span>
                 </button>
@@ -135,11 +138,11 @@ export default function MobileAppSection() {
     : "bg-[#6E0ACE] hover:bg-[#8A2BE2]"
   }`}
                 >
-                  <div className="bg-white p-4 rounded-full shadow-md">
+                  <div className="bg-white p-2 rounded-full shadow-md">
                     <Icon className="w-7 h-7 text-[#6E0ACE]" />
                   </div>
 
-                  <span className="font-semibold text-lg whitespace-pre-line leading-tight">
+                  <span className="font-semibold text-base whitespace-pre-line leading-tight">
                     {formatTitle(feature.title)}
                   </span>
                 </button>

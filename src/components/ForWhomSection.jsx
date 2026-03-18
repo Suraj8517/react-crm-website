@@ -6,76 +6,86 @@ const ForWhomSection = () => {
   return (
     <section
       id="for-whom"
-      className="relative max-w-7xl mx-auto px-6 lg:px-12 py-10 flex flex-col lg:flex-row items-center gap-10 lg:my-25 sm:my-10"
+      className="relative max-w-7xl mx-auto px-6 lg:px-12 py-16 lg:py-24 flex flex-col lg:flex-row items-center gap-12"
     >
-      {/* Top-right decorative circle */}
+      {/* Background Gradient */}
+      <div className="absolute inset-0 -z-10  rounded-3xl"></div>
+
+      {/* Decorative circle */}
       <img
         src={bg_circle}
-        alt="Decorative Circle"
-        className="absolute top-0 right-0 w-40 lg:w-60 opacity-30 pointer-events-none"
+        alt=""
+        className="absolute top-0 right-0 w-40 lg:w-72 opacity-20 pointer-events-none"
       />
 
-      {/* Purple background overlay */}
-      <div className="absolute inset-0 opacity-20 -z-10 rounded-2xl"></div>
+      {/* LEFT SIDE */}
+      <div className="relative w-full lg:w-1/2 flex justify-center">
+        
+        {/* Glow behind image */}
+        <div className="absolute w-[280px] h-[280px] bg-purple-500/20 blur-[100px] rounded-full"></div>
 
-      {/* Headings for mobile/tablet */}
-      <div className="text-center mb-6 lg:hidden">
-        <p className="uppercase tracking-wide text-purple-950 text-xl">
-          Who Is SmartCoach360 For?
-        </p>
-        <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mt-2">
-          Designed for Wellness Professionals Like You
-        </h2>
-      </div>
-
-      {/* Left Side */}
-      <div className="relative w-full lg:w-1/2 flex justify-center lg:ml-40 sm:ml-0">
-        <div className="relative flex items-center justify-center">
-          {/* Decorative circle behind main image */}
-          <img
-            src={bg_circle}
-            alt="Decorative Circle"
-            className="absolute -bottom-32 -left-24 w-32 lg:w-88 opacity-30 pointer-events-none z-0"
-          />
-
-          {/* Main Image */}
+        {/* Image card */}
+        <div className="relative group">
           <img
             src={forwhom}
-            alt="Online Appointment"
-            className="relative z-10 rounded-2xl shadow-lg object-cover
-                       w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-xl xl:max-w-2xl h-auto"
+            alt="Wellness professionals"
+            className="rounded-3xl shadow-[0_20px_60px_rgba(124,58,237,0.25)]
+                       object-cover w-full max-w-sm md:max-w-md lg:max-w-lg
+                       transition duration-500 group-hover:scale-[1.03]"
           />
+
+          {/* Floating badge */}
+          <div className="text-white absolute -bottom-6 -right-6 bg-[#5B21B6] px-4 py-2 rounded-xl shadow-lg border border-gray-100 text-sm font-medium">
+            Trusted by 1,000+ Coaches
+          </div>
         </div>
       </div>
 
-      {/* Right Side */}
-      <div className="w-full lg:w-2/3 lg:ml-10 lg:mr-10 text-center lg:text-left relative z-10">
-        <p className="uppercase tracking-wide text-purple-900 font-medium hidden lg:block sm:text-xl 2xl:text-xl">
+      {/* RIGHT SIDE */}
+      <div className="w-full lg:w-1/2 text-center lg:text-left relative z-10">
+        
+        {/* Label */}
+        <p className="uppercase tracking-wider text-purple-600 font-semibold text-sm">
           Who Is SmartCoach360 For?
         </p>
-        <h2 className="hidden lg:block 2xl:text-4xl text-3xl sm:text-5xl font-bold text-gray-900 mt-2">
-          Designed for Wellness Professionals Like You
+
+        {/* Heading */}
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 mt-3 leading-tighter" style={{ fontFamily: "'Cormorant', serif" }}>
+          Built for Modern<br/> <span className="text-purple-600">Wellness Experts</span>
         </h2>
 
-        <p className="text-gray-600 mt-4 2xl:text-lg">
-          <span className="font-bold text-purple-900">SmartCoach360</span> is designed to support health and wellness professionals who want
-          to streamline their practice, engage clients more effectively, and
-          grow their business with ease.
+        {/* Description */}
+        <p className="text-gray-600 mt-5 text-base lg:text-medium max-w-xl">
+          <span className="font-semibold text-gray-900">SmartCoach360</span> helps you streamline operations, improve client engagement, and scale your coaching business — all from one powerful platform.
         </p>
 
-        <ul className="mt-6 space-y-3 text-gray-700 inline-block text-left 2xl:text-lg">
-          <li className="flex items-start gap-3 font-bold">
-            <span className="w-5 h-5 flex items-center justify-center bg-purple-100 text-purple-600 rounded-full text-xs font-bold">✓</span> Nutritionists & Dietitians
-          </li>
-          <li className="flex items-start gap-3 font-bold">
-            <span className="w-5 h-5 flex items-center justify-center bg-purple-100 text-purple-600 rounded-full text-xs font-bold">✓</span> Fitness Coaches & Personal Trainers
-          </li>
-          <li className="flex items-start gap-3 font-bold">
-            <span className="w-5 h-5 flex items-center justify-center bg-purple-100 text-purple-600 rounded-full text-xs font-bold">✓</span> Wellness Consultants
-          </li>
-          <li className="flex items-start gap-3 font-bold">
-            <span className="w-5 h-5 flex items-center justify-center bg-purple-100 text-purple-600 rounded-full text-xs font-bold">✓</span> Wellness Centers
-          </li>
+        {/* List */}
+        <ul className="mt-8 space-y-4 text-gray-700 text-left max-w-md mx-auto lg:mx-0">
+          
+          {[
+            "Nutritionists & Dietitians",
+            "Fitness Coaches & Personal Trainers",
+            "Wellness Consultants",
+            "Wellness Centers",
+          ].map((item, i) => (
+            <li
+              key={i}
+              className="flex items-center gap-3 group transition text-lg font-extrabold"style={{ fontFamily: "'Cormorant Garamond ', serif" }}
+            >
+              {/* Icon */}
+              <div className="w-6 h-6 flex items-center justify-center 
+                              bg-purple-100 text-purple-600 
+                              rounded-full text-xs font-bold
+                              transition group-hover:bg-purple-600 group-hover:text-white">
+                ✓
+              </div>
+
+              {/* Text */}
+              <span className="font-medium group-hover:text-gray-900 transition">
+                {item}
+              </span>
+            </li>
+          ))}
         </ul>
       </div>
     </section>

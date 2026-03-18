@@ -9,7 +9,7 @@ export default function Navbar({ onOpenForm, onOpenContactForm }) {
         <div className="flex items-center justify-between h-16">
           {/* LOGO */}
           <div className="flex items-center">
-            <img src={logo} className="w-18" alt="logo"></img>
+            <img src={logo} className="w-40" alt="logo"></img>
           </div>
 
           {/* Desktop Navigation */}
@@ -33,7 +33,7 @@ export default function Navbar({ onOpenForm, onOpenContactForm }) {
   )
 }
 
-              className="inline-flex items-center justify-center bg-purple-600 hover:bg-purple-700 text-white text-sm font-medium px-5 py-2 rounded-lg transition-colors duration-200"
+              className="inline-flex items-center justify-center bg-[#5B21B6] hover:bg-purple-700 text-white text-sm font-medium px-5 py-2 rounded-lg transition-colors duration-200"
             >
               Book a Demo
             </button>

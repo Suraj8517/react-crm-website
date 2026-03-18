@@ -8,7 +8,7 @@ export default function HeroCarouselDesktop({ heroImage, setHeroImage, isPaused,
   hidden lg:block absolute 
   left-1/2 transform -translate-x-1/2 translate-y-3/4
   bottom-10 xl:bottom-16 2xl:bottom-24
-  w-[80%] xl:w-[65%] 
+  w-[70%] xl:w-[55%] 
   z-20
 ">
   <motion.div className="w-full aspect-video rounded-3xl shadow-xl overflow-hidden bg-white border-8 border-transparent">

@@ -1,35 +1,31 @@
-import React, { useState } from "react";
-import { ChevronDown, MessageCircle, HelpCircle, Sparkles, ArrowRight } from "lucide-react";
+import React, { useState } from 'react';
+import { ChevronDown } from 'lucide-react';
 
 const faqs = [
   {
-  question: "How does SmartCoach360 help with client management?",
-  answer:
-    "SmartCoach360 lets you store all client details in one place, track progress, manage programs, and communicate easily, saving you time and effort.",
-  icon: "📋"
-},
-{
-  question: "Can I track client progress and performance?",
-  answer:
-    "Yes, you can monitor workouts, nutrition, check-ins, and progress reports to see how each client is improving over time.",
-  icon: "📊"
-},
-{
-  question: "Can I manage payments and subscriptions?",
-  answer:
-    "SmartCoach360 helps you track client plans, subscriptions, and payment status so you stay organized and avoid missed renewals.",
-  icon: "💳"
-},
-{
-  question: "Is my client data secure?",
-  answer:
-    "Yes, all client information is stored securely with proper data protection, ensuring privacy and safety at all times.",
-  icon: "🔒"
-}
-
+    question: "What is SmartCoach360?",
+    answer: "SmartCoach360 is a comprehensive coaching platform designed for wellness professionals, nutritionists, fitness coaches, and health consultants. It streamlines client management, provides diagnostic integrations, and offers tools to grow your coaching business effectively."
+  },
+  {
+    question: "Who can use SmartCoach360?",
+    answer: "SmartCoach360 is perfect for nutritionists, dietitians, fitness coaches, personal trainers, wellness consultants, and wellness centers. Whether you're a solo practitioner or managing a team, our platform scales to meet your needs."
+  },
+  
+  {
+    question: "How secure is my client data?",
+    answer: "Security is our top priority. We're SOC 2 Type II certified and HIPAA compliant. All data is encrypted at rest and in transit with enterprise-grade security. We also offer multi-factor authentication, role-based access control, and regular security audits."
+  },
+  {
+    question: "Can I integrate SmartCoach360 with other tools?",
+    answer: "Absolutely! SmartCoach360 integrates seamlessly with popular tools including payment gateways, communication apps, calendar systems, and diagnostic labs. Our integration library is constantly expanding to support your workflow."
+  },
+  {
+    question: "Do you offer customer support?",
+    answer: "Yes, we provide 24/7 customer support through multiple channels including live chat, email, phone, Teams, and WhatsApp. Our dedicated support team is always ready to help you succeed."
+  }
 ];
 
-export default function FAQSection({onOpenContactForm}) {
+const FAQSection = ({ onOpenForm, onOpenContactForm }) => {
   const [openIndex, setOpenIndex] = useState(null);
 
   const toggleFAQ = (index) => {
@@ -37,157 +33,75 @@ export default function FAQSection({onOpenContactForm}) {
   };
 
   return (
-    <section id="faq" className="relative bg-white px-4 sm:px-6 md:px-8 lg:px-12 py-16 sm:py-20 md:py-24 lg:py-28 overflow-hidden">
-      
-      {/* Animated Background Elements */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-purple-500 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-indigo-500 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '700ms' }}></div>
-      </div>
+    <div  id="faqs" className="bg-white text-black py-12 px-4">
+      <div className="max-w-3xl mx-auto">
+        {/* Header */}
+        <div className="text-center mb-10">
+          <p className="text-purple-600 text-xs uppercase tracking-wider mb-2">
+            FAQ
+          </p>
+          <h2 className="text-3xl md:text-4xl font-bold mb-2 text-black" style={{ fontFamily: "'Cormorant', serif" }}>
+            Frequently Asked Questions
+          </h2>
+          <p className="text-zinc-500 text-sm">
+            Everything you need to know about SmartCoach360
+          </p>
+        </div>
 
-      <div className="relative max-w-7xl mx-auto">
-        {/* Grid layout: 1 column on mobile, 2 columns on lg+ */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16">
-          
-          {/* Left side (Title + Subtitle) */}
-          <div className="flex flex-col justify-center lg:sticky lg:top-24 lg:self-start">
-            {/* Badge */}
-            <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-indigo-600 px-4 py-2 rounded-full mb-6 w-fit shadow-lg">
-              <HelpCircle className="w-4 h-4 text-white" />
-              <span className="text-white text-sm font-semibold">FAQ</span>
-            </div>
-
-            {/* Main Heading */}
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-6 text-gray-900 leading-tight">
-              Got Questions?
-              <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-purple-800 to-purple-600">
-                We've Got Answers
-              </span>
-            </h2>
-
-            {/* Subtitle */}
-            <p className="text-gray-600 text-base sm:text-lg md:text-xl leading-relaxed mb-8">
-              Find answers to the most common questions about SmartCoach360. 
-              If you still need help, our support team is always here.
-            </p>
-
-            {/* Contact Card */}
-            <div className="bg-gradient-to-br from-purple-600 to-indigo-600 rounded-2xl p-6 shadow-xl border border-white/10">
-              <div className="flex items-start gap-4">
-                <div className="p-3 bg-white/20 rounded-xl">
-                  <MessageCircle className="w-6 h-6 text-white" />
-                </div>
-                <div>
-                  <h3 className="text-white font-bold text-lg mb-2">
-                    Still have questions?
-                  </h3>
-                  <p className="text-purple-100 text-sm mb-4">
-                    Can't find the answer you're looking for? Our support team is here to help.
-                  </p>
-                  <button className="group flex items-center gap-2 text-white font-semibold text-sm hover:gap-3 transition-all" onClick={onOpenContactForm}>
-                    Contact Support
-                    <ArrowRight className="w-4 h-4" />
-                  </button>
-                </div>
-              </div>
-            </div>
-
-            {/* Stats */}
-            <div className="grid grid-cols-3 gap-4 mt-8">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-gray-900 mb-1">24/7</div>
-                <div className="text-gray-600 text-xs">Support</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-gray-900 mb-1">&lt;2h</div>
-                <div className="text-gray-600 text-xs">Response Time</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-gray-900 mb-1">98%</div>
-                <div className="text-gray-600 text-xs">Satisfaction</div>
-              </div>
-            </div>
-          </div>
-
-          {/* Right side (FAQ Accordions) */}
-          <div className="space-y-4">
-            {faqs.map((faq, index) => {
-              const isOpen = openIndex === index;
-              return (
-                <div
-                  key={index}
-                  className={`relative rounded-2xl backdrop-blur-xl border transition-all duration-300 overflow-hidden shadow-lg ${
-                    isOpen 
-                      ? ' border-purple-300 shadow-xl shadow-purple-200/50' 
-                      : 'bg-white border-gray-200 hover:border-purple-200 hover:shadow-xl'
+        {/* FAQ Items */}
+        <div className="space-y-2">
+          {faqs.map((faq, index) => (
+            <div
+              key={index}
+              className="group relative bg-zinc-50 rounded-lg border border-zinc-200 hover:border-purple-200 transition-all duration-300 overflow-hidden"
+            >
+              {/* Question Button */}
+              <button
+                onClick={() => toggleFAQ(index)}
+                className="w-full flex items-center justify-between p-4 text-left"
+              >
+                <h3 className="text-sm md:text-base font-semibold text-black pr-6 group-hover:text-purple-700 transition-colors duration-300">
+                  {faq.question}
+                </h3>
+                <ChevronDown
+                  className={`w-4 h-4 text-purple-600 flex-shrink-0 transition-transform duration-300 ${
+                    openIndex === index ? 'rotate-180' : ''
                   }`}
-                >
-                  {/* Top gradient accent */}
-                  <div 
-                    className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-purple-400 to-pink-400 transition-opacity duration-300 ${
-                      isOpen ? 'opacity-100' : 'opacity-0'
-                    }`}
-                  />
+                />
+              </button>
 
-                  <button
-                    onClick={() => toggleFAQ(index)}
-                    className="w-full flex justify-between items-center gap-4 p-5 md:p-6 text-left group"
-                  >
-                    <div className="flex items-center gap-3 md:gap-4 flex-1">
-                      {/* Icon */}
-                      <div
-                        className={`flex-shrink-0 w-12 h-12 md:w-14 md:h-14 rounded-xl flex items-center justify-center text-xl md:text-2xl shadow-lg transition-all duration-300 ${
-                          isOpen 
-                            ? 'bg-gradient-to-br from-purple-500 to-indigo-500 scale-110' 
-                            : 'bg-gray-100 group-hover:bg-purple-50'
-                        }`}
-                      >
-                        {faq.icon}
-                      </div>
-
-                      {/* Question */}
-                      <span 
-                        className={`font-bold text-base md:text-lg transition-colors duration-300 ${
-                          isOpen ? 'text-purple-900' : 'text-gray-800 group-hover:text-purple-700'
-                        }`}
-                      >
-                        {faq.question}
-                      </span>
-                    </div>
-
-                    {/* Chevron */}
-                    <div
-                      className={`flex-shrink-0 transition-all duration-300 ${
-                        isOpen ? 'rotate-180 text-purple-600' : 'text-gray-400 group-hover:text-purple-500'
-                      }`}
-                    >
-                      <ChevronDown className="w-5 h-5 md:w-6 md:h-6" />
-                    </div>
-                  </button>
-
-                  {/* Answer */}
-                  <div
-                    className={`grid transition-all duration-300 ease-in-out ${
-                      isOpen ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'
-                    }`}
-                  >
-                    <div className="overflow-hidden">
-                      <div className="px-5 md:px-6 pb-5 md:pb-6 pl-16 md:pl-20">
-                        <p className="text-gray-600 text-sm md:text-base leading-relaxed">
-                          {faq.answer}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
+              {/* Answer */}
+              <div
+                className={`overflow-hidden transition-all duration-300 ${
+                  openIndex === index ? 'max-h-96' : 'max-h-0'
+                }`}
+              >
+                <div className="px-4 pb-4 pt-0">
+                  <p className="text-zinc-600 text-sm leading-relaxed">
+                    {faq.answer}
+                  </p>
                 </div>
-              );
-            })}
+              </div>
+            </div>
+          ))}
+        </div>
 
-
-          </div>
+        {/* Bottom CTA */}
+        <div className="text-center mt-8 p-6 bg-zinc-50 rounded-lg border border-zinc-200">
+          <h3 className="text-lg font-semibold mb-1 text-black">Still have questions?</h3>
+          <p className="text-zinc-500 text-sm mb-4">
+            Can't find the answer you're looking for? Our support team is here to help.
+          </p>
+          <button
+            onClick={onOpenContactForm}
+            className="inline-flex items-center px-5 py-2 bg-[#5B21B6] hover:bg-[#8A2BE2] text-white text-sm rounded-lg font-semibold transition-all duration-300 hover:shadow-[0_0_30px_-5px_rgba(168,85,247,0.4)]"
+          >
+            Contact Support
+          </button>
         </div>
       </div>
-    </section>
+    </div>
   );
-}
+};
+
+export default FAQSection;

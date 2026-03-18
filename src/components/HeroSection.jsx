@@ -20,33 +20,52 @@ export default function HeroSection({ onOpenForm }) {
   return (
     <main className="relative w-full h-[70vh] sm:h-[80vh] md:h-[60vh] lg:h-screen xl:h-[100vh]">
       <img src={herobg} alt="hero background" className="w-full h-full object-cover" />
-      <div className="absolute inset-0 bg-gradient-to-b from-[#7025a5] to-[#2E005C]"></div>
+      <div className="absolute inset-0 bg-[#0B1220]"></div>
+      <div className="absolute top-[-120px] left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-purple-600/20 blur-[140px] rounded-full" />
 
       {/* Hero Content */}
       <div className=" absolute inset-0 flex flex-col items-center justify-center text-center text-white px-4 md:px-6">
-        <div
-  className="border border-amber-50 rounded-3xl py-1 px-4 
-             flex items-center justify-center 
-             animate-fadeInUp 
-             transition-all duration-500 
-             hover:scale-105 hover:shadow-lg hover:shadow-purple-500/30"
->
-  <h5 className="text-sm font-medium text-white animate-pulse 2xl:text-2xl">
-    <span className="bg-purple-700 p-0.5 rounded-sm font-bold text-sm 2xl:text-2xl">#1</span> Software for Coaches 🏋🏻
-  </h5>
+       <div className="group relative inline-flex items-center justify-center">
+
+  {/* Glow background */}
+  <div className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-600 to-indigo-500 blur-md opacity-30 group-hover:opacity-60 transition duration-500"></div>
+
+  {/* Main pill */}
+  <div
+    className="relative flex items-center gap-2 px-5 py-2 
+               rounded-full border border-white/20 
+               bg-white/10 backdrop-blur-md 
+               shadow-[0_8px_30px_rgba(124,58,237,0.25)]
+               transition-all duration-300 
+               hover:scale-105 hover:shadow-[0_12px_40px_rgba(124,58,237,0.35)]"
+  >
+
+    {/* #1 badge */}
+    <span className="bg-gradient-to-r from-purple-600 to-indigo-500 
+                     text-white text-medium font-bold 
+                     px-2 py-0.5 rounded-full shadow-sm">
+      #1
+    </span>
+
+    {/* Text */}
+    <h5 className="text-sm md:text-sm 2xl:text-base font-medium text-white">
+      Software for Coaches
+    </h5>
+
+  </div>
 </div>
 
-        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl 2xl:text-6xl font-extrabold drop-shadow-lg 2xl:mt-6 mt-4 sm:mt-3">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl 2xl:text-6xl font-extrabold drop-shadow-lg 2xl:mt-6 md:pt-2 sm:mt-3" style={{ fontFamily: "'Cormorant', serif" }}>
           Coaching, tracking, scheduling…<br/> juggling too many things at once?
         </h1>
-        <p className="mt-4 text-base sm:text-lg md:text-xl lg:text-xl 2xl:mt-8 2xl:text-2xl max-w-lg sm:max-w-xl md:max-w-2xl">
+        <p className="mt-4 text-base sm:text-lg md:text-xl lg:text-lg 2xl:mt-8 2xl:text-lg max-w-lg sm:max-w-xl md:max-w-2xl" style={{ fontFamily: "'dm sans', sans-serif" }}>
 With our all-in-one platform, coaches can manage clients, track progress, and grow their business effortlessly — all from one place.        </p>
         <div className="sm:flex mt-6 gap-4 mb-20">
           <button onClick={() =>
     window.open(
       "https://calendly.com/sangameswaran-vmaxhealthtech/30min",
       "_blank"
-    )} className="md:mb-18 inline-flex items-center justify-center bg-purple-800 hover:bg-purple-700 text-white text-base font-medium px-5 py-2 rounded-lg transition-colors duration-200">
+    )} className="md:mb-18 inline-flex items-center justify-center bg-[#5B21B6] hover:bg-purple-700 text-white text-base font-medium px-5 py-2 rounded-lg transition-colors duration-200">
             Book a Demo
           </button>
         </div>

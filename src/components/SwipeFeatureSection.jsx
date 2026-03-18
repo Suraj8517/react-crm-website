@@ -26,23 +26,24 @@ const SwipeFeaturesSection = () => {
       {/* Section Header */}
       <div className="text-center mb-16 2xl:mb-24">
         <motion.h2
-          className="text-3xl sm:text-4xl 2xl:text-5xl font-extrabold text-gray-900"
+          className="text-3xl sm:text-4xl 2xl:text-5xl font-extrabold text-purple-900"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
+          style={{ fontFamily: "'Cormorant', serif" }}
         >
           Features
         </motion.h2>
 
         <motion.p
-          className="mt-4 text-lg 2xl:text-xl text-gray-600"
+          className="mt-4 text-medium 2xl:text-lg text-gray-600"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
         >
-          Discover all the reasons to grow with our platform
+          Discover all the reasons to grow <br/>with our platform
         </motion.p>
       </div>
 
@@ -125,10 +126,10 @@ const SwipeFeaturesSection = () => {
                   max-w-[400px] 2xl:max-w-[480px] w-full sm:mx-10`}
               >
                 <div>
-                  <h3 className="text-3xl 2xl:text-4xl font-bold text-purple-900 mb-4">
+                  <h3 className="text-3xl 2xl:text-4xl font-bold text-purple-900 mb-4" style={{ fontFamily: "'Cormorant', serif" }}>
                     {item.title}
                   </h3>
-                  <p className="text-gray-600 text-medium 2xl:text-lg mb-6">
+                  <p className="text-gray-600 text-medium 2xl:text-medium mb-6">
                     {item.desc}
                   </p>
                 </div>

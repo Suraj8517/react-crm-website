@@ -50,14 +50,19 @@ const OurCombinedFeature = ({onOpenForm}) => {
 
         {/* Left text */}
         <div className="lg:w-1/3 text-left z-20">
-          <h4 className="text-[#6E0ACE] rounded font-semibold uppercase tracking-wide">
+        
+          <h4 className="text-[#6E0ACE] rounded font-semibold uppercase tracking-wide mb-4">
             All-in-One Coaching Platform
           </h4>
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mt-2 mb-4 leading-tight">
-            Everything you need to run people operations
+         
+           <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tighter mb-6" style={{ fontFamily: "'Cormorant', serif" }}>
+          Everything you need to run{" "}
+            <span className="bg-gradient-to-r from-purple-600 to-purple-800 bg-clip-text text-transparent">
+               people operations
+            </span>
           </h2>
           <p className="text-gray-600 text-lg mb-6">
-            From client management to payments — <span className="font-bold text-purple-900 ">SmartCoach360</span> streamlines your fitness & wellness business in one place.
+            From client management to payments <span className="font-bold text-purple-900 ">SmartCoach360</span> streamlines your fitness & wellness business in one place.
           </p>
           <button  onClick={() =>
     window.open(
