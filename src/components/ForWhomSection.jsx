@@ -30,7 +30,7 @@ const ForWhomSection = () => {
             src={forwhom}
             alt="Wellness professionals"
             className="rounded-3xl shadow-[0_20px_60px_rgba(124,58,237,0.25)]
-                       object-cover w-full max-w-sm md:max-w-md lg:max-w-lg
+                       object-cover w-full max-w-sm md:max-w-md lg:max-w-md
                        transition duration-500 group-hover:scale-[1.03]"
           />
 
@@ -55,7 +55,7 @@ const ForWhomSection = () => {
         </h2>
 
         {/* Description */}
-        <p className="text-gray-600 mt-5 text-base lg:text-medium max-w-xl">
+        <p className="text-gray-600 mt-5 text-base lg:text-md max-w-xl">
           <span className="font-semibold text-gray-900">SmartCoach360</span> helps you streamline operations, improve client engagement, and scale your coaching business — all from one powerful platform.
         </p>
 
@@ -70,7 +70,7 @@ const ForWhomSection = () => {
           ].map((item, i) => (
             <li
               key={i}
-              className="flex items-center gap-3 group transition text-lg font-extrabold"style={{ fontFamily: "'Cormorant Garamond ', serif" }}
+              className="flex items-center gap-3 group transition text-lg font-extrabold "
             >
               {/* Icon */}
               <div className="w-6 h-6 flex items-center justify-center 

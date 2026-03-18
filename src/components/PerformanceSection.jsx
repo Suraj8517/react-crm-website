@@ -62,7 +62,7 @@ export default function PerformanceSection() {
   ];
 
   return (
-    <section className="relative py-24 px-6 bg-[#0B1220] text-white overflow-hidden">
+    <section className="relative py-24 px-6 bg-[#0B1220] text-white overflow-hidden py-40">
 
       {/* Background Glow */}
       <div className="absolute top-[-120px] left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-purple-600/20 blur-[140px] rounded-full" />

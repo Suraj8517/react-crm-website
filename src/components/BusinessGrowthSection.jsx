@@ -109,7 +109,7 @@ function GrowthMockup() {
                 className="w-full rounded-sm"
                 style={{
                   height: `${Math.round(h * 0.74)}px`,
-                  background: i === 11 ? "#0284C7" : `rgba(2,132,199,${(0.13 + h * 0.0056).toFixed(2)})`,
+                  background: i === 11 ? "#8b4fe8" : `rgba(139,92,246,${(0.13 + h * 0.0056).toFixed(2)})`,
                 }}
               />
               <span className="text-[8px] text-slate-300">{months[i]}</span>
@@ -296,24 +296,24 @@ export default function GrowthSection() {
             })}
           </div>
 
-          {/* RIGHT — browser mockup */}
+         
           <div className="md:sticky md:top-10">
             <div className="rounded-[18px] overflow-hidden border border-slate-200 shadow-[0_16px_48px_rgba(80,90,160,.10),0_2px_8px_rgba(80,90,160,.06)]">
 
-              {/* Browser chrome */}
+            
               <div className="flex items-center gap-1.5 px-4 py-3 bg-white border-b border-slate-100">
                 {["#ff5f57", "#febc2e", "#28c840"].map((c, i) => (
                   <div key={i} className="w-2.5 h-2.5 rounded-full" style={{ background: c }} />
                 ))}
                 <div className="flex-1 h-5 bg-slate-100 rounded-md ml-2 flex items-center justify-center gap-1.5 border border-slate-200">
                   <div className="w-1.5 h-1.5 rounded-full opacity-70" style={{ background: current.accent }} />
-                  <span className="text-[9.5px] text-slate-400">app.coachplatform.io</span>
+                  <span className="text-[9.5px] text-slate-400">smartcoach360.ai</span>
                 </div>
               </div>
 
-              {/* Mockup content area */}
+            
               <div className="p-4 bg-[#f4f5f9] min-h-[290px]">
-                {/* Tag pill */}
+             
                 <div
                   className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md mb-3.5 border"
                   style={{ background: current.accentLight, borderColor: current.accentMid }}
@@ -323,14 +323,14 @@ export default function GrowthSection() {
                   </span>
                 </div>
 
-                {/* Animated mockup swap */}
+               
                 <div key={active} className="animate-[fadeIn_0.4s_ease_both]">
                   <MockupComponent />
                 </div>
               </div>
             </div>
 
-            {/* Glow reflection */}
+          
             <div
               className="w-3/5 h-5 mx-auto blur-md"
               style={{ background: `radial-gradient(ellipse, ${current.accent}18 0%, transparent 70%)`, transition: "background 0.5s" }}

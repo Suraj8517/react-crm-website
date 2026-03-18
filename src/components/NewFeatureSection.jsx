@@ -64,7 +64,7 @@ const FeaturePreview = ({ preview, icon: Icon }) => {
       {icons.map((IconComp, i) => (
         <div
           key={i}
-          className="w-12 h-12 rounded-full bg-zinc-100 border border-zinc-200 flex items-center justify-center group-hover:border-purple-300 transition-all duration-300"
+          className="w-12 h-12 rounded-full bg-purple-100 border border-zinc-200 flex items-center justify-center group-hover:border-purple-300 transition-all duration-300"
         >
           <IconComp className="w-6 h-6 text-zinc-400 group-hover:text-purple-500 transition-colors duration-300" />
         </div>
@@ -104,7 +104,7 @@ const FeatureShowcase = () => {
                 <div className="absolute inset-0 bg-gradient-to-br from-purple-50/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
                 {/* Icon Section */}
-                <div className="p-6 border-b border-zinc-100 bg-zinc-50">
+                <div className="p-6 border-b border-zinc-100 bg-purple-50">
                   <FeaturePreview preview={feature.preview} icon={Icon} />
                 </div>
 

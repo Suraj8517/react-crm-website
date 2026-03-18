@@ -20,15 +20,13 @@ export default function PageLoader({ onLoadingComplete }) {
           initial={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.6 }}
-          className="fixed inset-0 z-[9999] flex items-center justify-center bg-white"
+          className="fixed inset-0 z-[9999] flex flex-col items-center justify-center gap-6 bg-white"
         >
-     
+          {/* Glow */}
           <div className="absolute w-[400px] h-[400px] bg-purple-500/20 blur-[120px] rounded-full" />
 
-         
+          {/* Loader */}
           <div className="relative flex items-center justify-center">
-
-          
             <motion.div
               className="w-[140px] h-[140px] rounded-full border-[4px] border-purple-200 border-t-purple-600"
               animate={{ rotate: 360 }}
@@ -39,7 +37,6 @@ export default function PageLoader({ onLoadingComplete }) {
               }}
             />
 
-           
             <motion.img
               src={logo}
               alt="Smart Coach 360"
@@ -50,6 +47,16 @@ export default function PageLoader({ onLoadingComplete }) {
               transition={{ duration: 0.6 }}
             />
           </div>
+          <motion.span
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 10 }}
+            transition={{ delay: 0.3, duration: 0.5 }}
+            className="text-lg font-extrabold tracking-widest text-purple-900" 
+            style={{ fontFamily: "'DM Sans', san-serif" }}
+          >
+            Smart Coach 360
+          </motion.span>
         </motion.div>
       )}
     </AnimatePresence>

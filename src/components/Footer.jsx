@@ -1,150 +1,166 @@
-import React from 'react';
-import { Facebook, Twitter, Instagram, Linkedin, Youtube, Mail, Phone, MapPin } from 'lucide-react';
+import React, { useState } from 'react';
+import { Instagram, Linkedin, Mail, MapPin, ChevronDown } from 'lucide-react';
 
 const socialLinks = [
   { name: 'Instagram', icon: Instagram, href: 'https://www.instagram.com/smartcoach360' },
-  { name: 'LinkedIn', icon: Linkedin, href: 'https://www.linkedin.com/company/smartcoach360/' },
+  { name: 'LinkedIn',  icon: Linkedin,  href: 'https://www.linkedin.com/company/smartcoach360/' },
 ];
+
+// Collapsible section for mobile
+function FooterSection({ title, children }) {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <div className="border-b border-zinc-800 md:border-none">
+      {/* Mobile: tappable header */}
+      <button
+        onClick={() => setOpen((o) => !o)}
+        className="w-full flex items-center justify-between py-4 md:py-0 md:cursor-default md:pointer-events-none"
+        aria-expanded={open}
+      >
+        <h3 className="text-base font-semibold text-white">{title}</h3>
+        <ChevronDown
+          className={`w-4 h-4 text-zinc-500 transition-transform duration-200 md:hidden ${open ? 'rotate-180' : ''}`}
+        />
+      </button>
+
+      {/* Content: always visible on md+, collapsible on mobile */}
+      <div
+        className={`overflow-hidden transition-all duration-300 md:!max-h-none md:!opacity-100 md:pb-0 ${
+          open ? 'max-h-96 opacity-100 pb-4' : 'max-h-0 opacity-0'
+        }`}
+      >
+        {children}
+      </div>
+    </div>
+  );
+}
 
 const Footer = ({ onOpenForm, onOpenContactForm }) => {
   return (
-    <footer className="bg-[#121212] text-white border-t border-zinc-800 mt-30">
-      <div className="max-w-5xl mx-auto px-4 py-16">
-        {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-12 ">
-          {/* Brand Section */}
-          <div>
-            <h2 className="text-3xl font-bold mb-4">SmartCoach<span className="text-purple-500 font-bold">360</span></h2>
-            <p className="text-zinc-400 text-sm mb-8 leading-relaxed max-w-md">
-              Empowering wellness professionals with tools to streamline practice, engage clients, and grow their business with ease.
+    <footer className="bg-[#121212] text-white border-t border-zinc-800 mt-20">
+      <div className="max-w-5xl mx-auto px-5 py-12 md:py-16">
+
+        {/* ── Grid ── */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-0 md:gap-8 mb-0 md:mb-12">
+
+          {/* Brand — always visible, not collapsible */}
+          <div className="pb-8 md:pb-0 border-b border-zinc-800 md:border-none mb-2 md:mb-0">
+            <h2 className="text-2xl sm:text-3xl font-bold mb-3">
+              SmartCoach<span className="text-purple-500">360</span>
+            </h2>
+            <p className="text-zinc-400 text-sm mb-6 leading-relaxed">
+              Empowering wellness professionals with tools to streamline practice,
+              engage clients, and grow their business with ease.
             </p>
-            
-            {/* Social Links */}
             <div className="flex gap-3">
-              {socialLinks.map((social) => {
-                const Icon = social.icon;
-                return (
-                  <a
-                    key={social.name}
-                    href={social.href}
-                    className="group w-10 h-10 flex items-center justify-center rounded-lg bg-zinc-900 border border-zinc-800 hover:border-purple-500 hover:bg-zinc-800 transition-all duration-300"
-                    aria-label={social.name}
-                  >
-                    <Icon className="w-5 h-5 text-zinc-500 group-hover:text-purple-400 transition-colors duration-300" />
-                  </a>
-                );
-              })}
+              {socialLinks.map(({ name, icon: Icon, href }) => (
+                <a
+                  key={name}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group w-10 h-10 flex items-center justify-center rounded-lg bg-zinc-900 border border-zinc-800 hover:border-purple-500 hover:bg-zinc-800 transition-all duration-300"
+                  aria-label={name}
+                >
+                  <Icon className="w-5 h-5 text-zinc-500 group-hover:text-purple-400 transition-colors duration-300" />
+                </a>
+              ))}
             </div>
           </div>
 
           {/* Quick Links */}
-          <div className='mx-auto'>
-            <h3 className="text-lg font-semibold mb-6 ">Quick Links</h3>
+          <FooterSection title="Quick Links">
             <ul className="space-y-3">
-              <li>
-                <a href="#features" className="text-zinc-400 hover:text-white transition-colors duration-300">
-                  Features
-                </a>
-              </li>
-              <li>
-                <a href="#app-features" className="text-zinc-400 hover:text-white transition-colors duration-300">
-                  App Features
-                </a>
-              </li>
-              <li>
-                <a href="#success-stories" className="text-zinc-400 hover:text-white transition-colors duration-300">
-                  Success Stories
-                </a>
-              </li>
-              <li>
-                <a href="#for-whom" className="text-zinc-400 hover:text-white transition-colors duration-300">
-                  For Whom
-                </a>
-              </li>
+              {[
+                { label: 'Features',      href: '#features' },
+                { label: 'App Features',  href: '#app-features' },
+                { label: 'Testimonials',  href: '#testimonials' },
+                { label: 'For Whom',      href: '#for-whom' },
+              ].map(({ label, href }) => (
+                <li key={label}>
+                  <a
+                    href={href}
+                    className="text-zinc-400 hover:text-white transition-colors duration-300 text-sm py-1 inline-block"
+                  >
+                    {label}
+                  </a>
+                </li>
+              ))}
             </ul>
-          </div>
+          </FooterSection>
 
           {/* Resources */}
-          <div>
-            <h3 className="text-lg font-semibold mb-6">Resources</h3>
+          <FooterSection title="Resources">
             <ul className="space-y-3">
               <li>
-                <a href="#faqs" className="text-zinc-400 hover:text-white transition-colors duration-300">
+                <a
+                  href="#faqs"
+                  className="text-zinc-400 hover:text-white transition-colors duration-300 text-sm py-1 inline-block"
+                >
                   FAQs
                 </a>
               </li>
               <li>
-                <button  onClick={() =>
-  window.open(
-    "https://calendly.com/sangameswaran-vmaxhealthtech/30min",
-    "_blank"
-  )
-} className="text-zinc-400 hover:text-white transition-colors duration-300">
+                <button
+                  onClick={() =>
+                    window.open(
+                      'https://calendly.com/sangameswaran-vmaxhealthtech/30min',
+                      '_blank'
+                    )
+                  }
+                  className="text-zinc-400 hover:text-white transition-colors duration-300 text-sm py-1"
+                >
                   Book a Demo
                 </button>
               </li>
               <li>
                 <button
                   onClick={onOpenContactForm}
-                  className="text-zinc-400 hover:text-white transition-colors duration-300"
+                  className="text-zinc-400 hover:text-white transition-colors duration-300 text-sm py-1"
                 >
                   Contact Us
                 </button>
               </li>
             </ul>
-          </div>
+          </FooterSection>
 
-          {/* Contact Info */}
-          <div>
-            <h3 className="text-lg font-semibold mb-6">Get in Touch</h3>
+          {/* Contact */}
+          <FooterSection title="Get in Touch">
             <div className="space-y-4">
+              {/* Email */}
               <div className="flex items-center gap-3 text-zinc-400 group">
-                <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-zinc-900 border border-zinc-800 group-hover:border-purple-500 transition-colors duration-300">
-                  <Mail className="w-5 h-5 text-purple-500 group-hover:text-purple-400 transition-colors duration-300" />
+                <div className="w-9 h-9 flex-shrink-0 flex items-center justify-center rounded-lg bg-zinc-900 border border-zinc-800 group-hover:border-purple-500 transition-colors duration-300">
+                  <Mail className="w-4 h-4 text-purple-500" />
                 </div>
-                <a href="mailto:sales@smartcoach360.ai" className="hover:text-white transition-colors duration-300">
+                <a
+                  href="mailto:sales@smartcoach360.ai"
+                  className="hover:text-white transition-colors duration-300 text-sm break-all"
+                >
                   sales@smartcoach360.ai
                 </a>
               </div>
-              {/*}
-              <div className="flex items-center gap-3 text-zinc-400 group">
-                <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-zinc-900 border border-zinc-800 group-hover:border-purple-500 transition-colors duration-300">
-                  <Phone className="w-5 h-5 text-purple-500 group-hover:text-purple-400 transition-colors duration-300" />
-                </div>
-                <a href="tel:+1234567890" className="hover:text-white transition-colors duration-300">
-                  +1 (234) 567-890
-                </a>
-              </div>*/}
-              
+
+              {/* Address */}
               <div className="flex items-start gap-3 text-zinc-400 group">
-                <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-zinc-900 border border-zinc-800 group-hover:border-purple-500 transition-colors duration-300 flex-shrink-0">
-                  <MapPin className="w-5 h-5 text-purple-500 group-hover:text-purple-400 transition-colors duration-300" />
+                <div className="w-9 h-9 flex-shrink-0 flex items-center justify-center rounded-lg bg-zinc-900 border border-zinc-800 group-hover:border-purple-500 transition-colors duration-300 mt-0.5">
+                  <MapPin className="w-4 h-4 text-purple-500" />
                 </div>
-                <span className="hover:text-white transition-colors duration-300 pt-2">
-                  No 9/14, Bharathi Street,<br/> Vellakinar, Coimbatore,<br/> Tamil Nadu, 641029
+                <span className="text-sm leading-relaxed hover:text-white transition-colors duration-300">
+                  No 9/14, Bharathi Street,<br />
+                  Vellakinar, Coimbatore,<br />
+                  Tamil Nadu, 641029
                 </span>
               </div>
             </div>
-          </div>
+          </FooterSection>
         </div>
 
-        {/* Bottom Bar */}
-        <div className="border-t border-zinc-800 pt-8 flex flex-col md:flex-row justify-center items-center gap-4 text-center md:text-left">
-          <p className="text-zinc-500 text-sm">
+        {/* ── Bottom bar ── */}
+        <div className="border-t border-zinc-800 mt-6 md:mt-0 pt-6 flex flex-col items-center gap-2 text-center">
+          <p className="text-zinc-500 text-xs sm:text-sm">
             © {new Date().getFullYear()} SmartCoach360. All rights reserved.
           </p>
-          
-          {/*<div className="flex gap-6 text-sm">
-            <a href="#" className="text-zinc-500 hover:text-white transition-colors duration-300">
-              Privacy Policy
-            </a>
-            <a href="#" className="text-zinc-500 hover:text-white transition-colors duration-300">
-              Terms of Service
-            </a>
-            <a href="#" className="text-zinc-500 hover:text-white transition-colors duration-300">
-              Security
-            </a>
-          </div>*/}
         </div>
       </div>
     </footer>

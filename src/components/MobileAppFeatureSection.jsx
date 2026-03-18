@@ -59,8 +59,7 @@ export default function MobileAppSection() {
     <div id="app-features" className="bg-[#0B1220] mt-16 py-50 px-4">
       
       <div className="max-w-7xl mx-auto flex flex-col items-center">
-              <div className="absolute  left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-purple-600/20 blur-[140px] rounded-full" />
-
+<div className="absolute left-1/2 -translate-x-1/2 w-[90vw] max-w-[700px] aspect-square bg-purple-600/20 blur-[140px] rounded-full pointer-events-none" />
         {/* Heading */}
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4" style={{ fontFamily: "'Cormorant', serif" }}>
