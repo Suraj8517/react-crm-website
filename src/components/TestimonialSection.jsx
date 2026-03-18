@@ -12,7 +12,7 @@ const testimonials = [
     name: "John",
     role: "Coach, FitMom Club",
     feedback:
-      "I struggled to grow my client base because marketing and lead management were overwhelming. SmartCoach360's built-in client tracking and automated reminders have streamlined my workflow. I'm now reaching more clients with less effort, and my revenue has increased noticeably.",
+      "I struggled to grow my client base due to overwhelming marketing and lead management. SmartCoach360 simplified everything with client tracking and automated reminders—helping me reach more clients with less effort and increase revenue.",
   },
   {
     name: "Pramod",
@@ -27,8 +27,7 @@ export default function TestimonialSection() {
   const [containerHeight, setContainerHeight] = useState("auto");
   const cardRefs = useRef([]);
 
-  // Measure the tallest card and lock container to that height
-  // so the absolute-positioned cards never overflow
+
   useEffect(() => {
     const measure = () => {
       const heights = cardRefs.current.map((el) => el?.offsetHeight ?? 0);
@@ -89,7 +88,7 @@ export default function TestimonialSection() {
             </div>
 
             <div
-              className="relative overflow-hidden"
+              className="relative"
               style={{ height: containerHeight === "auto" ? "auto" : `${containerHeight}px` }}
             >
               {testimonials.map((t, i) => (
