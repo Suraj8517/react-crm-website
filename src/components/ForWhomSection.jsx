@@ -179,17 +179,7 @@ export default function ForWhomSection() {
 
             {/* CTA */}
             <div className="mt-10 flex flex-wrap items-center gap-4 ">
-              <button
-                onClick={() =>
-                  window.open(
-                    "https://calendly.com/sangameswaran-vmaxhealthtech/30min",
-                    "_blank"
-                  )
-                }
-                className="rounded-full bg-purple-600 px-6 py-3 text-sm font-semibold text-white shadow-md shadow-purple-200 transition hover:bg-purple-700 hover:shadow-purple-300 active:scale-95 "
-              >
-                Book a Free Demo
-              </button>
+              
             </div>
           </div>
         </div>
