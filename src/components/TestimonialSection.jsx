@@ -58,14 +58,12 @@ export default function TestimonialSection() {
 
   return (
     <section className="relative py-16 md:py-24 bg-white overflow-hidden" id="testimonials">
-      {/* Background glows */}
       <div className="absolute inset-0 opacity-30 pointer-events-none">
         <div className="absolute top-20 left-10 w-64 h-64 bg-purple-100 rounded-full blur-3xl" />
         <div className="absolute bottom-20 right-10 w-80 h-80 bg-purple-300 rounded-full blur-3xl" />
       </div>
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 relative z-10">
-        {/* Header */}
         <div className="text-center mb-10 md:mb-16">
           <span className="px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-semibold uppercase tracking-wider">
             Testimonials
@@ -82,17 +80,14 @@ export default function TestimonialSection() {
         </div>
 
         <div className="relative max-w-4xl mx-auto">
-          {/* Card shell */}
           <div className="relative bg-white/80 backdrop-blur-md rounded-3xl px-6 pt-10 pb-8 md:px-12 md:pt-12 md:pb-10 border border-purple-100 shadow-[0_20px_60px_rgba(124,58,237,0.15)]">
 
-            {/* Quote icon */}
             <div className="absolute -top-6 left-8 md:left-10">
               <div className="w-12 h-12 bg-gradient-to-br from-purple-600 to-indigo-600 rounded-2xl flex items-center justify-center shadow-xl rotate-3">
                 <Quote className="w-6 h-6 text-white" />
               </div>
             </div>
 
-            {/* Slide container — height is set to the tallest measured card */}
             <div
               className="relative overflow-hidden"
               style={{ height: containerHeight === "auto" ? "auto" : `${containerHeight}px` }}
@@ -102,8 +97,7 @@ export default function TestimonialSection() {
                   key={i}
                   ref={(el) => (cardRefs.current[i] = el)}
                   className={`transition-all duration-500 ease-in-out ${
-                    // On first render all cards are in-flow so they can be measured.
-                    // Once we have a height, position them absolutely.
+                   
                     containerHeight === "auto"
                       ? ""
                       : "absolute inset-x-0 top-0"
@@ -113,19 +107,16 @@ export default function TestimonialSection() {
                       : "opacity-0 translate-y-4 z-0"
                   }`}
                 >
-                  {/* Stars */}
                   <div className="flex gap-1 mb-4">
                     {Array(5).fill(null).map((_, idx) => (
                       <span key={idx} className="text-yellow-400 text-base md:text-lg">★</span>
                     ))}
                   </div>
 
-                  {/* Feedback */}
                   <p className="text-gray-700 text-base md:text-lg leading-relaxed italic mb-6">
                     "{t.feedback}"
                   </p>
 
-                  {/* Author */}
                   <div className="flex items-center gap-3">
                     <div className="w-12 h-12 md:w-14 md:h-14 flex-shrink-0 rounded-full bg-gradient-to-br from-purple-500 to-indigo-600 flex items-center justify-center shadow-lg">
                       <span className="text-white font-bold text-lg md:text-xl">
@@ -145,7 +136,6 @@ export default function TestimonialSection() {
               ))}
             </div>
 
-            {/* Desktop arrows — outside the slide container */}
             <div className="hidden md:block">
               <button
                 onClick={() => paginate(-1)}
@@ -163,7 +153,6 @@ export default function TestimonialSection() {
           </div>
         </div>
 
-        {/* Mobile arrows */}
         <div className="flex md:hidden justify-between mt-6 px-2">
           <button
             onClick={() => paginate(-1)}
