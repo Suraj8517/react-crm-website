@@ -114,7 +114,7 @@ export default function ForWhomSection() {
           >
             {/* Headline */}
             <h2
-              className="text-4xl font-extrabold leading-[0.8] text-gray-900 sm:text-5xl lg:text-6xl"
+              className="text-4xl font-extrabold leading-[0.8] text-gray-900 sm:text-5xl lg:text-6xl text-center lg:text-left"
               style={{ fontFamily: "'Cormorant', serif" }}
             >
               Built for Modern<br />
@@ -124,7 +124,7 @@ export default function ForWhomSection() {
             </h2>
 
             {/* Description */}
-            <p className="mt-5 max-w-lg text-[15px] leading-relaxed text-gray-500">
+            <p className="mt-5 max-w-lg text-[15px] leading-relaxed text-gray-500 text-center lg:text-left">
               <span className="font-semibold text-gray-900">SmartCoach360</span> streamlines
               your operations, deepens client engagement, and scales your coaching
               practice, all from one powerful platform.

@@ -186,7 +186,7 @@ export default function GrowthSection() {
   const MockupComponent = MOCKUPS[active];
 
   return (
-    <section className="relative overflow-hidden py-24 px-6">
+    <section className="relative overflow-hidden pt-24 pb-10 px-6">
 
       <div
         className="pointer-events-none absolute -top-24 -right-24 w-[480px] h-[480px] rounded-full"
@@ -200,34 +200,44 @@ export default function GrowthSection() {
       <div className="relative max-w-5xl mx-auto">
 
         {/* Badge */}
-        <div
-          className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full mb-5 border"
-          style={{ background: current.accentLight, borderColor: current.accentMid, transition: "background 0.4s, border-color 0.4s" }}
-        >
-          <span className="w-1.5 h-1.5 rounded-full" style={{ background: current.accent }} />
-          <span className="text-[11px] font-bold tracking-wider" style={{ color: current.accent }}>
-            Growth Platform
-          </span>
-        </div>
+        <div className="flex flex-col items-center lg:items-start">
+  
+  {/* Badge */}
+  <div className="flex justify-center lg:justify-start w-full">
+    <div
+      className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full mb-5 border"
+      style={{ background: current.accentLight, borderColor: current.accentMid, transition: "background 0.4s, border-color 0.4s" }}
+    >
+      <span className="w-1.5 h-1.5 rounded-full" style={{ background: current.accent }} />
+      <span className="text-[11px] font-bold tracking-wider" style={{ color: current.accent }}>
+        Growth Platform
+      </span>
+    </div>
+  </div>
 
-        <h2 className="text-[clamp(28px,4.5vw,48px)] font-extrabold leading-[1.1] tracking-tight text-gray-900 mb-3 max-w-xl">
-          Scale with every
-          <br />
-          <span
-            style={{
-              WebkitBackgroundClip: "text",
-              color: current.accent,
-              display: "inline-block",
-              transition: "background 0.5s",
-            }}
-          >
-            customer interaction
-          </span>
-        </h2>
+  {/* Heading */}
+  <h2 className="text-[clamp(28px,4.5vw,48px)] font-extrabold leading-[1.1] tracking-tight text-gray-900 mb-3 max-w-xl text-center lg:text-left">
+    Scale with every
+    <br />
+    <span
+      style={{
+        WebkitBackgroundClip: "text",
+        color: current.accent,
+        display: "inline-block",
+        transition: "background 0.5s",
+      }}
+    >
+      customer interaction
+    </span>
+  </h2>
 
-        <p className="text-[15px] text-gray-500 max-w-md mb-12 leading-relaxed">
-          Manage your entire customer journey in one place — from first inquiry to long-term retention.
-        </p>
+  {/* Paragraph */}
+  <p className="text-[15px] text-gray-500 max-w-md mb-3 leading-relaxed text-center lg:text-left">
+    Manage your entire customer journey in one place — from first inquiry to long-term retention.
+  </p>
+
+</div>
+       
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 min-h-[300px]">
 
