@@ -60,7 +60,7 @@ const FeaturePreview = ({ preview, icon: Icon }) => {
   const icons = iconGroups[preview.type] || [];
 
   return (
-    <div className="flex items-center justify-center gap-4 py-8">
+    <div className="flex items-center justify-center gap-4 py-6">
       {icons.map((IconComp, i) => (
         <div
           key={i}
@@ -75,7 +75,7 @@ const FeaturePreview = ({ preview, icon: Icon }) => {
 
 const FeatureShowcase = () => {
   return (
-    <div className="min-h-screen bg-white text-black py-50 px-4">
+    <div className="min-h-screen bg-white text-black py-30 px-4">
       <div className="max-w-6xl mx-auto">
 
         {/* Header */}

@@ -7,77 +7,62 @@ import yoursmindfully from "../assets/yours-mindfully.png";
 import lk from "../assets/lk.jpg";
 import vmax from "../assets/vmax.png";
 
-
-
-
-
 const clientLogos = [
   { name: "FitMom Club", logo: fitmomclub },
-  {name:"VMax",logo:vmax},
+  { name: "VMax", logo: vmax },
   { name: "FitMom Miracle", logo: miracle },
   { name: "Yours Mindfully", logo: yoursmindfully },
-    { name: "FitDad Club", logo: fitdad },
-     { name: "LK", logo: lk },
-      { name: "FitKids Club", logo: fitkid },
+  { name: "FitDad Club", logo: fitdad },
+  { name: "LK", logo: lk },
+  { name: "FitKids Club", logo: fitkid },
 ];
 
 export default function ClientLogoSection() {
   const logos = [...clientLogos, ...clientLogos];
 
   return (
-    <div className="bg-white flex flex-col items-center mt-50 sm:mt-60 md:mt-66 lg:mt-92 xl:mt-90 ">
-      {/* Outer relative wrapper for heading overlap */}
+    <div className="bg-white flex flex-col items-center mt-50 sm:mt-60 md:mt-66 lg:mt-92 xl:mt-90">
       <div className="relative w-full flex justify-center overflow-visible">
-        
-        {/* Capsule container */}
-        <div className="relative bg-white border-2 border-purple-200 rounded-full shadow-sm px-4 sm:px-6 md:px-10 overflow-hidden 
-          w-[85%] sm:w-[80%] md:max-w-4xl lg:max-w-5xl h-16 sm:h-20 md:h-24 flex items-center">
-          
+
+        {/* Capsule container — width & height reduced ~20% */}
+        <div className="relative bg-white border-2 border-purple-200 rounded-full shadow-sm px-3 sm:px-5 md:px-8 overflow-hidden
+          w-[60%] sm:w-[56%] md:max-w-2xl lg:max-w-3xl h-12 sm:h-16 md:h-20 flex items-center">
+
           {/* Scrolling logos */}
-          <div className="flex items-center gap-8 sm:gap-12 md:gap-20 animate-scroll">
+          <div className="flex items-center gap-6 sm:gap-10 md:gap-16 animate-scroll">
             {logos.map((client, index) => (
               <div
                 key={index}
                 className="flex items-center justify-center flex-shrink-0"
               >
-                {/*<h4 className="text-base sm:text-xl md:text-3xl text-black-700 font-bold whitespace-nowrap">
-                  {client.name}
-                </h4>*/}
                 <img
                   src={client.logo}
                   alt={client.name}
-                  className="h-12 sm:h-10 md:h-16 object-contain opacity-90 hover:opacity-100 transition"
-                /> 
+                  className="h-8 sm:h-9 md:h-12 object-contain opacity-90 hover:opacity-100 transition"
+                />
               </div>
             ))}
           </div>
 
-          {/* Fades inside capsule */}
+          {/* Fades */}
           <div
-            className="pointer-events-none absolute left-0 top-0 bottom-0 w-8 sm:w-12 md:w-16 z-20 rounded-l-full"
-            style={{
-              background:
-                "linear-gradient(90deg, #ffffff 0%, rgba(255,255,255,0) 100%)",
-            }}
+            className="pointer-events-none absolute left-0 top-0 bottom-0 w-6 sm:w-10 md:w-14 z-20 rounded-l-full"
+            style={{ background: "linear-gradient(90deg, #ffffff 0%, rgba(255,255,255,0) 100%)" }}
           />
           <div
-            className="pointer-events-none absolute right-0 top-0 bottom-0 w-8 sm:w-12 md:w-16 z-20 rounded-r-full"
-            style={{
-              background:
-                "linear-gradient(270deg, #ffffff 0%, rgba(255,255,255,0) 100%)",
-            }}
+            className="pointer-events-none absolute right-0 top-0 bottom-0 w-6 sm:w-10 md:w-14 z-20 rounded-r-full"
+            style={{ background: "linear-gradient(270deg, #ffffff 0%, rgba(255,255,255,0) 100%)" }}
           />
         </div>
 
-        {/* Floating title (overlapping top border) */}
-        <div className="absolute -top-3 sm:-top-4 bg-white px-4 sm:px-6 md:px-8 z-40">
-          <h2 className="text-sm sm:text-base md:text-xl font-semibold text-purple-900">
+        {/* Floating title */}
+        <div className="absolute -top-2.5 sm:-top-3 bg-white px-3 sm:px-5 md:px-6 z-40">
+          <h2 className="text-xs sm:text-sm md:text-base font-semibold text-purple-900">
             Trusted by the best
           </h2>
         </div>
       </div>
 
-      {/* Animation Keyframes */}
       <style>{`
         @keyframes scroll {
           0% { transform: translateX(0); }

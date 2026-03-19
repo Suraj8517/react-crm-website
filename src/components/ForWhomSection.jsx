@@ -53,7 +53,6 @@ export default function ForWhomSection() {
     >
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute -top-24 -left-24 h-[420px] w-[420px] rounded-full bg-purple-100 blur-[100px]" />
-        <div className="absolute bottom-0 right-0 h-[360px] w-[360px] rounded-full bg-violet-100 blur-[90px]" />
       </div>
 
       <img
@@ -62,12 +61,12 @@ export default function ForWhomSection() {
         className="pointer-events-none absolute right-0 top-0 w-64 opacity-10 lg:w-96"
       />
 
-      <div className="relative z-10 mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
+      <div className="relative z-10 mx-auto max-w-5xl px-5 sm:px-8 lg:px-12">
 
         {/* Section label */}
         <div
           className={`mb-12 flex items-center gap-3 transition-all duration-700 ${
-            visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+            visible ? "opacity-100 translate-y-6" : "opacity-0 translate-y-2"
           }`}
         >
           <span className="h-px w-8 bg-purple-400" />
@@ -115,7 +114,7 @@ export default function ForWhomSection() {
           >
             {/* Headline */}
             <h2
-              className="text-4xl font-extrabold leading-[1.1] text-gray-900 sm:text-5xl lg:text-6xl"
+              className="text-4xl font-extrabold leading-[0.8] text-gray-900 sm:text-5xl lg:text-6xl"
               style={{ fontFamily: "'Cormorant', serif" }}
             >
               Built for Modern<br />
