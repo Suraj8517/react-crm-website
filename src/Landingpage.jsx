@@ -47,7 +47,7 @@ if (loading) return <PageLoader />;
 
       {/* Other sections */}
       <HeroSection onOpenForm={() => setOpenDemoForm(true)} />
-     <div className="relative z-10 pt-6 md:pt-28 lg:pt-26">
+     <div className="relative z-10 pt-6 md:pt-20 lg:pt-18">
   <LogoSwipper />
 </div>
 
