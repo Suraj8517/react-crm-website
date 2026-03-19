@@ -1,86 +1,96 @@
 import React, { useState } from "react";
 import { ArrowRight, Sparkles, CheckCircle } from "lucide-react";
 
+const features = [
+  "Automated Workflows",
+  "Client Tracking",
+  "Higher Conversions",
+  "Client Retention",
+  "Smart Scheduling",
+  "Integrated Messaging",
+  "Revenue Analytics",
+  "Lead Management",
+];
+
 const CallToActionSection = () => {
   const [hovered, setHovered] = useState(false);
 
   return (
-    <section className="relative py-24 bg-white overflow-hidden">
+    <section className="relative overflow-hidden min-h-[400px] py-20 px-6 [background:linear-gradient(150deg,#faf8ff_0%,#f0ebff_60%,#e9e0ff_100%)] [transform:translateZ(0)] [will-change:transform]">
+
       
-      {/* Background Glow */}
-      <div className="absolute top-[-100px] left-1/2 -translate-x-1/2 w-[600px] h-[600px] blur-[120px] rounded-full" />
+      <div className="absolute -top-24 -right-24 w-96 h-96 rounded-full pointer-events-none [background:radial-gradient(circle,rgba(139,92,246,0.15)_0%,transparent_70%)] [transform:translateZ(0)] [will-change:transform]" />
 
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="max-w-5xl mx-auto text-center">
+      
+      <div className="absolute -bottom-20 -left-16 w-72 h-72 rounded-full pointer-events-none [background:radial-gradient(circle,rgba(109,40,217,0.10)_0%,transparent_70%)] [transform:translateZ(0)] [will-change:transform]" />
 
-          {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 mb-6 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">
-            <Sparkles className="w-4 h-4" />
+      
+      <div className="absolute inset-0 pointer-events-none [background-image:radial-gradient(circle,rgba(109,40,217,0.05)_1px,transparent_1px)] [background-size:30px_30px] [transform:translateZ(0)]" />
+
+      <div className="relative z-10 max-w-5xl mx-auto flex items-center gap-16 flex-wrap">
+
+       
+        <div className="flex-1 basis-80 min-w-[280px]">
+
+       
+          <div className="inline-flex items-center gap-2 px-4 py-[7px] mb-6 rounded-full text-[13px] font-semibold tracking-wide text-purple-700 border border-purple-300/40 bg-purple-100/50">
+            <Sparkles size={13} />
             Built for Coaches & Fitness Businesses
           </div>
 
           {/* Headline */}
-          <h2 className="text-4xl md:text-6xl font-extrabold text-gray-900 leading-tighter mb-6" style={{ fontFamily: "'Cormorant', serif" }}>
-          Ready to grow your<br/>
-            <span className="bg-gradient-to-r from-purple-600 to-purple-800 bg-clip-text text-transparent">
-               coaching business?
+          <h2 className="font-extrabold text-[#1a0a3c] leading-[1.1] mb-5 [font-family:'Cormorant',serif] text-[clamp(32px,5vw,54px)]">
+            Ready to grow your<br />
+            <span className="text-purple-700">
+              coaching business?
             </span>
           </h2>
 
-          {/* Subtext */}
-          <p className="text-medium md:text-medium text-gray-600 max-w-2xl mx-auto mb-10">
-            Manage clients, automate workflows, and grow faster all from one
+          
+          <p className="text-gray-500 text-base leading-[1.75] max-w-[420px] m-0">
+            Manage clients, automate workflows, and grow faster — all from one
             powerful CRM platform designed for modern coaches.
           </p>
+        </div>
 
-          {/* Features */}
-          <div className="flex flex-wrap justify-center gap-4 mb-10">
-            {[
-              "Automated Workflows",
-              "Client Tracking",
-              "Higher Conversions"
-            ].map((item, i) => (
+      
+        <div className="flex-1 basis-72 min-w-[260px] flex flex-col gap-4">
+
+         
+          <div className="grid grid-cols-2 gap-[10px]">
+            {features.map((item, i) => (
               <div
                 key={i}
-                className="flex items-center gap-2 px-4 py-2 bg-white border border-gray-200 rounded-lg shadow-sm"
+                className="flex items-center gap-2 bg-white border border-[#e5d8ff] rounded-lg px-[14px] py-[10px]"
               >
-                <CheckCircle className="w-4 h-4 text-purple-600" />
-                <span className="text-sm font-medium text-gray-700">
-                  {item}
-                </span>
+                <CheckCircle size={15} color="#7c3aed" className="shrink-0" />
+                <span className="text-[13px] font-medium text-gray-700">{item}</span>
               </div>
             ))}
           </div>
 
-          {/* CTA */}
-          <div className="flex flex-col items-center gap-4">
-            
-            <button
-              onClick={() =>
-                window.open(
-                  "https://calendly.com/sangameswaran-vmaxhealthtech/30min",
-                  "_blank"
-                )
-              }
-              onMouseEnter={() => setHovered(true)}
-              onMouseLeave={() => setHovered(false)}
-              className="group relative px-7 py-3 bg-gradient-to-r from-purple-700 to-[#5B21B6] text-white text-medium font-semibold rounded-xl shadow-xl hover:scale-105 transition-all duration-300"
-            >
-              <span className="flex items-center gap-2">
-                Book Free Demo
-                <ArrowRight
-                  className={`w-5 h-5 transition-transform duration-300 ${
-                    hovered ? "translate-x-1" : ""
-                  }`}
-                />
-              </span>
-            </button>
+        
+          <div className="h-px my-1 [background:linear-gradient(90deg,rgba(139,92,246,0.2),transparent)]" />
 
-          </div>
+          <button
+            onClick={() => window.open("https://calendly.com/sangameswaran-vmaxhealthtech/30min", "_blank")}
+            onMouseEnter={() => setHovered(true)}
+            onMouseLeave={() => setHovered(false)}
+            className="w-full inline-flex items-center justify-center gap-2 px-7 py-[14px] rounded-xl text-white text-[15px] font-bold border-none cursor-pointer transition-transform duration-300 [background:linear-gradient(135deg,#7c3aed,#4c1d95)] [box-shadow:0_8px_24px_rgba(109,40,217,0.32)]"
+            style={{ transform: hovered ? "scale(1.03)" : "scale(1)" }}
+          >
+            Book Free Demo
+            <ArrowRight
+              size={17}
+              className="transition-transform duration-300"
+              style={{ transform: hovered ? "translateX(4px)" : "translateX(0)" }}
+            />
+          </button>
 
-          {/* Social proof */}
-          <div className="mt-4 text-gray-400 text-sm">
-            Trusted by 100+ coaches across India
+        
+          <div className="flex items-center justify-center gap-2">
+            <CheckCircle size={14} color="#7c3aed" />
+            <span className="text-[13px] text-gray-400">Trusted by 100+ coaches across India</span>
           </div>
 
         </div>

@@ -40,7 +40,7 @@ export default function PageLoader({ onLoadingComplete }) {
 
               <div
                 className="ring-outer absolute inset-0 rounded-full"
-                style={{ border: "3px solid transparent", borderTopColor: "#7c3aed" }}
+                style={{ border: "3px solid transparent", borderTopColor: "#543a7e" }}
               />
 
               <div
@@ -48,7 +48,7 @@ export default function PageLoader({ onLoadingComplete }) {
                 style={{
                   top: 5, left: 5, right: 5, bottom: 5,
                   border: "3px solid transparent",
-                  borderTopColor: "#7c3aed",
+                  borderTopColor: "#806b9d",
                 }}
               />
 
@@ -57,7 +57,7 @@ export default function PageLoader({ onLoadingComplete }) {
                 style={{
                   top: 15, left: 15, right: 15, bottom: 15,
                   border: "3px solid transparent",
-                  borderTopColor: "#7c3aed",
+                  borderTopColor: "#66567e",
                 }}
               />
 

@@ -46,7 +46,7 @@ const Footer = ({ onOpenForm, onOpenContactForm }) => {
 
           {/* Brand — always visible, not collapsible */}
           <div className="pb-8 md:pb-0 border-b border-zinc-800 md:border-none mb-2 md:mb-0">
-            <h2 className="text-2xl sm:text-3xl font-bold mb-3">
+            <h2 className="text-xl sm:text-2xl font-bold mb-3">
               SmartCoach<span className="text-purple-500">360</span>
             </h2>
             <p className="text-zinc-400 text-sm mb-6 leading-relaxed">

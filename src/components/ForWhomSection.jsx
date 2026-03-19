@@ -26,12 +26,6 @@ const personas = [
   },
 ];
 
-const stats = [
-  { value: "1,000+", label: "Coaches" },
-  { value: "98%",    label: "Satisfaction" },
-  { value: "3×",     label: "Faster Growth" },
-];
-
 function useInView(threshold = 0.15) {
   const ref = useRef(null);
   const [visible, setVisible] = useState(false);
@@ -57,7 +51,6 @@ export default function ForWhomSection() {
       ref={sectionRef}
       className="relative overflow-hidden bg-white py-20 lg:py-32"
     >
-  
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute -top-24 -left-24 h-[420px] w-[420px] rounded-full bg-purple-100 blur-[100px]" />
         <div className="absolute bottom-0 right-0 h-[360px] w-[360px] rounded-full bg-violet-100 blur-[90px]" />
@@ -86,7 +79,7 @@ export default function ForWhomSection() {
         {/* Main layout */}
         <div className="flex flex-col gap-16 lg:flex-row lg:items-center lg:gap-20">
 
-          {/* LEFT: Image + stats */}
+          {/* LEFT: Image + tagline */}
           <div
             className={`relative w-full lg:w-[46%] transition-all duration-700 delay-100 ${
               visible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-8"
@@ -106,21 +99,15 @@ export default function ForWhomSection() {
               <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-white/60 to-transparent" />
             </div>
 
-            {/* Stats bar */}
-            <div className="absolute -bottom-8 left-4 right-4 grid grid-cols-3 gap-2 rounded-2xl border border-purple-100 bg-white/90 p-4 shadow-[0_8px_32px_rgba(124,58,237,0.10)] backdrop-blur-md">
-              {stats.map(({ value, label }) => (
-                <div key={label} className="flex flex-col items-center gap-0.5">
-                  <span className="text-xl font-extrabold text-gray-900 sm:text-2xl">
-                    {value}
-                  </span>
-                  <span className="text-center text-[10px] font-semibold uppercase tracking-wider text-purple-500">
-                    {label}
-                  </span>
-                </div>
-              ))}
+            {/* Tagline badge */}
+            <div className="absolute -bottom-5 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full border border-purple-200 bg-white px-6 py-2.5 shadow-[0_8px_32px_rgba(124,58,237,0.12)]">
+              <span className="text-sm font-bold text-purple-700 tracking-wide">
+                🏆 #1 Software for Coaches
+              </span>
             </div>
           </div>
 
+          {/* RIGHT */}
           <div
             className={`w-full pt-10 lg:w-[54%] lg:pt-0 transition-all duration-700 delay-200 ${
               visible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-8"
@@ -178,9 +165,7 @@ export default function ForWhomSection() {
             </ul>
 
             {/* CTA */}
-            <div className="mt-10 flex flex-wrap items-center gap-4 ">
-              
-            </div>
+            <div className="mt-10 flex flex-wrap items-center gap-4" />
           </div>
         </div>
       </div>

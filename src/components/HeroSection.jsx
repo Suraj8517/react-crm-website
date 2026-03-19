@@ -31,12 +31,12 @@ export default function HeroSection({ onOpenForm }) {
 
   {/* Main pill */}
   <div
-    className="relative flex items-center gap-2 px-5 py-2 
+    className="relative flex items-center gap-2 px-3 py-1 md:px-5 md:py-2
                rounded-full border border-white/20 
                bg-white/10 backdrop-blur-md 
                shadow-[0_8px_30px_rgba(124,58,237,0.25)]
                transition-all duration-300 
-               hover:scale-105 hover:shadow-[0_12px_40px_rgba(124,58,237,0.35)]"
+               hover:scale-105 hover:shadow-[0_12px_40px_rgba(124,58,237,0.35)] mb-2 md:mb-0.5"
   >
 
     <span className="bg-gradient-to-r from-purple-600 to-indigo-500 
