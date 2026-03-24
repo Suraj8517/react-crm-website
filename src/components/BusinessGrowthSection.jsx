@@ -233,7 +233,7 @@ export default function GrowthSection() {
 
   {/* Paragraph */}
   <p className="text-[15px] text-gray-500 max-w-md mb-3 leading-relaxed text-center lg:text-left">
-    Manage your entire customer journey in one place — from first inquiry to long-term retention.
+    Manage your entire customer journey in one place, from first inquiry to long-term retention.
   </p>
 
 </div>

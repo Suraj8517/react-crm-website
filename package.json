@@ -3,23 +3,26 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-"scripts": {
-  "dev": "vite",
-  "build": "vite build",
-  "lint": "eslint .",
-  "preview": "vite preview",
-  "predeploy": "npm run build",
-  "deploy": "gh-pages -d dist",
-  "update-live": "git add . && git commit -m \"update live site\" && git push origin main && npm run deploy"
-}
-,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
+    "update-live": "git add . && git commit -m \"update live site\" && git push origin main && npm run deploy"
+  },
   "dependencies": {
+    "@portabletext/react": "^6.0.3",
+    "@sanity/client": "^7.20.0",
+    "@sanity/image-url": "^2.0.3",
     "@tailwindcss/vite": "^4.1.12",
     "framer-motion": "^12.23.12",
     "lucide-react": "^0.541.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "react-icons": "^5.5.0",
+    "react-router-dom": "^7.13.2",
     "swiper": "^11.2.10"
   },
   "devDependencies": {

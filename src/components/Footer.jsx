@@ -12,7 +12,7 @@ function FooterSection({ title, children }) {
 
   return (
     <div className="border-b border-zinc-800 md:border-none">
-      {/* Mobile: tappable header */}
+     
       <button
         onClick={() => setOpen((o) => !o)}
         className="w-full flex items-center justify-between py-4 md:py-0 md:cursor-default md:pointer-events-none"
@@ -24,7 +24,7 @@ function FooterSection({ title, children }) {
         />
       </button>
 
-      {/* Content: always visible on md+, collapsible on mobile */}
+     
       <div
         className={`overflow-hidden transition-all duration-300 md:!max-h-none md:!opacity-100 md:pb-0 ${
           open ? 'max-h-96 opacity-100 pb-4' : 'max-h-0 opacity-0'
@@ -38,13 +38,13 @@ function FooterSection({ title, children }) {
 
 const Footer = ({ onOpenForm, onOpenContactForm }) => {
   return (
-    <footer className="bg-[#121212] text-white border-t border-zinc-800 mt-20">
+    <footer className="bg-[#121212] text-white border-t border-zinc-800 ">
       <div className="max-w-5xl mx-auto px-5 py-12 md:py-16">
 
-        {/* ── Grid ── */}
+       
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-0 md:gap-8 mb-0 md:mb-12">
 
-          {/* Brand — always visible, not collapsible */}
+          
           <div className="pb-8 md:pb-0 border-b border-zinc-800 md:border-none mb-2 md:mb-0">
             <h2 className="text-xl sm:text-2xl font-bold mb-3">
               SmartCoach<span className="text-purple-500">360</span>

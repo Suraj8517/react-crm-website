@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import logo from '../assets/Coach 360 Logo.png'
+import { Link } from "react-router-dom";
 export default function Navbar({ onOpenForm, onOpenContactForm }) {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -14,6 +15,8 @@ export default function Navbar({ onOpenForm, onOpenContactForm }) {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
+            <Link to="/">Home</Link>
+      <Link to="/blogs">Blogs</Link>
           </nav>
 
           {/* Desktop Right Section */}
@@ -77,6 +80,10 @@ export default function Navbar({ onOpenForm, onOpenContactForm }) {
       {menuOpen && (
         <div className="md:hidden bg-white border-t border-gray-200">
           <div className="px-4 py-4 space-y-3">
+          <nav className="flex flex-col gap-3">
+  <Link to="/" className="text-gray-700 hover:text-gray-900 text-center">Home</Link>
+  <Link to="/blogs" className="text-gray-700 hover:text-gray-900 text-center ">Blogs</Link>
+</nav>
             <button
               onClick={() => {
                 onOpenContactForm();
